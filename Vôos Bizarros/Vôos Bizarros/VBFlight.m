@@ -10,15 +10,12 @@
 #import "VBCategory.h"
 
 @implementation VBFlight
-{
-	NSMutableArray *categories;
-}
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        categories = [[NSMutableArray alloc]init];
+        _categories = [[NSMutableArray alloc]init];
     }
     return self;
 }
