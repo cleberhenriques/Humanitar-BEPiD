@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FC9B9F618587B7B00BFD129 /* VBAirline.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9B9F518587B7B00BFD129 /* VBAirline.m */; };
-		406A61B11858883E009E6855 /* VBAirport.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A61B01858883E009E6855 /* VBAirport.m */; };
+		123FE90118587B60004A9E78 /* VBFlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 123FE90018587B60004A9E78 /* VBFlight.m */; };
+		1FC9B9FA1858892900BFD129 /* VBAirline.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9B9F91858892900BFD129 /* VBAirline.m */; };
+		1FC9B9FD18588C4800BFD129 /* VBSystemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9B9FC18588C4800BFD129 /* VBSystemManager.m */; };
+		406A61B418588D0E009E6855 /* VBAirport.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A61B318588D0E009E6855 /* VBAirport.m */; };
 		E908B5B7185873C400849F66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E908B5B6185873C400849F66 /* Foundation.framework */; };
 		E908B5B9185873C400849F66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E908B5B8185873C400849F66 /* CoreGraphics.framework */; };
 		E908B5BB185873C400849F66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E908B5BA185873C400849F66 /* UIKit.framework */; };
@@ -37,10 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1FC9B9F418587B7B00BFD129 /* VBAirline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBAirline.h; path = classes/VBAirline.h; sourceTree = "<group>"; };
-		1FC9B9F518587B7B00BFD129 /* VBAirline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBAirline.m; path = classes/VBAirline.m; sourceTree = "<group>"; };
-		406A61AF1858883E009E6855 /* VBAirport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBAirport.h; path = classes/VBAirport.h; sourceTree = "<group>"; };
-		406A61B01858883E009E6855 /* VBAirport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBAirport.m; path = classes/VBAirport.m; sourceTree = "<group>"; };
+		123FE8FF18587B60004A9E78 /* VBFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFlight.h; sourceTree = "<group>"; };
+		123FE90018587B60004A9E78 /* VBFlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFlight.m; sourceTree = "<group>"; };
+		1FC9B9F81858892900BFD129 /* VBAirline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBAirline.h; path = classes/VBAirline.h; sourceTree = "<group>"; };
+		1FC9B9F91858892900BFD129 /* VBAirline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBAirline.m; path = classes/VBAirline.m; sourceTree = "<group>"; };
+		1FC9B9FB18588C4800BFD129 /* VBSystemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBSystemManager.h; path = classes/VBSystemManager.h; sourceTree = "<group>"; };
+		1FC9B9FC18588C4800BFD129 /* VBSystemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBSystemManager.m; path = classes/VBSystemManager.m; sourceTree = "<group>"; };
+		406A61B218588D0E009E6855 /* VBAirport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBAirport.h; path = classes/VBAirport.h; sourceTree = "<group>"; };
+		406A61B318588D0E009E6855 /* VBAirport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBAirport.m; path = classes/VBAirport.m; sourceTree = "<group>"; };
 		E908B5B3185873C400849F66 /* Vôos Bizarros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vôos Bizarros.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E908B5B6185873C400849F66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E908B5B8185873C400849F66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,6 +100,8 @@
 		1FC9B9F718587BB700BFD129 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				406A61B218588D0E009E6855 /* VBAirport.h */,
+				406A61B318588D0E009E6855 /* VBAirport.m */,
 				E9BDAC07185889A1000CDB32 /* VBCategory.h */,
 				E9BDAC08185889A1000CDB32 /* VBCategory.m */,
 				E9BDAC09185889A1000CDB32 /* VBSeatClass.h */,
@@ -103,8 +111,8 @@
 				123FE90018587B60004A9E78 /* VBFlight.m */,
 				F4EB092B18587D1D007EDED9 /* VBSeat.h */,
 				F4EB092C18587D1D007EDED9 /* VBSeat.m */,
-				406A61AF1858883E009E6855 /* VBAirport.h */,
-				406A61B01858883E009E6855 /* VBAirport.m */,
+				1FC9B9FB18588C4800BFD129 /* VBSystemManager.h */,
+				1FC9B9FC18588C4800BFD129 /* VBSystemManager.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -284,11 +292,11 @@
 				1FC9B9FD18588C4800BFD129 /* VBSystemManager.m in Sources */,
 				1FC9B9FA1858892900BFD129 /* VBAirline.m in Sources */,
 				E908B5C7185873C400849F66 /* VBAppDelegate.m in Sources */,
-				406A61B11858883E009E6855 /* VBAirport.m in Sources */,
 				E908B5D0185873C400849F66 /* VBViewController.m in Sources */,
 				E908B5C3185873C400849F66 /* main.m in Sources */,
 				123FE90118587B60004A9E78 /* VBFlight.m in Sources */,
 				E9BDAC0B185889A1000CDB32 /* VBCategory.m in Sources */,
+				406A61B418588D0E009E6855 /* VBAirport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
