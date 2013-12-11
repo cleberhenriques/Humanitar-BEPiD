@@ -10,8 +10,8 @@
 
 @implementation VBSeat
 
-- (instancetype) initWithRow: (char) aRow
-                   AndColumn: (int) aColumn
+- (instancetype) initWithRow:(char) aRow
+                   AndColumn:(int) aColumn
 {
     if (self = [super init])
     {

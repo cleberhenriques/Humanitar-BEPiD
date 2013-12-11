@@ -16,10 +16,7 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"teste");
-    NSLog(@"Qualquer coisa.");
-    
-    NSLog(@"aksjdas");
+    NSLog(@"Inicializado com sucesso!");
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

@@ -13,23 +13,22 @@
     NSMutableArray *flights;
 }
 
--(instancetype)init
+- (instancetype) init
 {
     if (self = [super init])
     {
-        flights = [[NSMutableArray alloc]init];
+        flights = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
--(void)addFlight:(id)newFlight
+- (void) addFlight:(id) newFlight
 {
     [flights addObject:newFlight];
 }
 
--(VBFlight* )getFlight:(NSString *)idVoo
+- (VBFlight *) getFlight:(NSString *) idVoo
 {
-    
 	for (VBFlight *tmp in flights) {
     
         if ([idVoo compare:tmp.flID])

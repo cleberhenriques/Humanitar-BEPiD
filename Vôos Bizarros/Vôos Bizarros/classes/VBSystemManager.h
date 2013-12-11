@@ -13,22 +13,27 @@
 
 @interface VBSystemManager : NSObject
 
-- (instancetype)init;
-- (BOOL)createAirline:(NSString*) name;
-- (void)createAirport:(NSString *)airportName;
-- (void)createFlight:(NSString*)name
-				   :(NSString*)origem
-				   :(NSString*)destino
-				   :(int) year
-				   :(int) month
-				   :(int) day
-				   :(NSString*) flightID;
-- (NSArray *) findAvailableFlights: (NSString *) origin : (NSString *) destination;
-- (void)displaySystemDetails;
-- (void)bookSeat:(NSString *) air
-         flight:(NSString *)fl
-      seatClass:(VBSeatClass) s
-            row:(int) row
-            col:(char) col;
+- (BOOL) createAirlineWithName:(NSString *) name;
+- (void) createAirportWithName:(NSString *) airportName;
+- (void) createFlightWithName:(NSString *) name
+				   From:(NSString *) origem
+				   To:(NSString *) destino
+				   OnYear:(int) year
+				   OnMonth:(int) month
+				   OnDay:(int) day
+				   WithFlightID:(NSString*) flightID;
+- (NSArray *) findAvailableFlightsFrom: (NSString *) origin
+                                    To: (NSString *) destination;
+- (void) displaySystemDetails;
+- (void) bookSeatOnAirline:(NSString *) airline
+                  OnFlight:(NSString *)flightID
+             WithSeatClass:(VBSeatClass) seatClass
+                     OnRow:(char) row
+                 AndColumn:(int) col;
+- (void) createCategoryWithAirline:(NSString *) airline
+                        OnFlightID:(NSString *) flightID
+                          WithRows:(NSInteger) rows
+                           Columns:(NSInteger) cols
+                      AndSeatClass:(VBSeatClass) sc;
 
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, VBSeatClass) {
+typedef NS_ENUM (NSInteger, VBSeatClass) {
     Primeira,
     Executiva,
     Economica

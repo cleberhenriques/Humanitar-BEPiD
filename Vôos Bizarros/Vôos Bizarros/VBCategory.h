@@ -15,4 +15,9 @@
 @property (nonatomic) NSInteger rows;
 @property (nonatomic) NSInteger cols;
 
+- (instancetype) initWithClass:(VBSeatClass) aClass
+                          Rows:(NSInteger) aRows
+                    AndColumns:(NSInteger) aCols;
+
+
 @end

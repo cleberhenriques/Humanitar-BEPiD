@@ -10,5 +10,19 @@
 
 @implementation VBCategory
 
+- (instancetype) initWithClass:(VBSeatClass)aClass
+                          Rows:(NSInteger)aRows
+                    AndColumns:(NSInteger)aCols
+{
+    if (self = [super init])
+    {
+        _sClass = aClass;
+        _rows = aRows;
+        _cols = aCols;
+    }
+    
+    return self;
+}
+
 @end
 
