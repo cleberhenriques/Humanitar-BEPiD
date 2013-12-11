@@ -14,6 +14,16 @@
     NSMutableArray *airlines;
 }
 
+-(instancetype)init
+{
+    if (self = [super init])
+    {
+        airports = [[NSMutableArray alloc]init];
+        airlines = [[NSMutableArray alloc]init];
+    }
+    return self;
+}
+
 -(BOOL)createAirline:(NSString*) name
 {
     if([name length] <= 5)
@@ -33,6 +43,17 @@
     return NO;
 }
 
+-(void)createAirport:(NSString *)airportName
+{
+    VBAirport *airport = [[VBAirport alloc]initWithName:airportName];
+    [airports addObject:airport];
+}
+
+-(void)bookSeat:(NSString *)air flight:(NSString *)fl seatClass:(VBSeatClass)s row:(int)row col:(char)col
+{
+    
+}
+
 - (NSArray *) findAvailableFlights: (NSString *) origin : (NSString *) destination
 {
     
@@ -43,7 +64,7 @@
 -(void)createFlight:(NSString *)name :(NSString *)origem :(NSString *)destino :(int)year :(int)month :(int)day :(NSString *)flightID
 {
 	
-
+    
 	
 }
 
