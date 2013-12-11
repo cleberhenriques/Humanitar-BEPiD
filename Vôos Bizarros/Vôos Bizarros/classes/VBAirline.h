@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VBFlight.h"
 
 @interface VBAirline : NSObject
+
+@property NSString *nome;
+
+-(instancetype)init;
+-(void)addFlight:(Flight *)newFlight;
+-(Flight)getFlight:(NSString *)idVoo;
 
 @end
