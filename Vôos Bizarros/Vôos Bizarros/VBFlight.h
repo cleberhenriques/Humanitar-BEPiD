@@ -13,6 +13,11 @@
 
 @property NSMutableArray *categories;
 @property NSString *flID;
+@property NSString *orig;
+@property NSString *dest;
+@property int year;
+@property int month;
+@property int day;
 
 - (BOOL) addCategorie:(VBCategory*) categorie;
 
