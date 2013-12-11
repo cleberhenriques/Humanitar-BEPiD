@@ -9,5 +9,9 @@
 #import "VBSystemManager.h"
 
 @implementation VBSystemManager
+{
+    NSMutableArray *airports;
+    NSMutableArray *airlines;
+}
 
 @end

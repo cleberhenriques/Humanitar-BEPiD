@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VBAirline.h"
+#import "VBAirport.h"
+#import "VBFlight.h"
 
 @interface VBSystemManager : NSObject
+
+-(VBAirport *)createAirport;
+-(VBAirline *)createAirline;
+-(VBFlight *)createFlight;
+-(VBFlight *)findAvailableFlights:(NSString *)flID;
+-(void)bookSeat;
+-(void)displaySystemDetails;
 
 @end
