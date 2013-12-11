@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VBCategory.h"
 
 @interface VBFlight : NSObject
 
-
+@property NSMutableArray *categories;
 @property NSString *flID;
-- (BOOL) addCategorie:(NSString*) categorie;
+
+- (BOOL) addCategorie:(VBCategory*) categorie;
+
 @end

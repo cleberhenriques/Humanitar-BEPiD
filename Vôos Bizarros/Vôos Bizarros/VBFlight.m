@@ -7,7 +7,6 @@
 //
 
 #import "VBFlight.h"
-#import "VBCategory.h"
 
 @implementation VBFlight
 
@@ -20,13 +19,9 @@
     return self;
 }
 
--(NSString*)getCategories{
-	return [categories description];
-}
-
 -(BOOL)addCategorie:(VBCategory *)categorie{
-	if(![categories containsObject:categorie]){
-		[categories addObject:categorie];
+	if(![_categories containsObject:categorie]){
+		[_categories addObject:categorie];
 		return YES;
 	}
 	return NO;
