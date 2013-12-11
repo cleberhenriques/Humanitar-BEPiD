@@ -19,4 +19,11 @@
     
 }
 
+- (NSArray *) findAvailableFlights: (NSString *) origin : (NSString *) destination
+{
+    
+    
+    return nil;
+}
+
 @end
