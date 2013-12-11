@@ -7,35 +7,25 @@
 //
 
 #import "VBFlight.h"
+#import "VBCategory.h"
 
 @implementation VBFlight
-{
-	NSMutableArray *categories;
-}
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        categories = [[NSMutableArray alloc]init];
+        _categories = [[NSMutableArray alloc]init];
     }
     return self;
 }
 
--(NSString*)getCategories{
-	return [categories description];
-}
-
-//preciso classe category
--(BOOL)addCategorie:(NSString *)categorie{
-	if(![categories containsObject:categorie]){
-		[categories addObject:categorie];
+- (BOOL) addCategorie: (VBCategory *) categorie
+{
+	if(![_categories containsObject:categorie]){
+		[_categories addObject:categorie];
 		return YES;
 	}
 	return NO;
 }
-
-
-
-
 @end
