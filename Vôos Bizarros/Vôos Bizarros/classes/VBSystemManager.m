@@ -14,7 +14,23 @@
     NSMutableArray *airlines;
 }
 
--(void)createAirport
+-(instancetype)init
+{
+    if (self = [super init])
+    {
+        airports = [[NSMutableArray alloc]init];
+        airlines = [[NSMutableArray alloc]init];
+    }
+    return self;
+}
+
+-(void)createAirport:(NSString *)airportName
+{
+    VBAirport *airport = [[VBAirport alloc]initWithNome:airportName];
+    [airports addObject:airport];
+}
+
+-(void)bookSeat:(NSString *)air flight:(NSString *)fl seatClass:(VBSeatClass)s row:(int)row col:(char)col
 {
     
 }
