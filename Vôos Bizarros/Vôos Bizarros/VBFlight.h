@@ -12,9 +12,5 @@
 
 
 @property NSString *flID;
-
--(NSString*)getCategories;
--(BOOL)addCategorie:(NSString*)categorie;
-
-	
+- (BOOL) addCategorie:(NSString*) categorie;
 @end
