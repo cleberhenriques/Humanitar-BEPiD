@@ -9,5 +9,33 @@
 #import "VBAirline.h"
 
 @implementation VBAirline
+{
+    NSMutableArray *flights;
+}
 
+-(instancetype)init
+{
+    if (self = [super init])
+    {
+        flights = [[NSMutableArray alloc]init];
+    }
+    return self;
+}
+
+-(void)addFlight:(id)newFlight
+{
+    [flights addObject:newFlight];
+}
+
+-(Flight)getFlight:(NSString *)idVoo
+{
+    NSInteger count = [flights count];
+    for (Flight *tmp in flights) {
+    
+        if ([idVoo compare:tmp flID]])
+        {
+            return tmp;
+        }
+    }
+}
 @end
