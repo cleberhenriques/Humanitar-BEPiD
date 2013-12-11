@@ -27,10 +27,10 @@
     [flights addObject:newFlight];
 }
 
--(Flight)getFlight:(NSString *)idVoo
+-(VBFlight* )getFlight:(NSString *)idVoo
 {
     NSInteger count = [flights count];
-    for (Flight *tmp in flights) {
+    for (VBFlight *tmp in flights) {
     
         if ([idVoo compare:tmp flID]])
         {
