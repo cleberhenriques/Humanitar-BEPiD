@@ -90,4 +90,19 @@
 }
 
 
+- (void)createCategory: (NSString *)air : (NSString *)flID : (NSInteger)rows : (NSInteger)cols : (VBSeatClass)sc
+{
+    VBCategory *catAux = [[VBCategory alloc] init];
+    
+    catAux.rows = rows;
+    catAux.cols = cols;
+    catAux.sClass = sc;
+    
+    VBAirline * airLineAux = [self findCompany: air];
+    
+    [airLineAux getFlight:flID];
+}
+
+
+
 @end
