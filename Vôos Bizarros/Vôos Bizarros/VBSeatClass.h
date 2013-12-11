@@ -8,13 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VBSeatClass : NSObject
-
-typedef NS_ENUM(NSInteger, SeatClass) {
+typedef NS_ENUM(NSInteger, VBSeatClass) {
     Primeira,
     Executiva,
     Economica
 };
-
-
-@end

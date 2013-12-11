@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VBSeatClass.h"
 
 @interface VBCategory : NSObject
     
-
+@property (nonatomic) VBSeatClass sClass;
 @property (nonatomic) NSInteger rows;
 @property (nonatomic) NSInteger cols;
 
