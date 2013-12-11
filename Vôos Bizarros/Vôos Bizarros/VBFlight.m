@@ -7,7 +7,6 @@
 //
 
 #import "VBFlight.h"
-#import "VBCategory.h"
 
 @implementation VBFlight
 
@@ -20,12 +19,12 @@
     return self;
 }
 
-- (BOOL) addCategorie: (VBCategory *) categorie
-{
+-(BOOL)addCategorie:(VBCategory *)categorie{
 	if(![_categories containsObject:categorie]){
 		[_categories addObject:categorie];
 		return YES;
 	}
 	return NO;
 }
+
 @end
