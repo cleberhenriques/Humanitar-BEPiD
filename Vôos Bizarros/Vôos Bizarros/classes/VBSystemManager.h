@@ -14,7 +14,7 @@
 @interface VBSystemManager : NSObject
 
 - (instancetype)init;
-- (BOOL)createAirline;
+- (BOOL)createAirline:(NSString*) name;
 - (void)createAirport:(NSString *)airportName;
 - (void)createFlight:(NSString*)name
 				   :(NSString*)origem
