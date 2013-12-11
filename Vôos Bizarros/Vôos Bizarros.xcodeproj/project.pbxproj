@@ -23,6 +23,8 @@
 		E908B5DB185873C400849F66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E908B5BA185873C400849F66 /* UIKit.framework */; };
 		E908B5E3185873C400849F66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E908B5E1185873C400849F66 /* InfoPlist.strings */; };
 		E908B5E5185873C400849F66 /* Vo_os_BizarrosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E908B5E4185873C400849F66 /* Vo_os_BizarrosTests.m */; };
+		E9BDAC0B185889A1000CDB32 /* VBCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BDAC08185889A1000CDB32 /* VBCategory.m */; };
+		E9BDAC0C185889A1000CDB32 /* VBSeatClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BDAC0A185889A1000CDB32 /* VBSeatClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		E908B5E0185873C400849F66 /* Vôos BizarrosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Vôos BizarrosTests-Info.plist"; sourceTree = "<group>"; };
 		E908B5E2185873C400849F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E908B5E4185873C400849F66 /* Vo_os_BizarrosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vo_os_BizarrosTests.m; sourceTree = "<group>"; };
+		E9BDAC07185889A1000CDB32 /* VBCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBCategory.h; sourceTree = "<group>"; };
+		E9BDAC08185889A1000CDB32 /* VBCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBCategory.m; sourceTree = "<group>"; };
+		E9BDAC09185889A1000CDB32 /* VBSeatClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBSeatClass.h; sourceTree = "<group>"; };
+		E9BDAC0A185889A1000CDB32 /* VBSeatClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBSeatClass.m; sourceTree = "<group>"; };
 		F4EB092B18587D1D007EDED9 /* VBSeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBSeat.h; path = classes/VBSeat.h; sourceTree = "<group>"; };
 		F4EB092C18587D1D007EDED9 /* VBSeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBSeat.m; path = classes/VBSeat.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +96,10 @@
 		1FC9B9F718587BB700BFD129 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				E9BDAC07185889A1000CDB32 /* VBCategory.h */,
+				E9BDAC08185889A1000CDB32 /* VBCategory.m */,
+				E9BDAC09185889A1000CDB32 /* VBSeatClass.h */,
+				E9BDAC0A185889A1000CDB32 /* VBSeatClass.m */,
 				1FC9B9F81858892900BFD129 /* VBAirline.h */,
 				1FC9B9F91858892900BFD129 /* VBAirline.m */,
 				123FE8FF18587B60004A9E78 /* VBFlight.h */,
@@ -280,6 +290,8 @@
 				E908B5D0185873C400849F66 /* VBViewController.m in Sources */,
 				E908B5C3185873C400849F66 /* main.m in Sources */,
 				123FE90118587B60004A9E78 /* VBFlight.m in Sources */,
+				E9BDAC0C185889A1000CDB32 /* VBSeatClass.m in Sources */,
+				E9BDAC0B185889A1000CDB32 /* VBCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
