@@ -13,10 +13,10 @@
 
 @interface VBSystemManager : NSObject
 
--(VBAirport *)createAirport;
--(VBAirline *)createAirline;
--(VBFlight *)createFlight;
--(VBFlight *)findAvailableFlights:(NSString *)flID;
+-(void)createAirport;
+-(void)createAirline;
+-(void)createFlight;
+-(NSArray *)findAvailableFlights:(NSString *)flID;
 -(void)bookSeat;
 -(void)displaySystemDetails;
 

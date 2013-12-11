@@ -14,4 +14,9 @@
     NSMutableArray *airlines;
 }
 
+-(void)createAirport
+{
+    
+}
+
 @end
