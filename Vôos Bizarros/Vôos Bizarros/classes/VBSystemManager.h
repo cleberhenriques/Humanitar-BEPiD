@@ -13,16 +13,22 @@
 
 @interface VBSystemManager : NSObject
 
--(instancetype)init;
--(void)createAirport:(NSString *)airportName;
--(void)createAirline;
--(void)createFlight;
--(NSArray *)findAvailableFlights:(NSString *)flID;
--(void)bookSeat:(NSString *) air
+- (instancetype)init;
+- (void)createAirline;
+- (void)createAirport:(NSString *)airportName;
+- (void)createFlight:(NSString*)name
+				   :(NSString*)origem
+				   :(NSString*)destino
+				   :(int) year
+				   :(int) month
+				   :(int) day
+				   :(NSString*) flightID;
+- (NSArray *) findAvailableFlights: (NSString *) origin : (NSString *) destination;
+- (void)displaySystemDetails;
+- (void)bookSeat:(NSString *) air
          flight:(NSString *)fl
       seatClass:(VBSeatClass) s
             row:(int) row
             col:(char) col;
--(void)displaySystemDetails;
 
 @end
