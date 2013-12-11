@@ -14,9 +14,23 @@
     NSMutableArray *airlines;
 }
 
--(void)createAirport
+-(BOOL)createAirline:(NSString*) name
 {
+    if([name length] <= 5)
+    {
+        VBAirline* airline = [[VBAirline alloc] init];
+        for(VBAirline* al in airlines)
+        {
+           if([airline.nome isEqual:name])
+               return NO;
+        }
+        
+        airline.nome = name;
+        [airlines addObject:airline];
+        return YES;
+    }
     
+    return NO;
 }
 
 @end

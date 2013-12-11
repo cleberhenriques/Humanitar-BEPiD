@@ -14,7 +14,7 @@
 @interface VBSystemManager : NSObject
 
 -(void)createAirport;
--(void)createAirline;
+-(BOOL)createAirline:(NSString*) airline;
 -(void)createFlight;
 -(NSArray *)findAvailableFlights:(NSString *)flID;
 -(void)bookSeat;
