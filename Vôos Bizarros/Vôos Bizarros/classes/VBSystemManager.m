@@ -52,8 +52,8 @@
 - (void) bookSeatOnAirline:(NSString *) airline
                   OnFlight:(NSString *) flightID
              WithSeatClass:(VBSeatClass) seatClass
-                     OnRow:(char) row
-                 AndColumn:(int) col
+                  OnColumn:(int) col
+                    AndRow:(char) row
 {
     
 }
