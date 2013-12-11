@@ -11,7 +11,7 @@
 @interface VBFlight : NSObject
 
 
-//@property NSMutableArray *categories;
+@property (readonly) NSMutableArray *categories;
 
 @property NSString *flID;
 
