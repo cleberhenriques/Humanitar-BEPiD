@@ -10,8 +10,8 @@
 
 @interface VBAirport : NSObject
 
-@property NSString* nome;
+@property NSString* name;
 
-- (instancetype) initWithNome:(NSString*)nome;
+- (instancetype) initWithName:(NSString*)name;
 
 @end

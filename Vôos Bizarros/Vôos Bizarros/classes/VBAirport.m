@@ -10,14 +10,14 @@
 
 @implementation VBAirport
 
-- (instancetype) initWithNome:(NSString *)nome
+- (instancetype) initWithName:(NSString *)name
 {
-    if([nome length] <= 3)
+    if([name length] <= 3)
     {
         self = [super init];
             
         if (self) {
-            self.nome = nome;
+            self.name = name;
         }
             
         return self;
