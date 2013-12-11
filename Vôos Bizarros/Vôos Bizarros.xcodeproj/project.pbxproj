@@ -281,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC9B9FD18588C4800BFD129 /* VBSystemManager.m in Sources */,
 				1FC9B9FA1858892900BFD129 /* VBAirline.m in Sources */,
 				E908B5C7185873C400849F66 /* VBAppDelegate.m in Sources */,
 				406A61B11858883E009E6855 /* VBAirport.m in Sources */,
