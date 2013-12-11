@@ -26,4 +26,11 @@
     return nil;
 }
 
+-(void)createFlight:(NSString *)name :(NSString *)origem :(NSString *)destino :(int)year :(int)month :(int)day :(NSString *)flightID
+{
+	
+
+	
+}
+
 @end

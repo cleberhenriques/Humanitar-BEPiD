@@ -15,7 +15,13 @@
 
 - (void)createAirport;
 - (void)createAirline;
-- (void)createFlight;
+- (void)createFlight:(NSString*)name
+				   :(NSString*)origem
+				   :(NSString*)destino
+				   :(int) year
+				   :(int) month
+				   :(int) day
+				   :(NSString*) flightID;
 - (NSArray *) findAvailableFlights: (NSString *) origin : (NSString *) destination;
 - (void)bookSeat;
 - (void)displaySystemDetails;
