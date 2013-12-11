@@ -7,6 +7,7 @@
 //
 
 #import "VBFlight.h"
+#import "VBCategory.h"
 
 @implementation VBFlight
 {
@@ -26,16 +27,12 @@
 	return [categories description];
 }
 
-//preciso classe category
--(BOOL)addCategorie:(NSString *)categorie{
+-(BOOL)addCategorie:(VBCategory *)categorie{
 	if(![categories containsObject:categorie]){
 		[categories addObject:categorie];
 		return YES;
 	}
 	return NO;
 }
-
-
-
 
 @end
