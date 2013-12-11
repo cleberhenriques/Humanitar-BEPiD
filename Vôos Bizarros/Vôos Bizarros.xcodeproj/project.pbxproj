@@ -384,6 +384,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vôos Bizarros/Vôos Bizarros-Prefix.pch";
 				INFOPLIST_FILE = "Vôos Bizarros/Vôos Bizarros-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -397,6 +398,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vôos Bizarros/Vôos Bizarros-Prefix.pch";
 				INFOPLIST_FILE = "Vôos Bizarros/Vôos Bizarros-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -419,6 +421,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Vôos BizarrosTests/Vôos BizarrosTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -438,6 +441,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vôos Bizarros/Vôos Bizarros-Prefix.pch";
 				INFOPLIST_FILE = "Vôos BizarrosTests/Vôos BizarrosTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -463,6 +467,7 @@
 				E908B5EA185873C400849F66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E908B5EB185873C400849F66 /* Build configuration list for PBXNativeTarget "Vôos BizarrosTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +476,7 @@
 				E908B5ED185873C400849F66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
