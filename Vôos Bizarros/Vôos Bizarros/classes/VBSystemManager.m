@@ -111,15 +111,17 @@
                            Columns:(NSInteger) cols
                       AndSeatClass:(VBSeatClass) sc
 {
+    
+    VBAirline *airLineAux = [self findAirline: airline];
+    VBFlight* flightAux = [airLineAux getFlightWhithId:flightID];
+
     VBCategory *catAux = [[VBCategory alloc] init];
     
     catAux.rows = rows;
     catAux.cols = cols;
     catAux.sClass = sc;
     
-    VBAirline *airLineAux = [self findAirline: airline];
-    
-    [airLineAux getFlight:flightID];
+    [flightAux addCategory:catAux];
 }
 
 - (void) displaySystemDetails
