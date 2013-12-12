@@ -150,7 +150,7 @@
 		[airportsLog appendString:airport.name];
 		[airportsLog appendString:@"\n"];
 	}
-	NSLog(airportsLog);
+	NSLog(@"%@",airportsLog);
 	
 	//Show registered airlines and flights.
 	NSLog(@"Registered airlines:");
@@ -165,7 +165,7 @@
 			[airlinesLog appendString:@"\n"];
 		}
 	}
-	NSLog(airlinesLog);
+	NSLog(@"%@",airlinesLog);
 }
 
 @end
