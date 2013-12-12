@@ -57,23 +57,27 @@
 {
     VBAirline *airline = [self findAirline:airlineName];
     VBFlight *flight = [airline getFlightWithId:flightID];
-    VBCategory *category = [flight ]
-    
-    
-    
-    
+    //VBCategory *category = [flight ]
 }
 
 - (NSArray *) findAvailableFlightsFrom: (NSString *) origin
                                     To:(NSString *) destination
 {
-    for (VBAirline *airline in airlines) {
-        /*for (VBFlight *flight in [airline ]) {
-            ;
-        }*/
+    NSMutableArray *flightCandidates = [[NSMutableArray alloc] init];
+    for (VBAirline *airline in airlines)
+    {
+        for (VBFlight *flight in [airline flights])
+        {
+            if ([flight.from isEqualToString:origin] && [flight.from isEqualToString:destination])
+            {
+                if ([[flight schedule] laterDate:[NSDate date]])
+                {
+                    [flightCandidates addObject:flight];
+                }
+            }
+        }
     }
-    
-    return nil;
+    return [flightCandidates arrayByAddingObjectsFromArray:flightCandidates];
 }
 
 - (void) createFlightWithName:(NSString *) name

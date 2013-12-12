@@ -10,13 +10,28 @@
 
 @implementation VBFlight
 
-- (instancetype)init
+- (instancetype) initWithDate:(NSInteger) day
+                        Month:(NSInteger) month
+                      AndYear:(NSInteger) year
 {
     if (self = [super init])
     {
+        NSCalendar *calendar = [[NSCalendar alloc] init];
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        
+        [components setDay:day];
+        [components setMonth:month];
+        [components setYear:year];
+        
         _categories = [[NSMutableArray alloc] init];
+        _schedule = [calendar dateFromComponents:components];
     }
     return self;
+}
+
+- (instancetype)init
+{
+    return [self initWithDate:1 Month:1 AndYear:2000];
 }
 
 - (BOOL) addCategory:(VBCategory *) category
@@ -29,7 +44,7 @@
 	return NO;
 }
 
-- (VBCategory *)getCategoryWithSeatClass:(VBSeatClass)seatClass
+- (VBCategory *)getCategoryWithSeatClass:(VBSeatClass) seatClass
 {
     for (VBCategory *category in _categories)
     {

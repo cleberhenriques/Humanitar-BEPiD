@@ -12,14 +12,18 @@
 @interface VBFlight : NSObject
 
 @property (readonly) NSMutableArray *categories;
-@property NSString *flID;
-@property NSString *orig;
-@property NSString *dest;
+@property NSString *flightId;
+@property NSString *from;
+@property NSString *to;
 @property int year;
 @property int month;
 @property int day;
+@property NSDate *schedule;
 
+- (instancetype) initWithDate: (NSInteger) day
+                        Month: (NSInteger) month
+                      AndYear: (NSInteger) year;
 - (BOOL) addCategory:(VBCategory*) category;
-- (VBCategory *)getCategoryWithSeatClass:(VBSeatClass)seatClass;
+- (VBCategory *)getCategoryWithSeatClass:(VBSeatClass) seatClass;
 
 @end
