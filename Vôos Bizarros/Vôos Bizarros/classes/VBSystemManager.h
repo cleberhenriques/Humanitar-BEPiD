@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VBSeatClass.h"
+//#import "VBSeatClass.h"
+#import "VBCategory.h"
 
 @interface VBSystemManager : NSObject
 
