@@ -65,6 +65,12 @@
 - (NSArray *) findAvailableFlightsFrom: (NSString *) origin
                                     To:(NSString *) destination
 {
+    for (VBAirline *airline in airlines) {
+        /*for (VBFlight *flight in [airline ]) {
+            ;
+        }*/
+    }
+    
     return nil;
 }
 
