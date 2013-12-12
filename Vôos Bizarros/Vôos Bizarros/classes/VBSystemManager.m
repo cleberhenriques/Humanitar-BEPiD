@@ -187,7 +187,8 @@
         
 		for (VBFlight *flight in airline.flights)
 		{
-			[airlinesLog appendString:flight.description];
+#warning THIS NEED TO BE FIXED
+            //[airlinesLog appendString:flight.description];
 			[airlinesLog appendString:@"\n"];
 		}
 	}

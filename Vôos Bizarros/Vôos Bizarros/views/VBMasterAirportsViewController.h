@@ -10,7 +10,7 @@
 
 @class VBDetailViewController;
 
-@interface VBMasterViewController : UITableViewController
+@interface VBMasterAirportsViewController : UITableViewController
 
 @property (strong, nonatomic) VBDetailViewController *detailViewController;
 

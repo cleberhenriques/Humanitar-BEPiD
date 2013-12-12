@@ -28,7 +28,7 @@
 		E908B5E3185873C400849F66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E908B5E1185873C400849F66 /* InfoPlist.strings */; };
 		E908B5E5185873C400849F66 /* Vo_os_BizarrosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E908B5E4185873C400849F66 /* Vo_os_BizarrosTests.m */; };
 		E9719620185A1205006594C3 /* VBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E971961D185A1205006594C3 /* VBDetailViewController.m */; };
-		E9719621185A1205006594C3 /* VBMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E971961F185A1205006594C3 /* VBMasterViewController.m */; };
+		E9719621185A1205006594C3 /* VBMasterAirportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E971961F185A1205006594C3 /* VBMasterAirportsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +74,8 @@
 		E908B5E4185873C400849F66 /* Vo_os_BizarrosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vo_os_BizarrosTests.m; sourceTree = "<group>"; };
 		E971961C185A1205006594C3 /* VBDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBDetailViewController.h; sourceTree = "<group>"; };
 		E971961D185A1205006594C3 /* VBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBDetailViewController.m; sourceTree = "<group>"; };
-		E971961E185A1205006594C3 /* VBMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBMasterViewController.h; sourceTree = "<group>"; };
-		E971961F185A1205006594C3 /* VBMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBMasterViewController.m; sourceTree = "<group>"; };
+		E971961E185A1205006594C3 /* VBMasterAirportsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBMasterAirportsViewController.h; sourceTree = "<group>"; };
+		E971961F185A1205006594C3 /* VBMasterAirportsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBMasterAirportsViewController.m; sourceTree = "<group>"; };
 		F4EB092B18587D1D007EDED9 /* VBSeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBSeat.h; path = classes/VBSeat.h; sourceTree = "<group>"; };
 		F4EB092C18587D1D007EDED9 /* VBSeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBSeat.m; path = classes/VBSeat.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,8 +204,8 @@
 			children = (
 				E971961C185A1205006594C3 /* VBDetailViewController.h */,
 				E971961D185A1205006594C3 /* VBDetailViewController.m */,
-				E971961E185A1205006594C3 /* VBMasterViewController.h */,
-				E971961F185A1205006594C3 /* VBMasterViewController.m */,
+				E971961E185A1205006594C3 /* VBMasterAirportsViewController.h */,
+				E971961F185A1205006594C3 /* VBMasterAirportsViewController.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1364301859DF420055E4B3 /* VBSeat.m in Sources */,
-				E9719621185A1205006594C3 /* VBMasterViewController.m in Sources */,
+				E9719621185A1205006594C3 /* VBMasterAirportsViewController.m in Sources */,
 				E9719620185A1205006594C3 /* VBDetailViewController.m in Sources */,
 				1FC9B9FD18588C4800BFD129 /* VBSystemManager.m in Sources */,
 				1FC9B9FA1858892900BFD129 /* VBAirline.m in Sources */,

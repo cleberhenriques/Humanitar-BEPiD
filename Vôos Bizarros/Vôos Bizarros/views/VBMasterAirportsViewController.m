@@ -1,22 +1,28 @@
 //
-//  VBMasterViewController.m
+//  VBMasterAirportsViewController.m
 //  k
 //
 //  Created by Txai Wieser on 12/12/13.
 //  Copyright (c) 2013 com.TDW.app. All rights reserved.
 //
 
-#import "VBMasterViewController.h"
+#import "VBMasterAirportsViewController.h"
 
 #import "VBDetailViewController.h"
+#import "VBSystemManager.h"
+#import "VBAirport.h"
 
-@interface VBMasterViewController () {
+@interface VBMasterAirportsViewController () {
     NSMutableArray *_objects;
+    VBSystemManager *SystemManager;
 }
 @end
 
-@implementation VBMasterViewController
-
+@implementation VBMasterAirportsViewController
+{
+    NSMutableArray *airports;
+    NSMutableArray *airlines;
+}
 - (void)awakeFromNib
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -35,6 +41,27 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (VBDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    VBSystemManager *res = [[VBSystemManager alloc] init];
+    //Create airports
+    [res createAirportWithName:@"DEN"];
+    [res createAirportWithName:@"DFW"];
+    [res createAirportWithName:@"LON"];
+    [res createAirportWithName:@"JPN"];
+    [res createAirportWithName:@"DE"]; //invalid
+    
+    //Show registered airports
+	NSLog(@"Registered airports:");
+	NSMutableString *airportsLog = [[NSMutableString alloc] init];
+	for (VBAirport *airport in airports)
+	{
+		[airportsLog appendString:airport.name];
+		[airportsLog appendString:@"\n"];
+	}
+	NSLog(@"%@",airportsLog);
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -88,11 +88,11 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--Master View Controller - Master-->
+        <!--Master Airports View Controller - Master-->
         <scene sceneID="Izy-G0-Jre">
             <objects>
-                <tableViewController title="Master" id="6g4-4i-RgN" customClass="VBMasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eNA-Zm-AlO">
+                <tableViewController title="Master" id="6g4-4i-RgN" customClass="VBMasterAirportsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eNA-Zm-AlO" customClass="VBMasterAirportsView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -120,12 +120,8 @@
                             </tableViewCell>
                         </prototypes>
                         <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="6g4-4i-RgN" id="CAw-Iq-8Jb"/>
-                            <outlet property="delegate" destination="6g4-4i-RgN" id="Xqd-jN-mW7"/>
-                        </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Dw3-oi-tSF"/>
+                    <navigationItem key="navigationItem" title="Airports" id="Dw3-oi-tSF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSd-6f-bX6" sceneMemberID="firstResponder"/>
             </objects>
