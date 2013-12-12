@@ -70,6 +70,12 @@
 - (NSArray *) findAvailableFlightsFrom: (NSString *) origin
                                     To:(NSString *) destination
 {
+    for (VBAirline *airline in airlines) {
+        /*for (VBFlight *flight in [airline ]) {
+            ;
+        }*/
+    }
+    
     return nil;
 }
 
@@ -114,6 +120,10 @@
                            Columns:(NSInteger) cols
                       AndSeatClass:(VBSeatClass) sc
 {
+    
+    VBAirline *airLineAux = [self findAirline: airline];
+    VBFlight* flightAux = [airLineAux getFlightWithId:flightID];
+
     VBCategory *catAux = [[VBCategory alloc] init];
     
     catAux.rows = rows;
@@ -127,7 +137,30 @@
 
 - (void) displaySystemDetails
 {
-    
+    NSLog(@"System Details.");
+	
+	//Show registered airports
+	NSLog(@"Registered airports:");
+	NSMutableString *airportsLog;
+	for (VBAirport *airport in airports)
+	{
+		[airportsLog appendString:airport.name];//botar quebra de linha
+	}
+	NSLog(airportsLog);
+	
+	//Show registered airlines
+	NSLog(@"Registered airlines:");
+	NSMutableString *airlinesLog;
+	for (VBAirline *airline in airlines)
+	{
+		[airlinesLog appendString:airline.nome];//botar quebra de linha
+		for (VBFlight *flight in airline.flights)
+		{
+			<#statements#>
+		}
+	}
+	
+	
 }
 
 @end

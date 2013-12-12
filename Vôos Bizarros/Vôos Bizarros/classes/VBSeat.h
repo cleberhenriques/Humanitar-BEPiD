@@ -10,11 +10,11 @@
 
 @interface VBSeat : NSObject
 
-@property char row;
-@property int column;
+@property int row;
+@property char column;
 @property (getter = isReserved) BOOL reserved;
 
-- (instancetype) initWithRow:(char) aRow
-                   AndColumn:(int) aColumn;
+- (instancetype) initWithRow:(int) aRow
+                   AndColumn:(char) aColumn;
 
 @end
