@@ -15,9 +15,6 @@
 @property NSString *flightId;
 @property NSString *from;
 @property NSString *to;
-@property int year;
-@property int month;
-@property int day;
 @property NSDate *schedule;
 
 - (instancetype) initWithDate: (NSInteger) day

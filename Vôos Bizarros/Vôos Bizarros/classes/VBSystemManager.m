@@ -86,7 +86,7 @@
                        OnYear:(int) year
                       OnMonth:(int) month
                         OnDay:(int) day
-                 WithFlightID:(NSString *) flightID
+                 WithFlightID:(NSString *) aFlightID
 {
     VBAirline *air = [self findAirline:name];
 	if(air == nil)
@@ -94,13 +94,10 @@
 		NSLog(@"Companhia nao existente.");
 	}
 	
-	VBFlight *voo = [[VBFlight alloc] init];
-	voo.orig = origem;
-	voo.dest = destino;
-	voo.year = year;
-	voo.month = month;
-	voo.day = day;
-	voo.flID = flightID;
+	VBFlight *voo = [[VBFlight alloc] initWithDate:day Month:month AndYear:year];
+	voo.from = origem;
+	voo.to = destino;
+	voo.flightId = aFlightID;
 	
 	[air addFlight: voo];
 }
