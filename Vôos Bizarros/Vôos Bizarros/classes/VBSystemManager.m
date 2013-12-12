@@ -52,12 +52,12 @@
 - (BOOL) bookSeatOnAirline:(NSString *) airlineName
                   OnFlight:(NSString *) flightID
              WithSeatClass:(VBSeatClass) seatClass
-                  OnColumn:(char) col
-                    AndRow:(int) row
+                  OnRow:(int) row
+                    AndColumn:(char) col
 {
     VBAirline *airline = [self findAirline:airlineName];
-    VBFlight *flight = [airline getFlightWhithId:flightID];
-    VBCategory *category = [flight getCategoryWhithSeatClass:seatClass];
+    VBFlight *flight = [airline getFlightWithId:flightID];
+    VBCategory *category = [flight getCategoryWithSeatClass:seatClass];
     
     if (category != nil && [category seatReservedOnRow:row andCol:col])
     {
@@ -130,9 +130,7 @@
     catAux.cols = cols;
     catAux.sClass = sc;
     
-    VBAirline *airLineAux = [self findAirline: airline];
-    
-    [airLineAux getFlightWhithId:flightID];
+    [flightAux addCategory:catAux];
 }
 
 - (void) displaySystemDetails

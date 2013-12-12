@@ -28,8 +28,8 @@
 - (BOOL) bookSeatOnAirline:(NSString *) airline
                   OnFlight:(NSString *)flightID
              WithSeatClass:(VBSeatClass) seatClass
-                     OnColumn:(char) col
-                 AndRow:(int) row;
+                     OnRow:(int) row
+                 AndColumn:(char) col;
 - (void) createCategoryWithAirline:(NSString *) airline
                         OnFlightID:(NSString *) flightID
                           WithRows:(NSInteger) rows
