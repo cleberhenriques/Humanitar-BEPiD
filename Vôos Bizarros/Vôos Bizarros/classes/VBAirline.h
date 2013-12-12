@@ -12,8 +12,9 @@
 @interface VBAirline : NSObject
 
 @property NSString *nome;
+@property NSMutableArray *flights;
 
 - (void) addFlight:(VBFlight *) newFlight;
-- (VBFlight *) getFlight:(NSString *) idVoo;
+- (VBFlight *) getFlightWhithId:(NSString *) idVoo;
 
 @end
