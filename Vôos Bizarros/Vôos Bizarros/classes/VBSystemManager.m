@@ -97,7 +97,7 @@
 					   OnYear:(int) year
 					  OnMonth:(int) month
 						OnDay:(int) day
-					   WithID:(NSString*) aFlightID;
+				 WithFlightID:(NSString*) aFlightID;
 {
     VBAirline *airline = [self findAirline:name];
 	if(airline == nil)

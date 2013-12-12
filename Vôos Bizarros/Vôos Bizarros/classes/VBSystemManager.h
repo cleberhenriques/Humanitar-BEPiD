@@ -20,7 +20,7 @@
 				   OnYear:(int) year
 				   OnMonth:(int) month
 				   OnDay:(int) day
-			   WithID:(NSString*) aFlightID;
+			WithFlightID:(NSString*) aFlightID;
 - (NSArray *) findAvailableFlightsFrom: (NSString *) origin
                                     To: (NSString *) destination;
 - (void) displaySystemDetails;
