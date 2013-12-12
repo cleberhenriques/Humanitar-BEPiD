@@ -29,7 +29,7 @@
 	return NO;
 }
 
-- (VBCategory *)getCategoryWhithSeatClass:(VBSeatClass)seatClass
+- (VBCategory *)getCategoryWithSeatClass:(VBSeatClass)seatClass
 {
     for (VBCategory *category in _categories)
     {

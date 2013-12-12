@@ -15,6 +15,6 @@
 @property NSMutableArray *flights;
 
 - (void) addFlight:(VBFlight *) newFlight;
-- (VBFlight *) getFlightWhithId:(NSString *) idVoo;
+- (VBFlight *) getFlightWithId:(NSString *) idVoo;
 
 @end

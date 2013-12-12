@@ -11,7 +11,7 @@
 
 @interface VBFlight : NSObject
 
-@property NSMutableArray *categories;
+@property (readonly) NSMutableArray *categories;
 @property NSString *flID;
 @property NSString *orig;
 @property NSString *dest;
@@ -20,6 +20,6 @@
 @property int day;
 
 - (BOOL) addCategory:(VBCategory*) category;
-- (VBCategory *)getCategoryWhithSeatClass:(VBSeatClass)seatClass;
+- (VBCategory *)getCategoryWithSeatClass:(VBSeatClass)seatClass;
 
 @end
