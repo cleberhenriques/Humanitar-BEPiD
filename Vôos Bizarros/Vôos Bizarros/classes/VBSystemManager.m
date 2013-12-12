@@ -152,7 +152,7 @@
 	}
 	NSLog(airportsLog);
 	
-	//Show registered airlines
+	//Show registered airlines and flights.
 	NSLog(@"Registered airlines:");
 	NSMutableString *airlinesLog;
 	for (VBAirline *airline in airlines)
@@ -161,15 +161,11 @@
 		[airlinesLog appendString:@":\n"];
 		for (VBFlight *flight in airline.flights)
 		{
-			[airlinesLog appendString:[@"Flight ID :" stringByAppendingString:flight.flID]];
-			[airlinesLog appendString:[@"\nAvailable categories: " stringByAppendingString:flight.categories.description]];
-			[airlinesLog appendString:[@"\nOrigin: " stringByAppendingString:flight.orig]];
-			[airlinesLog appendString:[@"\nDestination: " stringByAppendingString:flight.dest]];
-			[airlinesLog appendString:[@""]]
+			[airlinesLog appendString:flight.description];
+			[airlinesLog appendString:@"\n"];
 		}
 	}
-	
-	
+	NSLog(airlinesLog);
 }
 
 @end
