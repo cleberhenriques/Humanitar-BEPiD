@@ -147,7 +147,8 @@
 	NSMutableString *airportsLog;
 	for (VBAirport *airport in airports)
 	{
-		[airportsLog appendString:airport.name];//botar quebra de linha
+		[airportsLog appendString:airport.name];
+		[airportsLog appendString:@"\n"];
 	}
 	NSLog(airportsLog);
 	
@@ -156,10 +157,15 @@
 	NSMutableString *airlinesLog;
 	for (VBAirline *airline in airlines)
 	{
-		[airlinesLog appendString:airline.nome];//botar quebra de linha
+		[airlinesLog appendString:airline.nome];
+		[airlinesLog appendString:@":\n"];
 		for (VBFlight *flight in airline.flights)
 		{
-			<#statements#>
+			[airlinesLog appendString:[@"Flight ID :" stringByAppendingString:flight.flID]];
+			[airlinesLog appendString:[@"\nAvailable categories: " stringByAppendingString:flight.categories.description]];
+			[airlinesLog appendString:[@"\nOrigin: " stringByAppendingString:flight.orig]];
+			[airlinesLog appendString:[@"\nDestination: " stringByAppendingString:flight.dest]];
+			[airlinesLog appendString:[@""]]
 		}
 	}
 	
