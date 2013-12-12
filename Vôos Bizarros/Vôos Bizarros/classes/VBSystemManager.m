@@ -49,7 +49,7 @@
     [airports addObject:airport];
 }
 
-- (void) bookSeatOnAirline:(NSString *) airlineName
+- (BOOL) bookSeatOnAirline:(NSString *) airlineName
                   OnFlight:(NSString *) flightID
              WithSeatClass:(VBSeatClass) seatClass
                   OnRow:(int) row
@@ -118,20 +118,45 @@
                            Columns:(NSInteger) cols
                       AndSeatClass:(VBSeatClass) sc
 {
+    
+    VBAirline *airLineAux = [self findAirline: airline];
+    VBFlight* flightAux = [airLineAux getFlightWithId:flightID];
+
     VBCategory *catAux = [[VBCategory alloc] init];
     
     catAux.rows = rows;
     catAux.cols = cols;
     catAux.sClass = sc;
     
-    VBAirline *airLineAux = [self findAirline: airline];
-    
-    [airLineAux getFlightWithId:flightID];
+    [flightAux addCategory:catAux];
 }
 
 - (void) displaySystemDetails
 {
-    
+    NSLog(@"System Details.");
+	
+	//Show registered airports
+	NSLog(@"Registered airports:");
+	NSMutableString *airportsLog;
+	for (VBAirport *airport in airports)
+	{
+		[airportsLog appendString:airport.name];//botar quebra de linha
+	}
+	NSLog(airportsLog);
+	
+	//Show registered airlines
+	NSLog(@"Registered airlines:");
+	NSMutableString *airlinesLog;
+	for (VBAirline *airline in airlines)
+	{
+		[airlinesLog appendString:airline.nome];//botar quebra de linha
+		for (VBFlight *flight in airline.flights)
+		{
+			<#statements#>
+		}
+	}
+	
+	
 }
 
 @end

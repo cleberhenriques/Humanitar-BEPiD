@@ -25,7 +25,7 @@
 - (NSArray *) findAvailableFlightsFrom: (NSString *) origin
                                     To: (NSString *) destination;
 - (void) displaySystemDetails;
-- (void) bookSeatOnAirline:(NSString *) airline
+- (BOOL) bookSeatOnAirline:(NSString *) airline
                   OnFlight:(NSString *)flightID
              WithSeatClass:(VBSeatClass) seatClass
                      OnRow:(int) row
