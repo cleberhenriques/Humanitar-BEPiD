@@ -119,7 +119,7 @@
 {
     
     VBAirline *airLineAux = [self findAirline: airline];
-    VBFlight* flightAux = [airLineAux getFlightWhithId:flightID];
+    VBFlight* flightAux = [airLineAux getFlightWithId:flightID];
 
     VBCategory *catAux = [[VBCategory alloc] init];
     
