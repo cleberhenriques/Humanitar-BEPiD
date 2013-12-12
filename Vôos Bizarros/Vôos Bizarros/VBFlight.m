@@ -29,6 +29,16 @@
 	return NO;
 }
 
-
+- (VBCategory *)getCategoryWhithSeatClass:(VBSeatClass)seatClass
+{
+    for (VBCategory *category in _categories)
+    {
+        if (seatClass == category.sClass)
+        {
+            return category;
+        }
+    }
+    return nil;
+}
 
 @end

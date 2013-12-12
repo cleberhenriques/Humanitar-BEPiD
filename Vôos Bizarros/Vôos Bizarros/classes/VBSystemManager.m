@@ -57,6 +57,8 @@
 {
     VBAirline *airline = [self findAirline:airlineName];
     VBFlight *flight = [airline getFlight:flightID];
+    VBCategory *category = [flight ]
+    
     
     
     

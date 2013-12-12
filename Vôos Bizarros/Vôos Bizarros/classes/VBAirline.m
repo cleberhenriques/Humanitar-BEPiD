@@ -9,31 +9,28 @@
 #import "VBAirline.h"
 
 @implementation VBAirline
-{
-    NSMutableArray *flights;
-}
 
 - (instancetype) init
 {
     if (self = [super init])
     {
-        flights = [[NSMutableArray alloc] init];
+        _flights = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 - (void) addFlight:(id) newFlight
 {
-    [flights addObject:newFlight];
+    [_flights addObject:newFlight];
 }
 
-- (VBFlight *) getFlight:(NSString *) idVoo
+- (VBFlight *) getFlightWhithId:(NSString *) idVoo
 {
-	for (VBFlight *tmp in flights) {
-    
-        if ([idVoo compare:tmp.flID])
+	for (VBFlight *flight in _flights)
+    {
+        if ([idVoo compare:flight.flID])
         {
-            return tmp;
+            return flight;
         }
     }
     return nil;
