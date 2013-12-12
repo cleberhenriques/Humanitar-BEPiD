@@ -49,12 +49,16 @@
     [airports addObject:airport];
 }
 
-- (void) bookSeatOnAirline:(NSString *) airline
+- (void) bookSeatOnAirline:(NSString *) airlineName
                   OnFlight:(NSString *) flightID
              WithSeatClass:(VBSeatClass) seatClass
                   OnColumn:(int) col
                     AndRow:(char) row
 {
+    VBAirline *airline = [self findAirline:airlineName];
+    VBFlight *flight = [airline getFlight:flightID];
+    
+    
     
 }
 
