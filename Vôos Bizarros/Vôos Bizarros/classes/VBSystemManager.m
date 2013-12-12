@@ -49,7 +49,7 @@
     [airports addObject:airport];
 }
 
-- (void) bookSeatOnAirline:(NSString *) airlineName
+- (BOOL) bookSeatOnAirline:(NSString *) airlineName
                   OnFlight:(NSString *) flightID
              WithSeatClass:(VBSeatClass) seatClass
                   OnRow:(int) row
@@ -57,11 +57,14 @@
 {
     VBAirline *airline = [self findAirline:airlineName];
     VBFlight *flight = [airline getFlightWithId:flightID];
-    VBCategory *category = [flight ]
+    VBCategory *category = [flight getCategoryWithSeatClass:seatClass];
     
-    
-    
-    
+    if (category != nil && [category seatReservedOnRow:row andCol:col])
+    {
+        return [category reserveSeatOnRow:row andCol:col];
+        
+    }
+    return FALSE;
 }
 
 - (NSArray *) findAvailableFlightsFrom: (NSString *) origin
