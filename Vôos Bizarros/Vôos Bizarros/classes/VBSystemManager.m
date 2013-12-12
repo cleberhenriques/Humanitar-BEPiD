@@ -14,22 +14,22 @@
     NSMutableArray *airlines;
 }
 
--(instancetype)init
+- (instancetype) init
 {
     if (self = [super init])
     {
-        airports = [[NSMutableArray alloc]init];
-        airlines = [[NSMutableArray alloc]init];
+        airports = [[NSMutableArray alloc] init];
+        airlines = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
--(BOOL)createAirline:(NSString*) name
+- (BOOL) createAirlineWithName:(NSString *) name
 {
     if([name length] <= 5)
     {
-        VBAirline* airline = [[VBAirline alloc] init];
-        for(VBAirline* al in airlines)
+        VBAirline *airline = [[VBAirline alloc] init];
+        for(VBAirline *al in airlines)
         {
 			if([airline.nome isEqual:name])
 				return NO;
@@ -43,29 +43,38 @@
     return NO;
 }
 
--(void)createAirport:(NSString *)airportName
+- (void) createAirportWithName:(NSString *) airportName
 {
-    VBAirport *airport = [[VBAirport alloc]initWithName:airportName];
+    VBAirport *airport = [[VBAirport alloc] initWithName:airportName];
     [airports addObject:airport];
 }
 
--(void)bookSeat:(NSString *)air flight:(NSString *)fl seatClass:(VBSeatClass)s row:(int)row col:(char)col
+- (void) bookSeatOnAirline:(NSString *) airline
+                  OnFlight:(NSString *) flightID
+             WithSeatClass:(VBSeatClass) seatClass
+                  OnColumn:(int) col
+                    AndRow:(char) row
 {
     
 }
 
-- (NSArray *) findAvailableFlights: (NSString *) origin : (NSString *) destination
+- (NSArray *) findAvailableFlightsFrom: (NSString *) origin
+                                    To:(NSString *) destination
 {
-    
-    
     return nil;
 }
 
-
--(void)createFlight:(NSString *)name :(NSString *)origem :(NSString *)destino :(int)year :(int)month :(int)day :(NSString *)flightID{
-	
-	VBAirline *air = [self findCompany:name];
-	if(air == nil){
+- (void) createFlightWithName:(NSString *) name
+                         From:(NSString *) origem
+                           To:(NSString *) destino
+                       OnYear:(int) year
+                      OnMonth:(int) month
+                        OnDay:(int) day
+                 WithFlightID:(NSString *) flightID
+{
+    VBAirline *air = [self findCompany:name];
+	if(air == nil)
+    {
 		NSLog(@"Companhia nao existente.");
 	}
 	
@@ -80,8 +89,9 @@
 	[air addFlight: voo];
 }
 
--(VBAirline*)findCompany:(NSString*)name{
-	for (VBAirline* comp in airlines) {
+- (VBAirline *) findCompany:(NSString*) name
+{
+	for (VBAirline *comp in airlines) {
 		if([name compare: comp.nome]){
 			return comp;
 		}
@@ -89,8 +99,11 @@
 	return nil;
 }
 
-
-- (void)createCategory: (NSString *)air : (NSString *)flID : (NSInteger)rows : (NSInteger)cols : (VBSeatClass)sc
+- (void) createCategoryWithAirline:(NSString *) airline
+                        OnFlightID:(NSString *) flightID
+                          WithRows:(NSInteger) rows
+                           Columns:(NSInteger) cols
+                      AndSeatClass:(VBSeatClass) sc
 {
     VBCategory *catAux = [[VBCategory alloc] init];
     
@@ -98,9 +111,9 @@
     catAux.cols = cols;
     catAux.sClass = sc;
     
-    VBAirline * airLineAux = [self findCompany: air];
+    VBAirline *airLineAux = [self findCompany: airline];
     
-    [airLineAux getFlight:flID];
+    [airLineAux getFlight:flightID];
 }
 
 - (void) displaySystemDetails

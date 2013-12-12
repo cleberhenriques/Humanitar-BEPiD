@@ -13,8 +13,7 @@
 
 @property NSString *nome;
 
--(instancetype)init;
--(void)addFlight:(VBFlight *)newFlight;
--(VBFlight* )getFlight:(NSString *)idVoo;
+- (void) addFlight:(VBFlight *) newFlight;
+- (VBFlight *) getFlight:(NSString *) idVoo;
 
 @end

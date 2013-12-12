@@ -12,16 +12,18 @@
 
 - (instancetype)init
 {
-    self = [super init];
-    if (self) {
-        _categories = [[NSMutableArray alloc]init];
+    if (self = [super init])
+    {
+        _categories = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
--(BOOL)addCategorie:(VBCategory *)categorie{
-	if(![_categories containsObject:categorie]){
-		[_categories addObject:categorie];
+- (BOOL) addCategory:(VBCategory *) category
+{
+	if(![_categories containsObject:category])
+    {
+		[_categories addObject:category];
 		return YES;
 	}
 	return NO;

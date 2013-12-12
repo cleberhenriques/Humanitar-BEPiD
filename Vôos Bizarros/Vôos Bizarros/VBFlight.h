@@ -19,6 +19,6 @@
 @property int month;
 @property int day;
 
-- (BOOL) addCategorie:(VBCategory*) categorie;
+- (BOOL) addCategory:(VBCategory*) category;
 
 @end

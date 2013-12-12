@@ -14,7 +14,7 @@
 @property int column;
 @property (getter = isReserved) BOOL reserved;
 
-- (instancetype) initWithRow: (char) aRow
-                   AndColumn: (int) aColumn;
+- (instancetype) initWithRow:(char) aRow
+                   AndColumn:(int) aColumn;
 
 @end
