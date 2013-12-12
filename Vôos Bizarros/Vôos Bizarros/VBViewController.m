@@ -8,6 +8,7 @@
 
 #import "VBViewController.h"
 #import "VBSystemManager.h"
+#import "VBSeatClass.h"
 @interface VBViewController ()
 
 @end
