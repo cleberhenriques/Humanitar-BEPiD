@@ -72,7 +72,7 @@
                         OnDay:(int) day
                  WithFlightID:(NSString *) flightID
 {
-    VBAirline *air = [self findCompany:name];
+    VBAirline *air = [self findAirline:name];
 	if(air == nil)
     {
 		NSLog(@"Companhia nao existente.");
@@ -89,7 +89,7 @@
 	[air addFlight: voo];
 }
 
-- (VBAirline *) findCompany:(NSString*) name
+- (VBAirline *) findAirline:(NSString*) name
 {
 	for (VBAirline *comp in airlines) {
 		if([name compare: comp.nome]){
@@ -111,7 +111,7 @@
     catAux.cols = cols;
     catAux.sClass = sc;
     
-    VBAirline *airLineAux = [self findCompany: airline];
+    VBAirline *airLineAux = [self findAirline: airline];
     
     [airLineAux getFlight:flightID];
 }
