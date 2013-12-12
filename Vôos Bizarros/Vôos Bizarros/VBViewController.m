@@ -8,6 +8,7 @@
 
 #import "VBViewController.h"
 #import "VBSystemManager.h"
+#import "VBSeatClass.h"
 @interface VBViewController ()
 {
     VBSystemManager *SystemManager;
@@ -87,10 +88,10 @@
     [res createCategoryWithAirline:@"SWSERTT" OnFlightID:@"123" WithRows:5 Columns:5 AndSeatClass:Economica]; //invalid
     [res displaySystemDetails];
     [res findAvailableFlightsFrom: @"DEN" To:@"LON"];
-    [res bookSeatOnAirline:@"DELTA" OnFlight:@"123" WithSeatClass:Executiva OnColumn:1 AndRow:'A'];
-    [res bookSeatOnAirline:@"DELTA" OnFlight:@"123" WithSeatClass:Economica OnColumn:1 AndRow:'A'];
-    [res bookSeatOnAirline:@"DELTA" OnFlight:@"123" WithSeatClass:Economica OnColumn:1 AndRow:'B'];
-    [res bookSeatOnAirline:@"DELTA" OnFlight:@"123" WithSeatClass:Executiva OnColumn:1 AndRow:'A']; //already booked
+    [res bookSeatOnAirline:@"DELTA" OnFlight:@"123" WithSeatClass:Executiva OnRow:1 AndColumn:'A'];
+    [res bookSeatOnAirline:@"DELTA" OnFlight:@"123" WithSeatClass:Economica OnRow:1 AndColumn:'A'];
+    [res bookSeatOnAirline:@"DELTA" OnFlight:@"123" WithSeatClass:Economica OnRow:1 AndColumn:'B'];
+    [res bookSeatOnAirline:@"DELTA" OnFlight:@"123" WithSeatClass:Executiva OnRow:1 AndColumn:'A']; //already booked
     [res displaySystemDetails];
     [res findAvailableFlightsFrom:@"DEN" To:@"LON"];*/
 }

@@ -7,6 +7,9 @@
 //
 
 #import "VBSystemManager.h"
+#import "VBAirline.h"
+#import "VBAirport.h"
+#import "VBFlight.h"
 
 @implementation VBSystemManager
 {
@@ -52,8 +55,8 @@
 - (BOOL) bookSeatOnAirline:(NSString *) airlineName
                   OnFlight:(NSString *) flightID
              WithSeatClass:(VBSeatClass) seatClass
-                  OnRow:(int) row
-                    AndColumn:(char) col
+                     OnRow:(int) row
+                 AndColumn:(char) col
 {
     VBAirline *airline = [self findAirline:airlineName];
     VBFlight *flight = [airline getFlightWithId:flightID];
@@ -70,13 +73,21 @@
 - (NSArray *) findAvailableFlightsFrom: (NSString *) origin
                                     To:(NSString *) destination
 {
-    for (VBAirline *airline in airlines) {
-        /*for (VBFlight *flight in [airline ]) {
-            ;
-        }*/
+    NSMutableArray *flightCandidates = [[NSMutableArray alloc] init];
+    for (VBAirline *airline in airlines)
+    {
+        for (VBFlight *flight in [airline flights])
+        {
+            if ([flight.from isEqualToString:origin] && [flight.from isEqualToString:destination])
+            {
+                if ([[flight schedule] laterDate:[NSDate date]])
+                {
+                    [flightCandidates addObject:flight];
+                }
+            }
+        }
     }
-    
-    return nil;
+    return [flightCandidates arrayByAddingObjectsFromArray:flightCandidates];
 }
 
 - (void) createFlightWithName:(NSString *) name
@@ -85,7 +96,7 @@
                        OnYear:(int) year
                       OnMonth:(int) month
                         OnDay:(int) day
-                 WithFlightID:(NSString *) flightID
+                 WithFlightID:(NSString *) aFlightID
 {
     VBAirline *air = [self findAirline:name];
 	if(air == nil)
@@ -93,13 +104,10 @@
 		NSLog(@"Companhia nao existente.");
 	}
 	
-	VBFlight *voo = [[VBFlight alloc] init];
-	voo.orig = origem;
-	voo.dest = destino;
-	voo.year = year;
-	voo.month = month;
-	voo.day = day;
-	voo.flID = flightID;
+	VBFlight *voo = [[VBFlight alloc] initWithDate:day Month:month AndYear:year];
+	voo.from = origem;
+	voo.to = destino;
+	voo.flightId = aFlightID;
 	
 	[air addFlight: voo];
 }
@@ -122,7 +130,7 @@
 {
     
     VBAirline *airLineAux = [self findAirline: airline];
-    VBFlight* flightAux = [airLineAux getFlightWithId:flightID];
+    VBFlight *flightAux = [airLineAux getFlightWithId:flightID];
 
     VBCategory *catAux = [[VBCategory alloc] init];
     
@@ -142,19 +150,22 @@
 	NSMutableString *airportsLog;
 	for (VBAirport *airport in airports)
 	{
-		[airportsLog appendString:airport.name];//botar quebra de linha
+		[airportsLog appendString:airport.name];
+		[airportsLog appendString:@"\n"];
 	}
-	NSLog(airportsLog);
+	NSLog(@"%@",airportsLog);
 	
-	//Show registered airlines
+	//Show registered airlines and flights.
 	NSLog(@"Registered airlines:");
 	NSMutableString *airlinesLog;
 	for (VBAirline *airline in airlines)
 	{
-		[airlinesLog appendString:airline.nome];//botar quebra de linha
+		[airlinesLog appendString:airline.nome];
+		[airlinesLog appendString:@":\n"];
 		for (VBFlight *flight in airline.flights)
 		{
-			<#statements#>
+			[airlinesLog appendString:flight.description];
+			[airlinesLog appendString:@"\n"];
 		}
 	}
 	*/

@@ -28,7 +28,7 @@
 {
 	for (VBFlight *flight in _flights)
     {
-        if ([idVoo compare:flight.flID])
+        if ([idVoo compare:flight.flightId])
         {
             return flight;
         }

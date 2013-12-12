@@ -25,7 +25,7 @@
         {
             for (NSInteger col = 0; col < aCols; col++)
             {
-                VBSeat *seat = [[VBSeat alloc]initWithRow:row AndColumn:[alfabeto characterAtIndex:col]];
+                VBSeat *seat = [[VBSeat alloc] initWithRow:row AndColumn:[alfabeto characterAtIndex:col]];
                 [_seats addObject:seat];
             }
         }
@@ -33,7 +33,7 @@
     return self;
 }
 
-- (BOOL)seatReservedOnRow:(NSInteger)row
+- (BOOL) seatReservedOnRow:(NSInteger)row
                  andCol:(char)col
 {
     for (VBSeat *seat in _seats)
@@ -58,6 +58,7 @@
                 seat.reserved = TRUE;
                 return TRUE;
             }
+            // REVIEW: Aplicar redução (remover else). se a condição falhar, a execução irá para o final do método que já retorna um FALSE.
             else
             {
                 return FALSE;
