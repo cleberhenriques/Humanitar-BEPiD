@@ -20,6 +20,10 @@
 - (instancetype) initWithClass:(VBSeatClass) aClass
                           Rows:(NSInteger) aRows
                     AndColumns:(NSInteger) aCols;
+- (BOOL)seatReservedOnRow:(NSInteger)row
+                 andCol:(char)col;
+- (BOOL) reserveSeatOnRow:(NSInteger)row
+                   andCol:(char)col;
 
 
 @end

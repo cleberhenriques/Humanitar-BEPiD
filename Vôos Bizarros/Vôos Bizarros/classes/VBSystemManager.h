@@ -25,11 +25,11 @@
 - (NSArray *) findAvailableFlightsFrom: (NSString *) origin
                                     To: (NSString *) destination;
 - (void) displaySystemDetails;
-- (void) bookSeatOnAirline:(NSString *) airline
+- (BOOL) bookSeatOnAirline:(NSString *) airline
                   OnFlight:(NSString *)flightID
              WithSeatClass:(VBSeatClass) seatClass
-                     OnColumn:(int) col
-                 AndRow:(char) row;
+                     OnColumn:(char) col
+                 AndRow:(int) row;
 - (void) createCategoryWithAirline:(NSString *) airline
                         OnFlightID:(NSString *) flightID
                           WithRows:(NSInteger) rows

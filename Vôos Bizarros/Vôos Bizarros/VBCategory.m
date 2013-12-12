@@ -19,11 +19,53 @@
         _sClass = aClass;
         _rows = aRows;
         _cols = aCols;
+        
+        NSString *alfabeto = @"ABCDEFGHIJKLMNOPQRSTUVXYZ";
+        for (NSInteger row = 1; row <= aRows; row++)
+        {
+            for (NSInteger col = 0; col < aCols; col++)
+            {
+                VBSeat *seat = [[VBSeat alloc]initWithRow:row AndColumn:[alfabeto characterAtIndex:col]];
+                [_seats addObject:seat];
+            }
+        }
     }
-    
     return self;
 }
 
+- (BOOL)seatReservedOnRow:(NSInteger)row
+                 andCol:(char)col
+{
+    for (VBSeat *seat in _seats)
+    {
+        if (row == seat.row && col == seat.column)
+        {
+            return seat.isReserved;
+        }
+    }
+    return FALSE;
+}
 
+- (BOOL) reserveSeatOnRow:(NSInteger)row
+                  andCol:(char)col
+{
+    for (VBSeat *seat in _seats)
+    {
+        if (row == seat.row && col == seat.column)
+        {
+            if (seat.isReserved == FALSE)
+            {
+                seat.reserved = TRUE;
+                return TRUE;
+            }
+            else
+            {
+                return FALSE;
+                
+            }
+        }
+    }
+    return FALSE;
+}
 @end
 
