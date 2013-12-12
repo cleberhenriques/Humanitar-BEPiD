@@ -42,6 +42,7 @@
 /* Begin PBXFileReference section */
 		123FE8FF18587B60004A9E78 /* VBFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFlight.h; sourceTree = "<group>"; };
 		123FE90018587B60004A9E78 /* VBFlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFlight.m; sourceTree = "<group>"; };
+		1F1364311859E3EE0055E4B3 /* VBSeatClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VBSeatClass.h; path = classes/VBSeatClass.h; sourceTree = "<group>"; };
 		1FC9B9F81858892900BFD129 /* VBAirline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBAirline.h; path = classes/VBAirline.h; sourceTree = "<group>"; };
 		1FC9B9F91858892900BFD129 /* VBAirline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBAirline.m; path = classes/VBAirline.m; sourceTree = "<group>"; };
 		1FC9B9FB18588C4800BFD129 /* VBSystemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBSystemManager.h; path = classes/VBSystemManager.h; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		E908B5E4185873C400849F66 /* Vo_os_BizarrosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vo_os_BizarrosTests.m; sourceTree = "<group>"; };
 		E9BDAC07185889A1000CDB32 /* VBCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBCategory.h; sourceTree = "<group>"; };
 		E9BDAC08185889A1000CDB32 /* VBCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBCategory.m; sourceTree = "<group>"; };
-		E9BDAC09185889A1000CDB32 /* VBSeatClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBSeatClass.h; sourceTree = "<group>"; };
 		F4EB092B18587D1D007EDED9 /* VBSeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBSeat.h; path = classes/VBSeat.h; sourceTree = "<group>"; };
 		F4EB092C18587D1D007EDED9 /* VBSeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBSeat.m; path = classes/VBSeat.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,7 +105,7 @@
 				406A61B318588D0E009E6855 /* VBAirport.m */,
 				E9BDAC07185889A1000CDB32 /* VBCategory.h */,
 				E9BDAC08185889A1000CDB32 /* VBCategory.m */,
-				E9BDAC09185889A1000CDB32 /* VBSeatClass.h */,
+				1F1364311859E3EE0055E4B3 /* VBSeatClass.h */,
 				1FC9B9F81858892900BFD129 /* VBAirline.h */,
 				1FC9B9F91858892900BFD129 /* VBAirline.m */,
 				123FE8FF18587B60004A9E78 /* VBFlight.h */,
