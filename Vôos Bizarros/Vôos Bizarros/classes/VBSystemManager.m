@@ -91,13 +91,13 @@
     return [flightCandidates arrayByAddingObjectsFromArray:flightCandidates];
 }
 
-- (void) createFlightWithID:(NSString *) aFlightID
-					   From:(NSString *) origem
-						 To:(NSString *) destino
-					 OnYear:(int) year
-					OnMonth:(int) month
-					  OnDay:(int) day
-				  OnAirline:(NSString *) name
+- (void) createFlightWithName:(NSString *) name
+						 From:(NSString *) origem
+						   To:(NSString *) destino
+					   OnYear:(int) year
+					  OnMonth:(int) month
+						OnDay:(int) day
+					   WithID:(NSString*) aFlightID;
 {
     VBAirline *airline = [self findAirline:name];
 	if(airline == nil)
