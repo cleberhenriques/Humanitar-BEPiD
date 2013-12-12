@@ -17,6 +17,7 @@
 @end
 
 @implementation VBViewController
+
 - (IBAction)ButtonCreateAirport:(UIButton *)sender
 {
     if (_labelAirport.text != nil)
@@ -32,8 +33,10 @@
 
 - (void)viewDidLoad
 {
-    SystemManager = [[VBSystemManager alloc]init];
+    SystemManager = [[VBSystemManager alloc] init];
     NSLog(@"Inicializado com sucesso!");
+    char *string;
+    scanf("%s", string);
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
@@ -49,7 +52,7 @@
 
 - (void) startApp
 {
-    /*VBSystemManager *res = [[VBSystemManager alloc] init];
+    VBSystemManager *res = [[VBSystemManager alloc] init];
     //Create airports
     [res createAirportWithName:@"DEN"];
     [res createAirportWithName:@"DFW"];
@@ -93,6 +96,6 @@
     [res bookSeatOnAirline:@"DELTA" OnFlight:@"123" WithSeatClass:Economica OnRow:1 AndColumn:'B'];
     [res bookSeatOnAirline:@"DELTA" OnFlight:@"123" WithSeatClass:Executiva OnRow:1 AndColumn:'A']; //already booked
     [res displaySystemDetails];
-    [res findAvailableFlightsFrom:@"DEN" To:@"LON"];*/
+    [res findAvailableFlightsFrom:@"DEN" To:@"LON"];
 }
 @end

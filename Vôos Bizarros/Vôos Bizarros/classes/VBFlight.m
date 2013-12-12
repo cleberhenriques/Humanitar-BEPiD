@@ -58,12 +58,12 @@
 
 - (NSString *)description
 {
-	NSMutableString *desc;
+	NSMutableString *desc = [[NSMutableString alloc] init];
 	[desc appendString:[@"Flight ID :" stringByAppendingString:_flightId]];
-	[desc appendString:[@"\nAvailable categories: " stringByAppendingString:_categories.description]];
+	[desc appendString:[@"\nAvailable categories: " stringByAppendingString:[_categories description]]];
 	[desc appendString:[@"\nFrom: " stringByAppendingString:_from]];
 	[desc appendString:[@"\nTo: " stringByAppendingString:_to]];
-	[desc appendString:[@"\nSchedule: " stringByAppendingString:_schedule.description]];
+	[desc appendString:[@"\nSchedule: " stringByAppendingString:[_schedule description]]];
 	return desc;
 }
 
