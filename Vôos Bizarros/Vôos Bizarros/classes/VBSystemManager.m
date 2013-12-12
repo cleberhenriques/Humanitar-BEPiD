@@ -124,7 +124,30 @@
 
 - (void) displaySystemDetails
 {
-    
+    NSLog(@"System Details.");
+	
+	//Show registered airports
+	NSLog(@"Registered airports:");
+	NSMutableString *airportsLog;
+	for (VBAirport *airport in airports)
+	{
+		[airportsLog appendString:airport.name];//botar quebra de linha
+	}
+	NSLog(airportsLog);
+	
+	//Show registered airlines
+	NSLog(@"Registered airlines:");
+	NSMutableString *airlinesLog;
+	for (VBAirline *airline in airlines)
+	{
+		[airlinesLog appendString:airline.nome];//botar quebra de linha
+		for (VBFlight *flight in airline.flights)
+		{
+			<#statements#>
+		}
+	}
+	
+	
 }
 
 @end
