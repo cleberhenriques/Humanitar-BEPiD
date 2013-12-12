@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		123FE90118587B60004A9E78 /* VBFlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 123FE90018587B60004A9E78 /* VBFlight.m */; };
+		1F1364301859DF420055E4B3 /* VBSeat.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EB092C18587D1D007EDED9 /* VBSeat.m */; };
 		1FC9B9FA1858892900BFD129 /* VBAirline.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9B9F91858892900BFD129 /* VBAirline.m */; };
 		1FC9B9FD18588C4800BFD129 /* VBSystemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9B9FC18588C4800BFD129 /* VBSystemManager.m */; };
 		406A61B418588D0E009E6855 /* VBAirport.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A61B318588D0E009E6855 /* VBAirport.m */; };
@@ -289,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1364301859DF420055E4B3 /* VBSeat.m in Sources */,
 				1FC9B9FD18588C4800BFD129 /* VBSystemManager.m in Sources */,
 				1FC9B9FA1858892900BFD129 /* VBAirline.m in Sources */,
 				E908B5C7185873C400849F66 /* VBAppDelegate.m in Sources */,

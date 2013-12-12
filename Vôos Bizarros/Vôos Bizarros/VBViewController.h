@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VBSystemManager.h"
 
 @interface VBViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *labelAirport;
+@property (weak, nonatomic) IBOutlet UITextField *labelAirline;
+@property (weak, nonatomic) IBOutlet UILabel *labelTeste;
 
 @end

@@ -136,7 +136,7 @@
 - (void) displaySystemDetails
 {
     NSLog(@"System Details.");
-	
+	/*
 	//Show registered airports
 	NSLog(@"Registered airports:");
 	NSMutableString *airportsLog;
@@ -157,7 +157,7 @@
 			<#statements#>
 		}
 	}
-	
+	*/
 	
 }
 
