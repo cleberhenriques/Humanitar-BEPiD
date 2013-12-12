@@ -91,18 +91,27 @@
     return [flightCandidates arrayByAddingObjectsFromArray:flightCandidates];
 }
 
-- (void) createFlightWithName:(NSString *) name
-                         From:(NSString *) origem
-                           To:(NSString *) destino
-                       OnYear:(int) year
-                      OnMonth:(int) month
-                        OnDay:(int) day
-                 WithFlightID:(NSString *) aFlightID
+- (void) createFlightWithID:(NSString *) aFlightID
+					   From:(NSString *) origem
+						 To:(NSString *) destino
+					 OnYear:(int) year
+					OnMonth:(int) month
+					  OnDay:(int) day
+				  OnAirline:(NSString *) name
 {
-    VBAirline *air = [self findAirline:name];
-	if(air == nil)
+    VBAirline *airline = [self findAirline:name];
+	if(airline == nil)
     {
-		NSLog(@"Companhia nao existente.");
+		NSLog(@"Airline does not exists.");
+	}
+	
+	if(![self existsAirport:origem])
+	{
+		NSLog(@"Origin airport does not exists.");//fazer o metodo dar break
+	}
+	if(![self existsAirport:destino])
+	{
+		NSLog(@"Destination airport does not exists");
 	}
 	
 	VBFlight *voo = [[VBFlight alloc] initWithDate:day Month:month AndYear:year];
@@ -110,10 +119,10 @@
 	voo.to = destino;
 	voo.flightId = aFlightID;
 	
-	[air addFlight: voo];
+	[airline addFlight: voo];
 }
 
-- (VBAirline *) findAirline:(NSString*) name
+- (VBAirline *) findAirline:(NSString *) name
 {
 	for (VBAirline *comp in airlines) {
 		if([name compare: comp.nome]){
@@ -122,6 +131,18 @@
 	}
 	return nil;
 }
+
+- (BOOL) existsAirport:(NSString *)airportName
+{
+	for (VBAirport *anAirport in airports) {
+		if([anAirport.name localizedCaseInsensitiveCompare:airportName])
+		{
+			return YES;
+		}
+	}
+	return NO;
+}
+
 
 - (void) createCategoryWithAirline:(NSString *) airline
                         OnFlightID:(NSString *) flightID

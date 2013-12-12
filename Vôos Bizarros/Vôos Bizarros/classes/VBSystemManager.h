@@ -14,13 +14,13 @@
 
 - (BOOL) createAirlineWithName:(NSString *) name;
 - (void) createAirportWithName:(NSString *) airportName;
-- (void) createFlightWithName:(NSString *) name
+- (void) createFlightWithID:(NSString *) aFlightID
 				   From:(NSString *) origem
 				   To:(NSString *) destino
 				   OnYear:(int) year
 				   OnMonth:(int) month
 				   OnDay:(int) day
-				   WithFlightID:(NSString*) flightID;
+			   OnAirline:(NSString*) name;
 - (NSArray *) findAvailableFlightsFrom: (NSString *) origin
                                     To: (NSString *) destination;
 - (void) displaySystemDetails;
