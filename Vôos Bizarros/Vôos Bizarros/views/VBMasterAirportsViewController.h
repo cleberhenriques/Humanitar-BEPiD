@@ -7,11 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VBSystemManager.h"
+
 
 @class VBDetailViewController;
 
 @interface VBMasterAirportsViewController : UITableViewController
 
 @property (strong, nonatomic) VBDetailViewController *detailViewController;
+
+
+
+
+@property (weak, nonatomic) IBOutlet UITextField *labelAirport;
+@property (weak, nonatomic) IBOutlet UITextField *labelAirline;
+@property (weak, nonatomic) IBOutlet UILabel *labelTeste;
+
+
+
 
 @end

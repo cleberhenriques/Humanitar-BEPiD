@@ -42,25 +42,22 @@
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (VBDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-    VBSystemManager *res = [[VBSystemManager alloc] init];
-    //Create airports
-    [res createAirportWithName:@"DEN"];
-    [res createAirportWithName:@"DFW"];
-    [res createAirportWithName:@"LON"];
-    [res createAirportWithName:@"JPN"];
-    [res createAirportWithName:@"DE"]; //invalid
-    
-    //Show registered airports
-	NSLog(@"Registered airports:");
-	NSMutableString *airportsLog = [[NSMutableString alloc] init];
-	for (VBAirport *airport in airports)
-	{
-		[airportsLog appendString:airport.name];
-		[airportsLog appendString:@"\n"];
-	}
-	NSLog(@"%@",airportsLog);
 
     
+    SystemManager = [[VBSystemManager alloc] init];
+    NSLog(@"Inicializado com sucesso!");
+    //char *string;
+    //scanf("%s", string);
+	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self startApp];
+    NSLog(@"Finalizado!");
+    
+    if (!_objects) {
+        _objects = [[NSMutableArray alloc] init];
+    }
+    _objects = [SystemManager listaDeAeroportos];
+
     
 }
 
@@ -72,12 +69,13 @@
 
 - (void)insertNewObject:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    if (!_objects) {
+//        _objects = [[NSMutableArray alloc] init];
+//    }
+//    _objects = [SystemManager listaDeAeroportos];
+//    
+    //NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    //[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - Table View
@@ -92,12 +90,18 @@
     return _objects.count;
 }
 
+
+
+
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    cell.textLabel.text = (NSString *)[[_objects objectAtIndex:indexPath.row] getName];
+    //cell.textInput.detailItem.text
+    
     return cell;
 }
 
@@ -107,15 +111,15 @@
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        [_objects removeObjectAtIndex:indexPath.row];
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+//    }
+//}
 
 /*
 // Override to support rearranging the table view.
@@ -141,13 +145,28 @@
     }
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        NSDate *object = _objects[indexPath.row];
+//        [[segue destinationViewController] setDetailItem:object];
+//    }
+//}
+
+- (void) startApp
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
-    }
+    VBSystemManager *res = [[VBSystemManager alloc] init];
+    //Create airports
+    [res createAirportWithName:@"DEN"];
+    [res createAirportWithName:@"DFW"];
+    [res createAirportWithName:@"LON"];
+    [res createAirportWithName:@"JPN"];
+    [res createAirportWithName:@"DE"]; //invalid
+    [res createAirportWithName:@"DEH"];
+    [res createAirportWithName:@"DEN"];
+
 }
+
 
 @end

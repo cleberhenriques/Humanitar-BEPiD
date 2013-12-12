@@ -179,6 +179,7 @@
 	
 	//Show registered airlines and flights.
 	NSLog(@"Registered airlines:");
+    
 	NSMutableString *airlinesLog = [[NSMutableString alloc] init];
 	for (VBAirline *airline in airlines)
 	{
@@ -188,11 +189,25 @@
 		for (VBFlight *flight in airline.flights)
 		{
 #warning THIS NEED TO BE FIXED
-            //[airlinesLog appendString:flight.description];
+            //[airlinesLog appendString: [flight description]];
 			[airlinesLog appendString:@"\n"];
 		}
 	}
 	NSLog(@"%@",airlinesLog);
+}
+
+-(NSMutableArray *)listaDeAeroportos
+{
+    //Show registered airports
+	NSLog(@"Registered airports:");
+	NSMutableArray *airportsList;
+
+	for (VBAirport *airport in airports)
+	{
+        
+		[airportsList addObject:airport];
+	}
+    return airportsList;
 }
 
 @end

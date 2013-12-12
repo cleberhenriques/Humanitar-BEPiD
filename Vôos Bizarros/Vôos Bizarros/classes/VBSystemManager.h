@@ -35,4 +35,6 @@
                            Columns:(NSInteger) cols
                       AndSeatClass:(VBSeatClass) sc;
 
+
+-(NSMutableArray *)listaDeAeroportos;
 @end
