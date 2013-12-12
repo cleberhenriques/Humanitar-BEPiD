@@ -24,7 +24,7 @@
     [_flights addObject:newFlight];
 }
 
-- (VBFlight *) getFlightWhithId:(NSString *) idVoo
+- (VBFlight *) getFlightWithId:(NSString *) idVoo
 {
 	for (VBFlight *flight in _flights)
     {

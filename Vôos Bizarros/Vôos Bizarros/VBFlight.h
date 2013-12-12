@@ -20,6 +20,6 @@
 @property int day;
 
 - (BOOL) addCategory:(VBCategory*) category;
-- (VBCategory *)getCategoryWhithSeatClass:(VBSeatClass)seatClass;
+- (VBCategory *)getCategoryWithSeatClass:(VBSeatClass)seatClass;
 
 @end
