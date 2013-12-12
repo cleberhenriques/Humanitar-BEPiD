@@ -7,6 +7,9 @@
 //
 
 #import "VBSystemManager.h"
+#import "VBAirline.h"
+#import "VBAirport.h"
+#import "VBFlight.h"
 
 @implementation VBSystemManager
 {
@@ -52,8 +55,8 @@
 - (BOOL) bookSeatOnAirline:(NSString *) airlineName
                   OnFlight:(NSString *) flightID
              WithSeatClass:(VBSeatClass) seatClass
-                  OnRow:(int) row
-                    AndColumn:(char) col
+                     OnRow:(int) row
+                 AndColumn:(char) col
 {
     VBAirline *airline = [self findAirline:airlineName];
     VBFlight *flight = [airline getFlightWithId:flightID];
@@ -127,7 +130,7 @@
 {
     
     VBAirline *airLineAux = [self findAirline: airline];
-    VBFlight* flightAux = [airLineAux getFlightWithId:flightID];
+    VBFlight *flightAux = [airLineAux getFlightWithId:flightID];
 
     VBCategory *catAux = [[VBCategory alloc] init];
     

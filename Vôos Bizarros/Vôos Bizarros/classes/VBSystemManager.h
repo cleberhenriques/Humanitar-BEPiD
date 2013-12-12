@@ -7,9 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VBAirline.h"
-#import "VBAirport.h"
-#import "VBFlight.h"
+#import "VBSeatClass.h"
 
 @interface VBSystemManager : NSObject
 
