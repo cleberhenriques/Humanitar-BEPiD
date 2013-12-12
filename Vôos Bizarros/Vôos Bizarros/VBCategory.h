@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "VBSeatClass.h"
+#import "VBSeat.h"
 
 @interface VBCategory : NSObject
-    
+
+@property (nonatomic) NSMutableArray *seats;
 @property (nonatomic) VBSeatClass sClass;
 @property (nonatomic) NSInteger rows;
 @property (nonatomic) NSInteger cols;
