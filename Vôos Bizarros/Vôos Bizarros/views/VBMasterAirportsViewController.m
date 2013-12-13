@@ -62,11 +62,6 @@
 
 - (void)insertNewObject:(id)sender
 {
-    
-    
-    
-    
-    
     newAirport = [[NSString alloc] init];
     
     UIAlertView *alert = [[UIAlertView alloc]
@@ -88,33 +83,28 @@
     {
         _objects = [[NSMutableArray alloc] init];
     }
-    
-    
-    
-    
-
 }
 
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     newAirport = [[alertView textFieldAtIndex:0] text];
     
-    NSLog(@"%@", newAirport);
+    //NSLog(@"%@", newAirport);
     //[SystemManager createAirlineWithName: [NSString stringWithFormat: @"%@", newAirport]];
     [SystemManager createAirportWithName:@"KKK"];
     [SystemManager createAirportWithName:@"HHH"];
-    NSLog(@"%@", newAirport);
-    NSLog(@"%@", [SystemManager getListOfAirports]);
+    //NSLog(@"%@", newAirport);
+    //NSLog(@"%@", [SystemManager getListOfAirports]);
     //_objects = [SystemManager getListOfAirports];
-    NSLog(@"%@", _objects);
-    [_objects insertObject:@"KKK" atIndex:0];
+    //NSLog(@"%@", _objects);
+    //[_objects insertObject:@"KKK" atIndex:0];
     
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    //NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 
-#warning Crashing here!
-    
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    //[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    _objects = [SystemManager getListOfAirports];
+    [self.tableView reloadData];
     
 }
 
