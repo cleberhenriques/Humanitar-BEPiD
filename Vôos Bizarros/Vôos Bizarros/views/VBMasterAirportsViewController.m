@@ -50,8 +50,6 @@
     NSLog(@"Finalizado!");
     
     _objects = [SystemManager getListOfAirports];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,31 +83,15 @@
     }
 }
 
-
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     newAirport = [[alertView textFieldAtIndex:0] text];
     
-    //NSLog(@"%@", newAirport);
-    //[SystemManager createAirlineWithName: [NSString stringWithFormat: @"%@", newAirport]];
-    [SystemManager createAirportWithName:@"KKK"];
-    [SystemManager createAirportWithName:@"HHH"];
-    //NSLog(@"%@", newAirport);
-    //NSLog(@"%@", [SystemManager getListOfAirports]);
-    //_objects = [SystemManager getListOfAirports];
-    //NSLog(@"%@", _objects);
-    //[_objects insertObject:@"KKK" atIndex:0];
-    
-    
-    //NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [SystemManager createAirportWithName:newAirport];
 
-    //[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     _objects = [SystemManager getListOfAirports];
-    [self.tableView reloadData];
+    [self.tableView reloadData]; //RECARREA A VIEW NA TELA
     
 }
-
-
-
 
 #pragma mark - Table View
 
