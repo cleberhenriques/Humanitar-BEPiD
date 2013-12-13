@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 //#import "VBSeatClass.h"
 #import "VBCategory.h"
+#import "VBAirport.h"
 
 @interface VBSystemManager : NSObject
 
@@ -36,5 +37,5 @@
                       AndSeatClass:(VBSeatClass) sc;
 
 
--(NSMutableArray *)listaDeAeroportos;
+-(NSMutableArray *)getListOfAirports;
 @end

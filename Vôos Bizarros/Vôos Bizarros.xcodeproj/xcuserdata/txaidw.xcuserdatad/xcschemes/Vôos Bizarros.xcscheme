@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E908B5B2185873C400849F66"
-               BuildableName = "Vo&#x302;os Bizarros.app"
-               BlueprintName = "Vo&#x302;os Bizarros"
-               ReferencedContainer = "container:Vo&#x302;os Bizarros.xcodeproj">
+               BuildableName = "Vo&#770;os Bizarros.app"
+               BlueprintName = "Vo&#770;os Bizarros"
+               ReferencedContainer = "container:Vo&#770;os Bizarros.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E908B5D6185873C400849F66"
-               BuildableName = "Vo&#x302;os BizarrosTests.xctest"
-               BlueprintName = "Vo&#x302;os BizarrosTests"
-               ReferencedContainer = "container:Vo&#x302;os Bizarros.xcodeproj">
+               BuildableName = "Vo&#770;os BizarrosTests.xctest"
+               BlueprintName = "Vo&#770;os BizarrosTests"
+               ReferencedContainer = "container:Vo&#770;os Bizarros.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E908B5B2185873C400849F66"
-            BuildableName = "Vo&#x302;os Bizarros.app"
-            BlueprintName = "Vo&#x302;os Bizarros"
-            ReferencedContainer = "container:Vo&#x302;os Bizarros.xcodeproj">
+            BuildableName = "Vo&#770;os Bizarros.app"
+            BlueprintName = "Vo&#770;os Bizarros"
+            ReferencedContainer = "container:Vo&#770;os Bizarros.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E908B5B2185873C400849F66"
-            BuildableName = "Vo&#x302;os Bizarros.app"
-            BlueprintName = "Vo&#x302;os Bizarros"
-            ReferencedContainer = "container:Vo&#x302;os Bizarros.xcodeproj">
+            BuildableName = "Vo&#770;os Bizarros.app"
+            BlueprintName = "Vo&#770;os Bizarros"
+            ReferencedContainer = "container:Vo&#770;os Bizarros.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E908B5B2185873C400849F66"
-            BuildableName = "Vo&#x302;os Bizarros.app"
-            BlueprintName = "Vo&#x302;os Bizarros"
-            ReferencedContainer = "container:Vo&#x302;os Bizarros.xcodeproj">
+            BuildableName = "Vo&#770;os Bizarros.app"
+            BlueprintName = "Vo&#770;os Bizarros"
+            ReferencedContainer = "container:Vo&#770;os Bizarros.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

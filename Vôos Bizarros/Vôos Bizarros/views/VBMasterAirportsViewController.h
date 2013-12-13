@@ -19,10 +19,10 @@
 
 
 
-@property (weak, nonatomic) IBOutlet UITextField *labelAirport;
-@property (weak, nonatomic) IBOutlet UITextField *labelAirline;
-@property (weak, nonatomic) IBOutlet UILabel *labelTeste;
-
+//@property (weak, nonatomic) IBOutlet UITextField *labelAirport;
+//@property (weak, nonatomic) IBOutlet UITextField *labelAirline;
+//@property (weak, nonatomic) IBOutlet UILabel *labelTeste;
+//
 
 
 

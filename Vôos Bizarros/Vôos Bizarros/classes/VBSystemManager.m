@@ -48,9 +48,12 @@
 
 - (void) createAirportWithName:(NSString *) airportName
 {
+    NSLog(@"%@", airports);
+    
     VBAirport *airport = [[VBAirport alloc] initWithName:airportName];
     if(airport)
         [airports addObject:airport];
+    NSLog(@"%@", airports);
 }
 
 - (BOOL) bookSeatOnAirline:(NSString *) airlineName
@@ -175,7 +178,7 @@
 		[airportsLog appendString:airport.name];
 		[airportsLog appendString:@"\n"];
 	}
-	NSLog(@"%@",airportsLog);
+	//NSLog(@"%@",airportsLog);
 	
 	//Show registered airlines and flights.
 	NSLog(@"Registered airlines:");
@@ -193,21 +196,12 @@
 			[airlinesLog appendString:@"\n"];
 		}
 	}
-	NSLog(@"%@",airlinesLog);
+	//NSLog(@"%@",airlinesLog);
 }
 
--(NSMutableArray *)listaDeAeroportos
+-(NSMutableArray *)getListOfAirports
 {
-    //Show registered airports
-	NSLog(@"Registered airports:");
-	NSMutableArray *airportsList;
-
-	for (VBAirport *airport in airports)
-	{
-        
-		[airportsList addObject:airport];
-	}
-    return airportsList;
+    return airports;
 }
 
 @end
