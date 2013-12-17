@@ -71,13 +71,39 @@
 {
     [super viewDidLoad];
     
-    UIImage *buttonBackgroudImage =[UIImage imageNamed:@"number1.png"];
-//    UIImage *stretchedBackground = [[UIImage alloc]init];
-//     [buttonBackgroudImage scretchableImageWithLeftCapWidth:33 topCapHeight:0]; <<<REDIMENSIONAMENTO
-    [_btn1 setBackgroundImage:buttonBackgroudImage forState:UIControlStateNormal];
+    UIImage *buttonBackgroudImage1 =[UIImage imageNamed:@"number1.png"];
+    [_btn1 setBackgroundImage:buttonBackgroudImage1 forState:UIControlStateNormal];
+    
+    UIImage *buttonBackgroudImage2 =[UIImage imageNamed:@"number2.png"];
+    [_btn2 setBackgroundImage:buttonBackgroudImage2 forState:UIControlStateNormal];
+    
+    UIImage *buttonBackgroudImage3 =[UIImage imageNamed:@"number3.png"];
+    [_btn3 setBackgroundImage:buttonBackgroudImage3 forState:UIControlStateNormal];
+    
+    UIImage *buttonBackgroudImage4 =[UIImage imageNamed:@"number4.png"];
+    [_btn4 setBackgroundImage:buttonBackgroudImage4 forState:UIControlStateNormal];
+    
+    UIImage *buttonBackgroudImage5 =[UIImage imageNamed:@"number5.png"];
+    [_btn5 setBackgroundImage:buttonBackgroudImage5 forState:UIControlStateNormal];
+    
+    UIImage *buttonBackgroudImage6 =[UIImage imageNamed:@"number6.png"];
+    [_btn6 setBackgroundImage:buttonBackgroudImage6 forState:UIControlStateNormal];
+    
+    UIImage *buttonBackgroudImage7 =[UIImage imageNamed:@"number7.png"];
+    [_btn7 setBackgroundImage:buttonBackgroudImage7 forState:UIControlStateNormal];
+    
+    UIImage *buttonBackgroudImage8 =[UIImage imageNamed:@"number8.png"];
+    [_btn8 setBackgroundImage:buttonBackgroudImage8 forState:UIControlStateNormal];
+    
+    UIImage *buttonBackgroudImage9 =[UIImage imageNamed:@"number9.png"];
+    [_btn9 setBackgroundImage:buttonBackgroudImage9 forState:UIControlStateNormal];
+    
+    UIImage *buttonBackgroudImage0 =[UIImage imageNamed:@"number0.png"];
+    [_btn0 setBackgroundImage:buttonBackgroudImage0 forState:UIControlStateNormal];
     
     
-    
+    //    UIImage *stretchedBackground = [[UIImage alloc]init];
+    //     [buttonBackgroudImage scretchableImageWithLeftCapWidth:33 topCapHeight:0]; <<<REDIMENSIONAMENTO
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
