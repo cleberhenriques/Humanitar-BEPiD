@@ -21,6 +21,7 @@
 		37D5CE4A186064290010F76C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D5CE2C186064290010F76C /* UIKit.framework */; };
 		37D5CE52186064290010F76C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37D5CE50186064290010F76C /* InfoPlist.strings */; };
 		37D5CE54186064290010F76C /* Golden_CalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D5CE53186064290010F76C /* Golden_CalcTests.m */; };
+		F9B0DAC2186074AD000B0D0D /* number1.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DAC1186074AD000B0D0D /* number1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		37D5CE4F186064290010F76C /* Golden CalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Golden CalcTests-Info.plist"; sourceTree = "<group>"; };
 		37D5CE51186064290010F76C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37D5CE53186064290010F76C /* Golden_CalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Golden_CalcTests.m; sourceTree = "<group>"; };
+		F9B0DAC1186074AD000B0D0D /* number1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = number1.png; path = ../../../number1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		37D5CE2E186064290010F76C /* Golden Calc */ = {
 			isa = PBXGroup;
 			children = (
+				F9B0DABE18606F16000B0D0D /* images */,
 				37D5CE37186064290010F76C /* GCAppDelegate.h */,
 				37D5CE38186064290010F76C /* GCAppDelegate.m */,
 				37D5CE3A186064290010F76C /* Main.storyboard */,
@@ -150,6 +153,14 @@
 				37D5CE50186064290010F76C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9B0DABE18606F16000B0D0D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F9B0DAC1186074AD000B0D0D /* number1.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B0DAC2186074AD000B0D0D /* number1.png in Resources */,
 				37D5CE41186064290010F76C /* Images.xcassets in Resources */,
 				37D5CE33186064290010F76C /* InfoPlist.strings in Resources */,
 				37D5CE3C186064290010F76C /* Main.storyboard in Resources */,
@@ -461,6 +473,7 @@
 				37D5CE59186064290010F76C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37D5CE5A186064290010F76C /* Build configuration list for PBXNativeTarget "Golden CalcTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +482,7 @@
 				37D5CE5C186064290010F76C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
