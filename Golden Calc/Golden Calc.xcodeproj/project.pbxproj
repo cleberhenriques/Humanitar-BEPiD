@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37D5CE29186064290010F76C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D5CE28186064290010F76C /* Foundation.framework */; };
+		37D5CE2B186064290010F76C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D5CE2A186064290010F76C /* CoreGraphics.framework */; };
+		37D5CE2D186064290010F76C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D5CE2C186064290010F76C /* UIKit.framework */; };
+		37D5CE33186064290010F76C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37D5CE31186064290010F76C /* InfoPlist.strings */; };
+		37D5CE35186064290010F76C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D5CE34186064290010F76C /* main.m */; };
+		37D5CE39186064290010F76C /* GCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D5CE38186064290010F76C /* GCAppDelegate.m */; };
+		37D5CE3C186064290010F76C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D5CE3A186064290010F76C /* Main.storyboard */; };
+		37D5CE3F186064290010F76C /* GCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D5CE3E186064290010F76C /* GCViewController.m */; };
+		37D5CE41186064290010F76C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D5CE40186064290010F76C /* Images.xcassets */; };
+		37D5CE48186064290010F76C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D5CE47186064290010F76C /* XCTest.framework */; };
+		37D5CE49186064290010F76C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D5CE28186064290010F76C /* Foundation.framework */; };
+		37D5CE4A186064290010F76C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D5CE2C186064290010F76C /* UIKit.framework */; };
+		37D5CE52186064290010F76C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37D5CE50186064290010F76C /* InfoPlist.strings */; };
+		37D5CE54186064290010F76C /* Golden_CalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D5CE53186064290010F76C /* Golden_CalcTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37D5CE4B186064290010F76C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37D5CE1D186064290010F76C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37D5CE24186064290010F76C;
+			remoteInfo = "Golden Calc";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37D5CE25186064290010F76C /* Golden Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Golden Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D5CE28186064290010F76C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		37D5CE2A186064290010F76C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		37D5CE2C186064290010F76C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		37D5CE30186064290010F76C /* Golden Calc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Golden Calc-Info.plist"; sourceTree = "<group>"; };
+		37D5CE32186064290010F76C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37D5CE34186064290010F76C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37D5CE36186064290010F76C /* Golden Calc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Golden Calc-Prefix.pch"; sourceTree = "<group>"; };
+		37D5CE37186064290010F76C /* GCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAppDelegate.h; sourceTree = "<group>"; };
+		37D5CE38186064290010F76C /* GCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAppDelegate.m; sourceTree = "<group>"; };
+		37D5CE3B186064290010F76C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37D5CE3D186064290010F76C /* GCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCViewController.h; sourceTree = "<group>"; };
+		37D5CE3E186064290010F76C /* GCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCViewController.m; sourceTree = "<group>"; };
+		37D5CE40186064290010F76C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		37D5CE46186064290010F76C /* Golden CalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Golden CalcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D5CE47186064290010F76C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		37D5CE4F186064290010F76C /* Golden CalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Golden CalcTests-Info.plist"; sourceTree = "<group>"; };
+		37D5CE51186064290010F76C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37D5CE53186064290010F76C /* Golden_CalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Golden_CalcTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37D5CE22186064290010F76C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D5CE2B186064290010F76C /* CoreGraphics.framework in Frameworks */,
+				37D5CE2D186064290010F76C /* UIKit.framework in Frameworks */,
+				37D5CE29186064290010F76C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D5CE43186064290010F76C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D5CE48186064290010F76C /* XCTest.framework in Frameworks */,
+				37D5CE4A186064290010F76C /* UIKit.framework in Frameworks */,
+				37D5CE49186064290010F76C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37D5CE1C186064290010F76C = {
+			isa = PBXGroup;
+			children = (
+				37D5CE2E186064290010F76C /* Golden Calc */,
+				37D5CE4D186064290010F76C /* Golden CalcTests */,
+				37D5CE27186064290010F76C /* Frameworks */,
+				37D5CE26186064290010F76C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37D5CE26186064290010F76C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37D5CE25186064290010F76C /* Golden Calc.app */,
+				37D5CE46186064290010F76C /* Golden CalcTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37D5CE27186064290010F76C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37D5CE28186064290010F76C /* Foundation.framework */,
+				37D5CE2A186064290010F76C /* CoreGraphics.framework */,
+				37D5CE2C186064290010F76C /* UIKit.framework */,
+				37D5CE47186064290010F76C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37D5CE2E186064290010F76C /* Golden Calc */ = {
+			isa = PBXGroup;
+			children = (
+				37D5CE37186064290010F76C /* GCAppDelegate.h */,
+				37D5CE38186064290010F76C /* GCAppDelegate.m */,
+				37D5CE3A186064290010F76C /* Main.storyboard */,
+				37D5CE3D186064290010F76C /* GCViewController.h */,
+				37D5CE3E186064290010F76C /* GCViewController.m */,
+				37D5CE40186064290010F76C /* Images.xcassets */,
+				37D5CE2F186064290010F76C /* Supporting Files */,
+			);
+			path = "Golden Calc";
+			sourceTree = "<group>";
+		};
+		37D5CE2F186064290010F76C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37D5CE30186064290010F76C /* Golden Calc-Info.plist */,
+				37D5CE31186064290010F76C /* InfoPlist.strings */,
+				37D5CE34186064290010F76C /* main.m */,
+				37D5CE36186064290010F76C /* Golden Calc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37D5CE4D186064290010F76C /* Golden CalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				37D5CE53186064290010F76C /* Golden_CalcTests.m */,
+				37D5CE4E186064290010F76C /* Supporting Files */,
+			);
+			path = "Golden CalcTests";
+			sourceTree = "<group>";
+		};
+		37D5CE4E186064290010F76C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37D5CE4F186064290010F76C /* Golden CalcTests-Info.plist */,
+				37D5CE50186064290010F76C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37D5CE24186064290010F76C /* Golden Calc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D5CE57186064290010F76C /* Build configuration list for PBXNativeTarget "Golden Calc" */;
+			buildPhases = (
+				37D5CE21186064290010F76C /* Sources */,
+				37D5CE22186064290010F76C /* Frameworks */,
+				37D5CE23186064290010F76C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Golden Calc";
+			productName = "Golden Calc";
+			productReference = 37D5CE25186064290010F76C /* Golden Calc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37D5CE45186064290010F76C /* Golden CalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D5CE5A186064290010F76C /* Build configuration list for PBXNativeTarget "Golden CalcTests" */;
+			buildPhases = (
+				37D5CE42186064290010F76C /* Sources */,
+				37D5CE43186064290010F76C /* Frameworks */,
+				37D5CE44186064290010F76C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37D5CE4C186064290010F76C /* PBXTargetDependency */,
+			);
+			name = "Golden CalcTests";
+			productName = "Golden CalcTests";
+			productReference = 37D5CE46186064290010F76C /* Golden CalcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37D5CE1D186064290010F76C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Cangootech;
+				TargetAttributes = {
+					37D5CE45186064290010F76C = {
+						TestTargetID = 37D5CE24186064290010F76C;
+					};
+				};
+			};
+			buildConfigurationList = 37D5CE20186064290010F76C /* Build configuration list for PBXProject "Golden Calc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37D5CE1C186064290010F76C;
+			productRefGroup = 37D5CE26186064290010F76C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37D5CE24186064290010F76C /* Golden Calc */,
+				37D5CE45186064290010F76C /* Golden CalcTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37D5CE23186064290010F76C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D5CE41186064290010F76C /* Images.xcassets in Resources */,
+				37D5CE33186064290010F76C /* InfoPlist.strings in Resources */,
+				37D5CE3C186064290010F76C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D5CE44186064290010F76C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D5CE52186064290010F76C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37D5CE21186064290010F76C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D5CE39186064290010F76C /* GCAppDelegate.m in Sources */,
+				37D5CE3F186064290010F76C /* GCViewController.m in Sources */,
+				37D5CE35186064290010F76C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D5CE42186064290010F76C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D5CE54186064290010F76C /* Golden_CalcTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37D5CE4C186064290010F76C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37D5CE24186064290010F76C /* Golden Calc */;
+			targetProxy = 37D5CE4B186064290010F76C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37D5CE31186064290010F76C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D5CE32186064290010F76C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		37D5CE3A186064290010F76C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D5CE3B186064290010F76C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37D5CE50186064290010F76C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D5CE51186064290010F76C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37D5CE55186064290010F76C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		37D5CE56186064290010F76C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37D5CE58186064290010F76C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Golden Calc/Golden Calc-Prefix.pch";
+				INFOPLIST_FILE = "Golden Calc/Golden Calc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		37D5CE59186064290010F76C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Golden Calc/Golden Calc-Prefix.pch";
+				INFOPLIST_FILE = "Golden Calc/Golden Calc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		37D5CE5B186064290010F76C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Golden Calc.app/Golden Calc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Golden Calc/Golden Calc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Golden CalcTests/Golden CalcTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		37D5CE5C186064290010F76C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Golden Calc.app/Golden Calc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Golden Calc/Golden Calc-Prefix.pch";
+				INFOPLIST_FILE = "Golden CalcTests/Golden CalcTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37D5CE20186064290010F76C /* Build configuration list for PBXProject "Golden Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D5CE55186064290010F76C /* Debug */,
+				37D5CE56186064290010F76C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37D5CE57186064290010F76C /* Build configuration list for PBXNativeTarget "Golden Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D5CE58186064290010F76C /* Debug */,
+				37D5CE59186064290010F76C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		37D5CE5A186064290010F76C /* Build configuration list for PBXNativeTarget "Golden CalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D5CE5B186064290010F76C /* Debug */,
+				37D5CE5C186064290010F76C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37D5CE1D186064290010F76C /* Project object */;
+}
