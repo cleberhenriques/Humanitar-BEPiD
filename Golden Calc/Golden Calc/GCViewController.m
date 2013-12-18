@@ -14,8 +14,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *CampoOperando1;
 @property (weak, nonatomic) IBOutlet UILabel *CampoOperando2;
+
 @property (weak, nonatomic) IBOutlet UILabel *CampoOperador;
 @property (weak, nonatomic) IBOutlet UILabel *CampoResultado;
+
 @property (weak, nonatomic) IBOutlet UILabel *CampoHistorico1;
 @property (weak, nonatomic) IBOutlet UILabel *CampoHistorico2;
 @property (weak, nonatomic) IBOutlet UILabel *CampoHistorico3;
@@ -31,6 +33,7 @@
     _Bool operando1completo;
     _Bool operacaoJaDefinida;
     float respostaDaOperacao;
+    _Bool flagJaDeuResultado;
     NSString *stringOperador;
 }
 
@@ -89,6 +92,7 @@
 
 - (IBAction)clickbtnequals:(UIButton *)sender
 {
+    flagJaDeuResultado = 1;
     switch (operador) {
         case 1:
             respostaDaOperacao = op1.valor / op2.valor;
@@ -159,6 +163,7 @@
     operacaoJaDefinida = 0;
     respostaDaOperacao = 0;
     operador = 0;
+    flagJaDeuResultado = 0;
 
 }
 
@@ -168,14 +173,36 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)NewCal:(UIButton *)sender
-{
+- (IBAction)ClearCal:(UIButton *)sender {
+    
+    
+    [self.CampoOperando2 setText:@""];
+    [self.CampoOperando1 setText:@""];
+    [self.CampoOperador setText:@""];
+    [self.CampoResultado setText:@""];
+    
+    op1 = [[GCOperando alloc] init];
+    op2 = [[GCOperando alloc] init];
+    operando1completo = 0;
+    operacaoJaDefinida = 0;
+    respostaDaOperacao = 0;
+    operador = 0;
+    
+}
 
+-(void)limpaResultadoEOperandosPNovoCalc
+{
     self.CampoHistorico4.text = self.CampoHistorico3.text;
     self.CampoHistorico3.text = self.CampoHistorico2.text;
     self.CampoHistorico2.text = self.CampoHistorico1.text;
     
     [self.CampoHistorico1 setText:[NSString stringWithFormat:@"%.2f %@ %.2f = %.2f",op1.valor, stringOperador, op2.valor, respostaDaOperacao]];
+    
+    [self.CampoOperando2 setText:@""];
+    [self.CampoOperando1 setText:@""];
+    [self.CampoOperador setText:@""];
+    [self.CampoResultado setText:@""];
+    
     
     op1 = [[GCOperando alloc] init];
     op2 = [[GCOperando alloc] init];
@@ -184,13 +211,14 @@
     respostaDaOperacao = 0;
     operador = 0;
 }
-- (IBAction)ClearCal:(UIButton *)sender {
-    
-    
-}
 
 -(void)botaoNumero:(int)numApertado
 {
+    if (flagJaDeuResultado) {
+        [self limpaResultadoEOperandosPNovoCalc];
+        flagJaDeuResultado = 0;
+    }
+    
     if (operando1completo) {
         [op2 addDigitToNum:numApertado];
         NSLog(@"%f", op2.valor);

@@ -10,4 +10,5 @@
 
 @interface GCViewController : UIViewController
 
+-(void)limpaResultadoEOperandosPNovoCalc;
 @end
