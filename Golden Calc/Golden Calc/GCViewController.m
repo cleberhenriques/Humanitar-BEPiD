@@ -7,110 +7,200 @@
 //
 
 #import "GCViewController.h"
+#import "GCOperando.h"
 
 @interface GCViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *btn1;
-@property (weak, nonatomic) IBOutlet UIButton *btn2;
-@property (weak, nonatomic) IBOutlet UIButton *btn3;
-@property (weak, nonatomic) IBOutlet UIButton *btn4;
-@property (weak, nonatomic) IBOutlet UIButton *btn5;
-@property (weak, nonatomic) IBOutlet UIButton *btn6;
-@property (weak, nonatomic) IBOutlet UIButton *btn7;
-@property (weak, nonatomic) IBOutlet UIButton *btn8;
-@property (weak, nonatomic) IBOutlet UIButton *btn9;
-@property (weak, nonatomic) IBOutlet UIButton *btn0;
-@property (weak, nonatomic) IBOutlet UIButton *btnequals;
-@property (weak, nonatomic) IBOutlet UIButton *btndivide;
-@property (weak, nonatomic) IBOutlet UIButton *btntimes;
-@property (weak, nonatomic) IBOutlet UIButton *btnminus;
-@property (weak, nonatomic) IBOutlet UIButton *btnplus;
-@property (weak, nonatomic) IBOutlet UIButton *btndot;
 
+
+@property (weak, nonatomic) IBOutlet UILabel *CampoOperando1;
+@property (weak, nonatomic) IBOutlet UILabel *CampoOperando2;
+@property (weak, nonatomic) IBOutlet UILabel *CampoOperador;
+@property (weak, nonatomic) IBOutlet UILabel *CampoResultado;
+@property (weak, nonatomic) IBOutlet UILabel *CampoHistorico1;
+@property (weak, nonatomic) IBOutlet UILabel *CampoHistorico2;
+@property (weak, nonatomic) IBOutlet UILabel *CampoHistorico3;
+@property (weak, nonatomic) IBOutlet UILabel *CampoHistorico4;
 
 @end
 
 @implementation GCViewController
-
-- (IBAction)clickbtn1:(UIButton *)sender {
-}
-- (IBAction)clickbtn2:(UIButton *)sender {
-}
-- (IBAction)clickbtn3:(UIButton *)sender {
-}
-- (IBAction)clickbtn4:(UIButton *)sender {
-}
-- (IBAction)clickbtn5:(UIButton *)sender {
-}
-- (IBAction)clickbtn6:(UIButton *)sender {
-}
-- (IBAction)clickbtn7:(UIButton *)sender {
-}
-- (IBAction)clickbtn8:(UIButton *)sender {
-}
-- (IBAction)clickbtn9:(UIButton *)sender {
-}
-- (IBAction)clickbtn0:(UIButton *)sender {
+{
+    GCOperando *op1;
+    GCOperando *op2;
+    int operador;
+    _Bool operando1completo;
+    _Bool operacaoJaDefinida;
+    float respostaDaOperacao;
+    NSString *stringOperador;
 }
 
-- (IBAction)clickbtndot:(UIButton *)sender {
+- (IBAction)clickbtn1:(UIButton *)sender
+{
+    [self botaoNumero:1];
+}
+- (IBAction)clickbtn2:(UIButton *)sender
+{
+    [self botaoNumero:2];
+}
+- (IBAction)clickbtn3:(UIButton *)sender
+{
+    [self botaoNumero:3];
+}
+- (IBAction)clickbtn4:(UIButton *)sender
+{
+    [self botaoNumero:4];
+}
+- (IBAction)clickbtn5:(UIButton *)sender
+{
+    [self botaoNumero:5];
+}
+- (IBAction)clickbtn6:(UIButton *)sender
+{
+    [self botaoNumero:6];
+}
+- (IBAction)clickbtn7:(UIButton *)sender
+{
+    [self botaoNumero:7];
+}
+- (IBAction)clickbtn8:(UIButton *)sender
+{
+    [self botaoNumero:8];
+}
+- (IBAction)clickbtn9:(UIButton *)sender
+{
+    [self botaoNumero:9];
+}
+- (IBAction)clickbtn0:(UIButton *)sender
+{
+    [self botaoNumero:0];
 }
 
-- (IBAction)clickbtnequals:(UIButton *)sender {
-}
-- (IBAction)clickbtndivide:(UIButton *)sender {
-}
-- (IBAction)clickbtntimes:(UIButton *)sender {
-}
-- (IBAction)clickbtnminus:(UIButton *)sender {
-}
-- (IBAction)clickbtnplus:(UIButton *)sender {
+// Virgula
+- (IBAction)clickbtndot:(UIButton *)sender
+{
+    if (operando1completo) {
+        [op2 virgulaClick];
+    } else {
+        [op1 virgulaClick];
+    }
+    respostaDaOperacao = op1.valor / op2.valor;
 }
 
+
+- (IBAction)clickbtnequals:(UIButton *)sender
+{
+    switch (operador) {
+        case 1:
+            respostaDaOperacao = op1.valor / op2.valor;
+            break;
+        case 2:
+            respostaDaOperacao = op1.valor * op2.valor;
+            break;
+        case 3:
+            respostaDaOperacao = op1.valor - op2.valor;
+            break;
+        case 4:
+            respostaDaOperacao = op1.valor + op2.valor;
+            break;
+        default:
+            NSLog(@"erro1");
+            break;
+    }
+    
+    [self.CampoResultado setText:[NSString stringWithFormat:@"%.2f",respostaDaOperacao]];
+
+}
+
+//Operações
+- (IBAction)clickbtndivide:(UIButton *)sender
+{
+    //Divide
+    [self escolheOperador:@"/"];
+    operador = 1;
+    
+}
+- (IBAction)clickbtntimes:(UIButton *)sender
+{
+    //Multiplica
+    [self escolheOperador:@"x"];
+    operador = 2;
+}
+- (IBAction)clickbtnminus:(UIButton *)sender
+{
+    //Subtrai
+    [self escolheOperador:@"-"];
+    operador = 3;
+}
+- (IBAction)clickbtnplus:(UIButton *)sender
+{
+    //Soma
+    [self escolheOperador:@"+"];
+    operador = 4;
+}
+
+-(void)escolheOperador:(NSString *)sOperador
+{
+    if (!operacaoJaDefinida) {
+        operacaoJaDefinida = 1;
+        operando1completo = 1;
+        [self.CampoOperador setText:sOperador];
+        stringOperador = sOperador;
+        
+    }
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    UIImage *buttonBackgroudImage1 =[UIImage imageNamed:@"number1.png"];
-    [_btn1 setBackgroundImage:buttonBackgroudImage1 forState:UIControlStateNormal];
-    
-    UIImage *buttonBackgroudImage2 =[UIImage imageNamed:@"number2.png"];
-    [_btn2 setBackgroundImage:buttonBackgroudImage2 forState:UIControlStateNormal];
-    
-    UIImage *buttonBackgroudImage3 =[UIImage imageNamed:@"number3.png"];
-    [_btn3 setBackgroundImage:buttonBackgroudImage3 forState:UIControlStateNormal];
-    
-    UIImage *buttonBackgroudImage4 =[UIImage imageNamed:@"number4.png"];
-    [_btn4 setBackgroundImage:buttonBackgroudImage4 forState:UIControlStateNormal];
-    
-    UIImage *buttonBackgroudImage5 =[UIImage imageNamed:@"number5.png"];
-    [_btn5 setBackgroundImage:buttonBackgroudImage5 forState:UIControlStateNormal];
-    
-    UIImage *buttonBackgroudImage6 =[UIImage imageNamed:@"number6.png"];
-    [_btn6 setBackgroundImage:buttonBackgroudImage6 forState:UIControlStateNormal];
-    
-    UIImage *buttonBackgroudImage7 =[UIImage imageNamed:@"number7.png"];
-    [_btn7 setBackgroundImage:buttonBackgroudImage7 forState:UIControlStateNormal];
-    
-    UIImage *buttonBackgroudImage8 =[UIImage imageNamed:@"number8.png"];
-    [_btn8 setBackgroundImage:buttonBackgroudImage8 forState:UIControlStateNormal];
-    
-    UIImage *buttonBackgroudImage9 =[UIImage imageNamed:@"number9.png"];
-    [_btn9 setBackgroundImage:buttonBackgroudImage9 forState:UIControlStateNormal];
-    
-    UIImage *buttonBackgroudImage0 =[UIImage imageNamed:@"number0.png"];
-    [_btn0 setBackgroundImage:buttonBackgroudImage0 forState:UIControlStateNormal];
-    
-    
-    //    UIImage *stretchedBackground = [[UIImage alloc]init];
-    //     [buttonBackgroudImage scretchableImageWithLeftCapWidth:33 topCapHeight:0]; <<<REDIMENSIONAMENTO
-	// Do any additional setup after loading the view, typically from a nib.
+    op1 = [[GCOperando alloc] init];
+    op2 = [[GCOperando alloc] init];
+    operando1completo = 0;
+    operacaoJaDefinida = 0;
+    respostaDaOperacao = 0;
+    operador = 0;
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)NewCal:(UIButton *)sender
+{
+
+    self.CampoHistorico4.text = self.CampoHistorico3.text;
+    self.CampoHistorico3.text = self.CampoHistorico2.text;
+    self.CampoHistorico2.text = self.CampoHistorico1.text;
+    
+    [self.CampoHistorico1 setText:[NSString stringWithFormat:@"%.2f %@ %.2f = %.2f",op1.valor, stringOperador, op2.valor, respostaDaOperacao]];
+    
+    op1 = [[GCOperando alloc] init];
+    op2 = [[GCOperando alloc] init];
+    operando1completo = 0;
+    operacaoJaDefinida = 0;
+    respostaDaOperacao = 0;
+    operador = 0;
+}
+- (IBAction)ClearCal:(UIButton *)sender {
+    
+    
+}
+
+-(void)botaoNumero:(int)numApertado
+{
+    if (operando1completo) {
+        [op2 addDigitToNum:numApertado];
+        NSLog(@"%f", op2.valor);
+        [self.CampoOperando2 setText: [NSString stringWithFormat:@"%.2f",op2.valor]];
+        
+    } else {
+        [op1 addDigitToNum:numApertado];
+        [self.CampoOperando1 setText: [NSString stringWithFormat:@"%.2f",op1.valor]];
+        NSLog(@"%f", op1.valor);
+    }
 }
 
 @end
