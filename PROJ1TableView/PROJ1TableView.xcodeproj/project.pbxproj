@@ -21,7 +21,19 @@
 		E974F3D1188D39CB00DF1C70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E974F3B0188D39CB00DF1C70 /* UIKit.framework */; };
 		E974F3D9188D39CB00DF1C70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E974F3D7188D39CB00DF1C70 /* InfoPlist.strings */; };
 		E974F3DB188D39CB00DF1C70 /* PROJ1TableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E974F3DA188D39CB00DF1C70 /* PROJ1TableViewTests.m */; };
-		E974F3E6188D3AA800DF1C70 /* PROJ1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E974F3E5188D3AA800DF1C70 /* PROJ1ViewController.m */; };
+		E9E7DC1F1891267300B53BE2 /* Arvore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC131891267300B53BE2 /* Arvore.jpg */; };
+		E9E7DC201891267300B53BE2 /* Aguas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC141891267300B53BE2 /* Aguas.jpg */; };
+		E9E7DC211891267300B53BE2 /* Praia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC151891267300B53BE2 /* Praia.jpg */; };
+		E9E7DC221891267300B53BE2 /* Onda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC161891267300B53BE2 /* Onda.jpg */; };
+		E9E7DC231891267300B53BE2 /* Breaking Bad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC171891267300B53BE2 /* Breaking Bad.jpg */; };
+		E9E7DC241891267300B53BE2 /* Cachoeira.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC181891267300B53BE2 /* Cachoeira.jpg */; };
+		E9E7DC251891267300B53BE2 /* Caminho.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC191891267300B53BE2 /* Caminho.jpg */; };
+		E9E7DC261891267300B53BE2 /* Cosmos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC1A1891267300B53BE2 /* Cosmos.jpg */; };
+		E9E7DC271891267300B53BE2 /* Leopard Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC1B1891267300B53BE2 /* Leopard Screen.jpg */; };
+		E9E7DC281891267300B53BE2 /* iPhone Generations.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC1C1891267300B53BE2 /* iPhone Generations.jpg */; };
+		E9E7DC291891267300B53BE2 /* Milky Way.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC1D1891267300B53BE2 /* Milky Way.jpg */; };
+		E9E7DC2A1891267300B53BE2 /* The Road.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E7DC1E1891267300B53BE2 /* The Road.jpg */; };
+		E9E7DC341891275500B53BE2 /* PROJ1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E7DC321891275500B53BE2 /* PROJ1ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +65,20 @@
 		E974F3D6188D39CB00DF1C70 /* PROJ1TableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PROJ1TableViewTests-Info.plist"; sourceTree = "<group>"; };
 		E974F3D8188D39CB00DF1C70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E974F3DA188D39CB00DF1C70 /* PROJ1TableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PROJ1TableViewTests.m; sourceTree = "<group>"; };
-		E974F3E4188D3AA800DF1C70 /* PROJ1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1ViewController.h; sourceTree = "<group>"; };
-		E974F3E5188D3AA800DF1C70 /* PROJ1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1ViewController.m; sourceTree = "<group>"; };
+		E9E7DC131891267300B53BE2 /* Arvore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Arvore.jpg; sourceTree = "<group>"; };
+		E9E7DC141891267300B53BE2 /* Aguas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aguas.jpg; sourceTree = "<group>"; };
+		E9E7DC151891267300B53BE2 /* Praia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Praia.jpg; sourceTree = "<group>"; };
+		E9E7DC161891267300B53BE2 /* Onda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Onda.jpg; sourceTree = "<group>"; };
+		E9E7DC171891267300B53BE2 /* Breaking Bad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Breaking Bad.jpg"; sourceTree = "<group>"; };
+		E9E7DC181891267300B53BE2 /* Cachoeira.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cachoeira.jpg; sourceTree = "<group>"; };
+		E9E7DC191891267300B53BE2 /* Caminho.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Caminho.jpg; sourceTree = "<group>"; };
+		E9E7DC1A1891267300B53BE2 /* Cosmos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cosmos.jpg; sourceTree = "<group>"; };
+		E9E7DC1B1891267300B53BE2 /* Leopard Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Leopard Screen.jpg"; sourceTree = "<group>"; };
+		E9E7DC1C1891267300B53BE2 /* iPhone Generations.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iPhone Generations.jpg"; sourceTree = "<group>"; };
+		E9E7DC1D1891267300B53BE2 /* Milky Way.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Milky Way.jpg"; sourceTree = "<group>"; };
+		E9E7DC1E1891267300B53BE2 /* The Road.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Road.jpg"; sourceTree = "<group>"; };
+		E9E7DC321891275500B53BE2 /* PROJ1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1ViewController.m; sourceTree = "<group>"; };
+		E9E7DC331891275500B53BE2 /* PROJ1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1ViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +140,12 @@
 			children = (
 				E974F3BB188D39CB00DF1C70 /* PROJ1AppDelegate.h */,
 				E974F3BC188D39CB00DF1C70 /* PROJ1AppDelegate.m */,
+				E9E7DC331891275500B53BE2 /* PROJ1ViewController.h */,
+				E9E7DC321891275500B53BE2 /* PROJ1ViewController.m */,
 				E974F3BE188D39CB00DF1C70 /* Main_iPhone.storyboard */,
-				E974F3E4188D3AA800DF1C70 /* PROJ1ViewController.h */,
-				E974F3E5188D3AA800DF1C70 /* PROJ1ViewController.m */,
 				E974F3C1188D39CB00DF1C70 /* Main_iPad.storyboard */,
 				E974F3C7188D39CB00DF1C70 /* Images.xcassets */,
+				E9E7DC2B1891267D00B53BE2 /* Imagens */,
 				E974F3B3188D39CB00DF1C70 /* Supporting Files */,
 			);
 			path = PROJ1TableView;
@@ -153,6 +178,25 @@
 				E974F3D7188D39CB00DF1C70 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9E7DC2B1891267D00B53BE2 /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+				E9E7DC131891267300B53BE2 /* Arvore.jpg */,
+				E9E7DC141891267300B53BE2 /* Aguas.jpg */,
+				E9E7DC151891267300B53BE2 /* Praia.jpg */,
+				E9E7DC161891267300B53BE2 /* Onda.jpg */,
+				E9E7DC171891267300B53BE2 /* Breaking Bad.jpg */,
+				E9E7DC181891267300B53BE2 /* Cachoeira.jpg */,
+				E9E7DC191891267300B53BE2 /* Caminho.jpg */,
+				E9E7DC1A1891267300B53BE2 /* Cosmos.jpg */,
+				E9E7DC1B1891267300B53BE2 /* Leopard Screen.jpg */,
+				E9E7DC1C1891267300B53BE2 /* iPhone Generations.jpg */,
+				E9E7DC1D1891267300B53BE2 /* Milky Way.jpg */,
+				E9E7DC1E1891267300B53BE2 /* The Road.jpg */,
+			);
+			name = Imagens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,10 +276,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E7DC251891267300B53BE2 /* Caminho.jpg in Resources */,
+				E9E7DC271891267300B53BE2 /* Leopard Screen.jpg in Resources */,
+				E9E7DC2A1891267300B53BE2 /* The Road.jpg in Resources */,
+				E9E7DC291891267300B53BE2 /* Milky Way.jpg in Resources */,
 				E974F3C3188D39CB00DF1C70 /* Main_iPad.storyboard in Resources */,
+				E9E7DC221891267300B53BE2 /* Onda.jpg in Resources */,
 				E974F3C8188D39CB00DF1C70 /* Images.xcassets in Resources */,
 				E974F3C0188D39CB00DF1C70 /* Main_iPhone.storyboard in Resources */,
+				E9E7DC261891267300B53BE2 /* Cosmos.jpg in Resources */,
+				E9E7DC281891267300B53BE2 /* iPhone Generations.jpg in Resources */,
+				E9E7DC231891267300B53BE2 /* Breaking Bad.jpg in Resources */,
+				E9E7DC241891267300B53BE2 /* Cachoeira.jpg in Resources */,
+				E9E7DC201891267300B53BE2 /* Aguas.jpg in Resources */,
+				E9E7DC211891267300B53BE2 /* Praia.jpg in Resources */,
 				E974F3B7188D39CB00DF1C70 /* InfoPlist.strings in Resources */,
+				E9E7DC1F1891267300B53BE2 /* Arvore.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +311,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E974F3B9188D39CB00DF1C70 /* main.m in Sources */,
-				E974F3E6188D3AA800DF1C70 /* PROJ1ViewController.m in Sources */,
 				E974F3BD188D39CB00DF1C70 /* PROJ1AppDelegate.m in Sources */,
+				E9E7DC341891275500B53BE2 /* PROJ1ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

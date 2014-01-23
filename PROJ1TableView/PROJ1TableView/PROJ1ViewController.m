@@ -15,34 +15,86 @@
 @implementation PROJ1ViewController
 
 
+
+- (NSArray *)photosName
+{
+    NSArray *myArray = [NSArray arrayWithObjects:@"Arvore.jpg", @"Praia.jpg", @"Aguas.jpg", @"Onda.jpg", @"Breaking Bad.jpg", @"Cachoeira.jpg", @"Caminho.jpg", @"Cosmos.jpg", @"Leopard Screen.jpg", @"Milky Way.jpg", @"The Road.jpg", @"iPhone Generations.jpg", nil];
+    NSSortDescriptor* sortOrder = [NSSortDescriptor sortDescriptorWithKey: @"self" ascending: YES];
+    return [myArray sortedArrayUsingDescriptors: [NSArray arrayWithObject: sortOrder]];
+}
+
+
+
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return 1;
+    return 12;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    return 800;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *aCell = [[UITableViewCell alloc] initWithFrame:CGRectMake(0, 0, <#CGFloat width#>, 50)];
+    static NSString *CellIdentifier = @"TimeLineCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    UIImageView *aImageView = [[UIImageView alloc] initWithFrame:CGRectMake(30, 30, aCell.bounds.size.width, aCell.bounds.size.height)];
+    // Configure the cell...
+
+#define TITLEHEIGHT 30
+#define TOPMARGIN 6
     
-    [aImageView setBackgroundColor:[UIColor greenColor]];
+    // ADICIONA TITULO NA CELULA
+    UILabel *titleCellLabel = [[UILabel alloc] initWithFrame:CGRectMake(2, TOPMARGIN, cell.bounds.size.width-2, TITLEHEIGHT)];
+    [titleCellLabel setTextAlignment:NSTextAlignmentCenter];
+    titleCellLabel.text = @"TITULO";
+    titleCellLabel.font = [UIFont fontWithName:@"Helvetica" size:30];
+    [cell addSubview:titleCellLabel];
     
-    //aImageView.image = [UIImage imageNamed:@"aImage.png"];
-    [aCell addSubview:aImageView];
     
-    return aCell;
+    //ADICIONA IMAGEM NA CELULA
+    
+    // Image settings
+    UIImage *image = [UIImage imageNamed:[self.photosName objectAtIndex:indexPath.row]];
+    // reducing the image size
+#define IMAGEMARGIN 12
+    int imageSizeInt = cell.bounds.size.width-(2*IMAGEMARGIN);
+    CGSize newSize = CGSizeMake(imageSizeInt, imageSizeInt);
+    UIGraphicsBeginImageContext( newSize );
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    // cropping the image
+    
+    CGRect clippedRect  = CGRectMake(0, 0, imageSizeInt, imageSizeInt);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([newImage CGImage], clippedRect);
+    UIImage *newNewImage = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    UIImageView *imageViewCell = [[UIImageView alloc]initWithFrame:CGRectMake(IMAGEMARGIN, 100, imageSizeInt, imageSizeInt)];
+    imageViewCell.image = newNewImage;
+    //[cell addSubview:imageViewCell];
+    // making the image rounded
+    
+//    cell.imageView.frame = cell.frame;
+//    cell.imageView.layer.cornerRadius = imageSizeInt/2; //image.size.width/2;
+//    cell.imageView.layer.masksToBounds = YES;
+    
+    
+    UIButton *likeButtonsCell = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 60, 60)];
+    
+    likeButtonsCell.titleLabel.text = @"Likeskjnkjnkjnkjnkjnkjnkjnkjnkjnkjnkjn";
+    
+    [cell addSubview:likeButtonsCell];
+    
+    
+    return cell;
+    
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -54,6 +106,7 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    NSLog(@"MEMORY WARNING");
 }
 
 /*
