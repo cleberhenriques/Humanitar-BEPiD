@@ -14,7 +14,6 @@
 		E974F3B9188D39CB00DF1C70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E974F3B8188D39CB00DF1C70 /* main.m */; };
 		E974F3BD188D39CB00DF1C70 /* PROJ1AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E974F3BC188D39CB00DF1C70 /* PROJ1AppDelegate.m */; };
 		E974F3C0188D39CB00DF1C70 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E974F3BE188D39CB00DF1C70 /* Main_iPhone.storyboard */; };
-		E974F3C3188D39CB00DF1C70 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E974F3C1188D39CB00DF1C70 /* Main_iPad.storyboard */; };
 		E974F3C8188D39CB00DF1C70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E974F3C7188D39CB00DF1C70 /* Images.xcassets */; };
 		E974F3CF188D39CB00DF1C70 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E974F3CE188D39CB00DF1C70 /* XCTest.framework */; };
 		E974F3D0188D39CB00DF1C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E974F3AC188D39CB00DF1C70 /* Foundation.framework */; };
@@ -58,7 +57,6 @@
 		E974F3BB188D39CB00DF1C70 /* PROJ1AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PROJ1AppDelegate.h; sourceTree = "<group>"; };
 		E974F3BC188D39CB00DF1C70 /* PROJ1AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PROJ1AppDelegate.m; sourceTree = "<group>"; };
 		E974F3BF188D39CB00DF1C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		E974F3C2188D39CB00DF1C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		E974F3C7188D39CB00DF1C70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E974F3CD188D39CB00DF1C70 /* PROJ1TableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJ1TableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E974F3CE188D39CB00DF1C70 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -143,7 +141,6 @@
 				E9E7DC331891275500B53BE2 /* PROJ1ViewController.h */,
 				E9E7DC321891275500B53BE2 /* PROJ1ViewController.m */,
 				E974F3BE188D39CB00DF1C70 /* Main_iPhone.storyboard */,
-				E974F3C1188D39CB00DF1C70 /* Main_iPad.storyboard */,
 				E974F3C7188D39CB00DF1C70 /* Images.xcassets */,
 				E9E7DC2B1891267D00B53BE2 /* Imagens */,
 				E974F3B3188D39CB00DF1C70 /* Supporting Files */,
@@ -280,7 +277,6 @@
 				E9E7DC271891267300B53BE2 /* Leopard Screen.jpg in Resources */,
 				E9E7DC2A1891267300B53BE2 /* The Road.jpg in Resources */,
 				E9E7DC291891267300B53BE2 /* Milky Way.jpg in Resources */,
-				E974F3C3188D39CB00DF1C70 /* Main_iPad.storyboard in Resources */,
 				E9E7DC221891267300B53BE2 /* Onda.jpg in Resources */,
 				E974F3C8188D39CB00DF1C70 /* Images.xcassets in Resources */,
 				E974F3C0188D39CB00DF1C70 /* Main_iPhone.storyboard in Resources */,
@@ -349,14 +345,6 @@
 				E974F3BF188D39CB00DF1C70 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		E974F3C1188D39CB00DF1C70 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E974F3C2188D39CB00DF1C70 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		E974F3D7188D39CB00DF1C70 /* InfoPlist.strings */ = {
