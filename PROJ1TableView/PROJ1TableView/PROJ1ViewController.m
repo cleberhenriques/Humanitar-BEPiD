@@ -9,7 +9,8 @@
 #import "PROJ1ViewController.h"
 
 @interface PROJ1ViewController ()
-
+@property (weak, nonatomic) IBOutlet UITableView *timeLineTableView;
+@property (nonatomic) CGPoint lastOffset;
 @end
 
 @implementation PROJ1ViewController
@@ -34,7 +35,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    return 800;
+    return 460;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,8 +61,8 @@
     // Image settings
     UIImage *image = [UIImage imageNamed:[self.photosName objectAtIndex:indexPath.row]];
     // reducing the image size
-#define IMAGEMARGIN 12
-    int imageSizeInt = cell.bounds.size.width-(2*IMAGEMARGIN);
+#define IMAGEMARGINWIDTH 12
+    int imageSizeInt = cell.bounds.size.width-(2*IMAGEMARGINWIDTH);
     CGSize newSize = CGSizeMake(imageSizeInt, imageSizeInt);
     UIGraphicsBeginImageContext( newSize );
     [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
@@ -74,23 +75,33 @@
     CGImageRef imageRef = CGImageCreateWithImageInRect([newImage CGImage], clippedRect);
     UIImage *newNewImage = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
-    UIImageView *imageViewCell = [[UIImageView alloc]initWithFrame:CGRectMake(IMAGEMARGIN, 100, imageSizeInt, imageSizeInt)];
+    UIImageView *imageViewCell = [[UIImageView alloc]initWithFrame:CGRectMake(IMAGEMARGINWIDTH, TOPMARGIN+TITLEHEIGHT+10, imageSizeInt, imageSizeInt)];
     imageViewCell.image = newNewImage;
-    //[cell addSubview:imageViewCell];
+    [cell addSubview:imageViewCell];
     // making the image rounded
     
 //    cell.imageView.frame = cell.frame;
 //    cell.imageView.layer.cornerRadius = imageSizeInt/2; //image.size.width/2;
 //    cell.imageView.layer.masksToBounds = YES;
     
+#define BOTTOMIMAGESIZE 40
+    UIButton *likeButtonsCell = [[UIButton alloc] initWithFrame:CGRectMake(IMAGEMARGINWIDTH, TOPMARGIN+TITLEHEIGHT+imageSizeInt+15, imageSizeInt/2 -4, BOTTOMIMAGESIZE)];
     
-    UIButton *likeButtonsCell = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 60, 60)];
-    
-    likeButtonsCell.titleLabel.text = @"Likeskjnkjnkjnkjnkjnkjnkjnkjnkjnkjnkjn";
-    
+
+    [likeButtonsCell.titleLabel setTextAlignment:NSTextAlignmentLeft];
+    [likeButtonsCell setTitle:@"Likes" forState:UIControlStateNormal];
+    [likeButtonsCell setBackgroundColor:[UIColor greenColor]];
     [cell addSubview:likeButtonsCell];
     
+    UIButton *commentButtonsCell = [[UIButton alloc] initWithFrame:CGRectMake(IMAGEMARGINWIDTH+imageSizeInt/2 +4, TOPMARGIN+TITLEHEIGHT+imageSizeInt+15, imageSizeInt/2 -4, BOTTOMIMAGESIZE)];
     
+    
+    [commentButtonsCell.titleLabel setTextAlignment:NSTextAlignmentRight];
+    [commentButtonsCell setTitle:@"Comentários" forState:UIControlStateNormal];
+    [commentButtonsCell setBackgroundColor:[UIColor greenColor]];
+    [cell addSubview:commentButtonsCell];
+    
+
     return cell;
     
 }
@@ -100,6 +111,23 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    
+    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
+    [self.navigationController.navigationBar setOpaque:YES];
+    
+    
+    self.timeLineTableView.allowsSelection = NO;
+    
+    
+    
+    
+    
+    UIView *timelineheader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.timeLineTableView.frame.size.width, 60)];
+    timelineheader.backgroundColor = [UIColor purpleColor];
+    
+    self.timeLineTableView.tableHeaderView = timelineheader;
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,6 +136,21 @@
     // Dispose of any resources that can be recreated.
     NSLog(@"MEMORY WARNING");
 }
+
+
+- (void)scrollViewWillBeginScroll :(UIScrollView *)scrollView {
+    if (self.timeLineTableView.contentOffset.y < self.lastOffset.y) {
+        [self.navigationController.navigationBar setHidden:YES];
+    } else{
+        // unhide
+    }
+}
+
+- (void)scrollViewDidScroll :(UIScrollView *)scrollView {
+    /// blah blah
+    self.lastOffset = scrollView.contentOffset;
+}
+
 
 /*
 #pragma mark - Navigation
