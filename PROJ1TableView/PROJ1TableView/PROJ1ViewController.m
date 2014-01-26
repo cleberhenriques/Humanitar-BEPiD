@@ -112,22 +112,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    
-    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
-    [self.navigationController.navigationBar setOpaque:YES];
-    
-    
     self.timeLineTableView.allowsSelection = NO;
-    
-    
-    
-    
-    
-    UIView *timelineheader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.timeLineTableView.frame.size.width, 60)];
-    timelineheader.backgroundColor = [UIColor purpleColor];
-    
-    self.timeLineTableView.tableHeaderView = timelineheader;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -138,17 +124,23 @@
 }
 
 
-- (void)scrollViewWillBeginScroll :(UIScrollView *)scrollView {
-    if (self.timeLineTableView.contentOffset.y < self.lastOffset.y) {
-        [self.navigationController.navigationBar setHidden:YES];
-    } else{
-        // unhide
-    }
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.lastOffset = scrollView.contentOffset;
+    
 }
 
 - (void)scrollViewDidScroll :(UIScrollView *)scrollView {
-    /// blah blah
-    self.lastOffset = scrollView.contentOffset;
+    if (scrollView.contentOffset.y > self.lastOffset.y) {
+        // hide
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+    } else{
+        // unhide
+    
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+
+    }
+    
 }
 
 
