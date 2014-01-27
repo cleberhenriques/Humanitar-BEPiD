@@ -133,14 +133,10 @@
 - (void)scrollViewDidScroll :(UIScrollView *)scrollView {
     if (scrollView.contentOffset.y > self.lastOffset.y) {
         // hide
-        //[self.navigationController setNavigationBarHidden:YES animated:YES];
-        [UIView animateWithDuration:3. animations:^{
         [self.navigationController setNavigationBarHidden:YES animated:YES];
-        }];
         
     } else{
         // unhide
-    
         [self.navigationController setNavigationBarHidden:NO animated:YES];
 
     }
