@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA30D59A1896823100CD20AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5991896823100CD20AA /* Foundation.framework */; };
+		BA30D59C1896823100CD20AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D59B1896823100CD20AA /* CoreGraphics.framework */; };
+		BA30D59E1896823100CD20AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D59D1896823100CD20AA /* UIKit.framework */; };
+		BA30D5A41896823100CD20AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA30D5A21896823100CD20AA /* InfoPlist.strings */; };
+		BA30D5A61896823100CD20AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA30D5A51896823100CD20AA /* main.m */; };
+		BA30D5AA1896823100CD20AA /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA30D5A91896823100CD20AA /* CHAppDelegate.m */; };
+		BA30D5AD1896823100CD20AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA30D5AB1896823100CD20AA /* Main.storyboard */; };
+		BA30D5B01896823100CD20AA /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA30D5AF1896823100CD20AA /* CHViewController.m */; };
+		BA30D5B21896823100CD20AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA30D5B11896823100CD20AA /* Images.xcassets */; };
+		BA30D5B91896823100CD20AA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5B81896823100CD20AA /* XCTest.framework */; };
+		BA30D5BA1896823100CD20AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5991896823100CD20AA /* Foundation.framework */; };
+		BA30D5BB1896823100CD20AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D59D1896823100CD20AA /* UIKit.framework */; };
+		BA30D5C31896823100CD20AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA30D5C11896823100CD20AA /* InfoPlist.strings */; };
+		BA30D5C51896823100CD20AA /* ComunitarLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA30D5C41896823100CD20AA /* ComunitarLoginTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA30D5BC1896823100CD20AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA30D58E1896823100CD20AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA30D5951896823100CD20AA;
+			remoteInfo = ComunitarLogin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA30D5961896823100CD20AA /* ComunitarLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComunitarLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA30D5991896823100CD20AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BA30D59B1896823100CD20AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BA30D59D1896823100CD20AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BA30D5A11896823100CD20AA /* ComunitarLogin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ComunitarLogin-Info.plist"; sourceTree = "<group>"; };
+		BA30D5A31896823100CD20AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA30D5A51896823100CD20AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA30D5A71896823100CD20AA /* ComunitarLogin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComunitarLogin-Prefix.pch"; sourceTree = "<group>"; };
+		BA30D5A81896823100CD20AA /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
+		BA30D5A91896823100CD20AA /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
+		BA30D5AC1896823100CD20AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA30D5AE1896823100CD20AA /* CHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
+		BA30D5AF1896823100CD20AA /* CHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
+		BA30D5B11896823100CD20AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA30D5B71896823100CD20AA /* ComunitarLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComunitarLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA30D5B81896823100CD20AA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BA30D5C01896823100CD20AA /* ComunitarLoginTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ComunitarLoginTests-Info.plist"; sourceTree = "<group>"; };
+		BA30D5C21896823100CD20AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA30D5C41896823100CD20AA /* ComunitarLoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComunitarLoginTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA30D5931896823100CD20AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA30D59C1896823100CD20AA /* CoreGraphics.framework in Frameworks */,
+				BA30D59E1896823100CD20AA /* UIKit.framework in Frameworks */,
+				BA30D59A1896823100CD20AA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA30D5B41896823100CD20AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA30D5B91896823100CD20AA /* XCTest.framework in Frameworks */,
+				BA30D5BB1896823100CD20AA /* UIKit.framework in Frameworks */,
+				BA30D5BA1896823100CD20AA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA30D58D1896823100CD20AA = {
+			isa = PBXGroup;
+			children = (
+				BA30D59F1896823100CD20AA /* ComunitarLogin */,
+				BA30D5BE1896823100CD20AA /* ComunitarLoginTests */,
+				BA30D5981896823100CD20AA /* Frameworks */,
+				BA30D5971896823100CD20AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA30D5971896823100CD20AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA30D5961896823100CD20AA /* ComunitarLogin.app */,
+				BA30D5B71896823100CD20AA /* ComunitarLoginTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA30D5981896823100CD20AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA30D5991896823100CD20AA /* Foundation.framework */,
+				BA30D59B1896823100CD20AA /* CoreGraphics.framework */,
+				BA30D59D1896823100CD20AA /* UIKit.framework */,
+				BA30D5B81896823100CD20AA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA30D59F1896823100CD20AA /* ComunitarLogin */ = {
+			isa = PBXGroup;
+			children = (
+				BA30D5A81896823100CD20AA /* CHAppDelegate.h */,
+				BA30D5A91896823100CD20AA /* CHAppDelegate.m */,
+				BA30D5AB1896823100CD20AA /* Main.storyboard */,
+				BA30D5AE1896823100CD20AA /* CHViewController.h */,
+				BA30D5AF1896823100CD20AA /* CHViewController.m */,
+				BA30D5B11896823100CD20AA /* Images.xcassets */,
+				BA30D5A01896823100CD20AA /* Supporting Files */,
+			);
+			path = ComunitarLogin;
+			sourceTree = "<group>";
+		};
+		BA30D5A01896823100CD20AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA30D5A11896823100CD20AA /* ComunitarLogin-Info.plist */,
+				BA30D5A21896823100CD20AA /* InfoPlist.strings */,
+				BA30D5A51896823100CD20AA /* main.m */,
+				BA30D5A71896823100CD20AA /* ComunitarLogin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA30D5BE1896823100CD20AA /* ComunitarLoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA30D5C41896823100CD20AA /* ComunitarLoginTests.m */,
+				BA30D5BF1896823100CD20AA /* Supporting Files */,
+			);
+			path = ComunitarLoginTests;
+			sourceTree = "<group>";
+		};
+		BA30D5BF1896823100CD20AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA30D5C01896823100CD20AA /* ComunitarLoginTests-Info.plist */,
+				BA30D5C11896823100CD20AA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA30D5951896823100CD20AA /* ComunitarLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA30D5C81896823100CD20AA /* Build configuration list for PBXNativeTarget "ComunitarLogin" */;
+			buildPhases = (
+				BA30D5921896823100CD20AA /* Sources */,
+				BA30D5931896823100CD20AA /* Frameworks */,
+				BA30D5941896823100CD20AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ComunitarLogin;
+			productName = ComunitarLogin;
+			productReference = BA30D5961896823100CD20AA /* ComunitarLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA30D5B61896823100CD20AA /* ComunitarLoginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA30D5CB1896823100CD20AA /* Build configuration list for PBXNativeTarget "ComunitarLoginTests" */;
+			buildPhases = (
+				BA30D5B31896823100CD20AA /* Sources */,
+				BA30D5B41896823100CD20AA /* Frameworks */,
+				BA30D5B51896823100CD20AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA30D5BD1896823100CD20AA /* PBXTargetDependency */,
+			);
+			name = ComunitarLoginTests;
+			productName = ComunitarLoginTests;
+			productReference = BA30D5B71896823100CD20AA /* ComunitarLoginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA30D58E1896823100CD20AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CH;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					BA30D5B61896823100CD20AA = {
+						TestTargetID = BA30D5951896823100CD20AA;
+					};
+				};
+			};
+			buildConfigurationList = BA30D5911896823100CD20AA /* Build configuration list for PBXProject "ComunitarLogin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA30D58D1896823100CD20AA;
+			productRefGroup = BA30D5971896823100CD20AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA30D5951896823100CD20AA /* ComunitarLogin */,
+				BA30D5B61896823100CD20AA /* ComunitarLoginTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA30D5941896823100CD20AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA30D5B21896823100CD20AA /* Images.xcassets in Resources */,
+				BA30D5A41896823100CD20AA /* InfoPlist.strings in Resources */,
+				BA30D5AD1896823100CD20AA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA30D5B51896823100CD20AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA30D5C31896823100CD20AA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA30D5921896823100CD20AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA30D5A61896823100CD20AA /* main.m in Sources */,
+				BA30D5AA1896823100CD20AA /* CHAppDelegate.m in Sources */,
+				BA30D5B01896823100CD20AA /* CHViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA30D5B31896823100CD20AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA30D5C51896823100CD20AA /* ComunitarLoginTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA30D5BD1896823100CD20AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA30D5951896823100CD20AA /* ComunitarLogin */;
+			targetProxy = BA30D5BC1896823100CD20AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA30D5A21896823100CD20AA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA30D5A31896823100CD20AA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BA30D5AB1896823100CD20AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA30D5AC1896823100CD20AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA30D5C11896823100CD20AA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA30D5C21896823100CD20AA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA30D5C61896823100CD20AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BA30D5C71896823100CD20AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA30D5C91896823100CD20AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ComunitarLogin/ComunitarLogin-Prefix.pch";
+				INFOPLIST_FILE = "ComunitarLogin/ComunitarLogin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BA30D5CA1896823100CD20AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ComunitarLogin/ComunitarLogin-Prefix.pch";
+				INFOPLIST_FILE = "ComunitarLogin/ComunitarLogin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BA30D5CC1896823100CD20AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ComunitarLogin.app/ComunitarLogin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ComunitarLogin/ComunitarLogin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ComunitarLoginTests/ComunitarLoginTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BA30D5CD1896823100CD20AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ComunitarLogin.app/ComunitarLogin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ComunitarLogin/ComunitarLogin-Prefix.pch";
+				INFOPLIST_FILE = "ComunitarLoginTests/ComunitarLoginTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA30D5911896823100CD20AA /* Build configuration list for PBXProject "ComunitarLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA30D5C61896823100CD20AA /* Debug */,
+				BA30D5C71896823100CD20AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA30D5C81896823100CD20AA /* Build configuration list for PBXNativeTarget "ComunitarLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA30D5C91896823100CD20AA /* Debug */,
+				BA30D5CA1896823100CD20AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BA30D5CB1896823100CD20AA /* Build configuration list for PBXNativeTarget "ComunitarLoginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA30D5CC1896823100CD20AA /* Debug */,
+				BA30D5CD1896823100CD20AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA30D58E1896823100CD20AA /* Project object */;
+}
