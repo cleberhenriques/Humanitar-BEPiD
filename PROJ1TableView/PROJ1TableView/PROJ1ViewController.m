@@ -45,25 +45,20 @@
     
     // Configure the cell...
 
-#define TITLEHEIGHT 30
-#define TOPMARGIN 6
-    
     // ADICIONA TITULO NA CELULA
-    UILabel *titleCellLabel = [[UILabel alloc] initWithFrame:CGRectMake(2, TOPMARGIN, cell.bounds.size.width-2, TITLEHEIGHT)];
+    UILabel *titleCellLabel = (UILabel *)[cell viewWithTag:100];
     [titleCellLabel setTextAlignment:NSTextAlignmentCenter];
     titleCellLabel.text = @"TITULO";
-    titleCellLabel.font = [UIFont fontWithName:@"Helvetica" size:30];
-    [cell addSubview:titleCellLabel];
-    
+    titleCellLabel.textColor = [UIColor colorWithRed:46/255. green:204/255. blue:113/255. alpha:1.0];
+    titleCellLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:30];
     
     //ADICIONA IMAGEM NA CELULA
     
     // Image settings
+    UIImageView *cellImageView = (UIImageView *)[cell viewWithTag:101];
     UIImage *image = [UIImage imageNamed:[self.photosName objectAtIndex:indexPath.row]];
     // reducing the image size
-#define IMAGEMARGINWIDTH 12
-    int imageSizeInt = cell.bounds.size.width-(2*IMAGEMARGINWIDTH);
-    CGSize newSize = CGSizeMake(imageSizeInt, imageSizeInt);
+    CGSize newSize = CGSizeMake(cellImageView.frame.size.width, cellImageView.frame.size.height);
     UIGraphicsBeginImageContext( newSize );
     [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
     UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -71,35 +66,30 @@
     
     // cropping the image
     
-    CGRect clippedRect  = CGRectMake(0, 0, imageSizeInt, imageSizeInt);
+    CGRect clippedRect  = CGRectMake(0, 0, cellImageView.frame.size.width, cellImageView.frame.size.width);
     CGImageRef imageRef = CGImageCreateWithImageInRect([newImage CGImage], clippedRect);
     UIImage *newNewImage = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
-    UIImageView *imageViewCell = [[UIImageView alloc]initWithFrame:CGRectMake(IMAGEMARGINWIDTH, TOPMARGIN+TITLEHEIGHT+10, imageSizeInt, imageSizeInt)];
-    imageViewCell.image = newNewImage;
-    [cell addSubview:imageViewCell];
+    
+    [cellImageView setImage:newNewImage];
+    
     // making the image rounded
     
-//    cell.imageView.frame = cell.frame;
-//    cell.imageView.layer.cornerRadius = imageSizeInt/2; //image.size.width/2;
-//    cell.imageView.layer.masksToBounds = YES;
+    cellImageView.layer.cornerRadius = cellImageView.frame.size.width/12; //image.size.width/2;
+    cellImageView.layer.masksToBounds = YES;
     
 #define BOTTOMIMAGESIZE 40
-    UIButton *likeButtonsCell = [[UIButton alloc] initWithFrame:CGRectMake(IMAGEMARGINWIDTH, TOPMARGIN+TITLEHEIGHT+imageSizeInt+15, imageSizeInt/2 -4, BOTTOMIMAGESIZE)];
+    UIButton *likeButtonsCell = (UIButton *)[cell viewWithTag:110];
     
-
     [likeButtonsCell.titleLabel setTextAlignment:NSTextAlignmentLeft];
     [likeButtonsCell setTitle:@"Likes" forState:UIControlStateNormal];
-    [likeButtonsCell setBackgroundColor:[UIColor greenColor]];
-    [cell addSubview:likeButtonsCell];
+    //[likeButtonsCell setBackgroundColor:[UIColor greenColor]];
     
-    UIButton *commentButtonsCell = [[UIButton alloc] initWithFrame:CGRectMake(IMAGEMARGINWIDTH+imageSizeInt/2 +4, TOPMARGIN+TITLEHEIGHT+imageSizeInt+15, imageSizeInt/2 -4, BOTTOMIMAGESIZE)];
-    
+    UIButton *commentButtonsCell = (UIButton *)[cell viewWithTag:111];
     
     [commentButtonsCell.titleLabel setTextAlignment:NSTextAlignmentRight];
     [commentButtonsCell setTitle:@"Comentários" forState:UIControlStateNormal];
-    [commentButtonsCell setBackgroundColor:[UIColor greenColor]];
-    [cell addSubview:commentButtonsCell];
+    //[commentButtonsCell setBackgroundColor:[UIColor greenColor]];
     
 
     return cell;
@@ -113,6 +103,18 @@
     // Do any additional setup after loading the view.
     
     self.timeLineTableView.allowsSelection = NO;
+    self.title = @"TimeLine";
+    
+    UIView *headerViewSelectionButtons = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.timeLineTableView.frame.size.width, 46)];
+    
+    //headerViewSelectionButtons.backgroundColor = [UIColor greenColor];
+#define MARGINHEADERSEGMENT 6
+    
+    UISegmentedControl *segmentButtons = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"News", @"Próximo", @"??" ,nil]];
+    segmentButtons.frame = CGRectMake(MARGINHEADERSEGMENT, MARGINHEADERSEGMENT, headerViewSelectionButtons.frame.size.width-(2*MARGINHEADERSEGMENT), headerViewSelectionButtons.frame.size.height-(2*MARGINHEADERSEGMENT));
+    [headerViewSelectionButtons addSubview:segmentButtons];
+    
+    self.timeLineTableView.tableHeaderView = headerViewSelectionButtons;
 
 }
 
