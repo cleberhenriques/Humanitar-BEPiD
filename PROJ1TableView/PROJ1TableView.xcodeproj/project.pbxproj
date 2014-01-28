@@ -136,8 +136,6 @@
 		E974F3B2188D39CB00DF1C70 /* PROJ1TableView */ = {
 			isa = PBXGroup;
 			children = (
-				E974F3BB188D39CB00DF1C70 /* PROJ1AppDelegate.h */,
-				E974F3BC188D39CB00DF1C70 /* PROJ1AppDelegate.m */,
 				E9E7DC331891275500B53BE2 /* PROJ1ViewController.h */,
 				E9E7DC321891275500B53BE2 /* PROJ1ViewController.m */,
 				E974F3BE188D39CB00DF1C70 /* Main_iPhone.storyboard */,
@@ -151,6 +149,8 @@
 		E974F3B3188D39CB00DF1C70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E974F3BB188D39CB00DF1C70 /* PROJ1AppDelegate.h */,
+				E974F3BC188D39CB00DF1C70 /* PROJ1AppDelegate.m */,
 				E974F3B4188D39CB00DF1C70 /* PROJ1TableView-Info.plist */,
 				E974F3B5188D39CB00DF1C70 /* InfoPlist.strings */,
 				E974F3B8188D39CB00DF1C70 /* main.m */,

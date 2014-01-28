@@ -49,7 +49,7 @@
     UILabel *titleCellLabel = (UILabel *)[cell viewWithTag:100];
     [titleCellLabel setTextAlignment:NSTextAlignmentCenter];
     titleCellLabel.text = @"TITULO";
-    titleCellLabel.textColor = [UIColor colorWithRed:46/255. green:204/255. blue:113/255. alpha:1.0];
+    //titleCellLabel.textColor = [UIColor colorWithRed:46/255. green:204/255. blue:113/255. alpha:1.0];
     titleCellLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:30];
     
     //ADICIONA IMAGEM NA CELULA
@@ -104,6 +104,8 @@
     
     self.timeLineTableView.allowsSelection = NO;
     self.title = @"TimeLine";
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:46/255. green:204/255. blue:113/255. alpha:1.0]];
+    
     
     UIView *headerViewSelectionButtons = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.timeLineTableView.frame.size.width, 46)];
     
