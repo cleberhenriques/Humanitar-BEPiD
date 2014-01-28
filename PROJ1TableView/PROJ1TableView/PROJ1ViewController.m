@@ -7,6 +7,7 @@
 //
 
 #import "PROJ1ViewController.h"
+#import <Parse/Parse.h>
 
 @interface PROJ1ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *timeLineTableView;
@@ -102,6 +103,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self loginParseUserInfo];
+    
     self.timeLineTableView.allowsSelection = NO;
     self.title = @"TimeLine";
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:46/255. green:204/255. blue:113/255. alpha:1.0]];
@@ -118,6 +121,12 @@
     
     self.timeLineTableView.tableHeaderView = headerViewSelectionButtons;
 
+}
+
+
+- (void)loginParseUserInfo
+{
+    
 }
 
 - (void)didReceiveMemoryWarning
