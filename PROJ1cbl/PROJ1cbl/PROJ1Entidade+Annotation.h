@@ -11,6 +11,6 @@
 
 @interface PROJ1Entidade (Annotation) <MKAnnotation>
 
-@property (nonatomic) CLLocationCoordinate2D coordinate;
+//@property (nonatomic) CLLocationCoordinate2D coordinate;
 
 @end

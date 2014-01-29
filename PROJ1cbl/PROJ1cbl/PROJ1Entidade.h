@@ -12,9 +12,9 @@
 
 @property (nonatomic) NSNumber *codEntidade; // int
 @property (nonatomic) NSString *nomeEntidade;
-@property (nonatomic) NSString *desccricaoEntidade;
-@property (nonatomic) NSNumber *latitude; // double
-@property (nonatomic) NSNumber *longitude; // double
+@property (nonatomic) NSString *descricaoEntidade;
+@property (nonatomic, strong) NSNumber *latitude; // double
+@property (nonatomic, strong) NSNumber *longitude; // double
 @property (nonatomic) NSNumber *codTipoEntidade; // int
 
 @end
