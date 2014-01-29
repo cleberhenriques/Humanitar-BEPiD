@@ -18,6 +18,8 @@
 @implementation PROJ1MapaInstituicoesViewController
 
 
+
+
 - (NSArray *)arrayOfInstitutions
 {
     if (!_arrayOfInstitutions) {
@@ -26,6 +28,7 @@
     }
     return _arrayOfInstitutions;
 }
+
 
 - (NSArray *)buscaArrayDeInstituicoes
 {
@@ -82,6 +85,8 @@
 
 
 
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -91,18 +96,21 @@
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view
     self.instituicoesMapView.delegate = self;
-    
 }
+
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     //headerViewSelectionButtons.backgroundColor = [UIColor greenColor];
 #define MARGINTOPSEGMENT 28
 #define MARGINSIDESEGMENT 56
@@ -117,6 +125,8 @@
 
 }
 
+
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -125,13 +135,16 @@
 
 }
 
+
+
 - (void)updateInstituicoesMapViewAnnotations
 {
-    NSLog(@"didUP");
     [self.instituicoesMapView removeAnnotations:self.instituicoesMapView.annotations];
     [self.instituicoesMapView addAnnotations:self.arrayOfInstitutions];
     [self.instituicoesMapView showAnnotations:self.arrayOfInstitutions animated:YES];
 }
+
+
 
 - (void)didJustChangeOptionOnSegmentedControlMapView:(UISegmentedControl *)segmented
 {
@@ -141,21 +154,14 @@
     [self updateInstituicoesMapViewAnnotations];
 }
 
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    NSLog(@"MEMORY WARNING");
 }
-
-
-//
-//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
-//{
-//    
-//}
-
-
-//- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control;
 
 
 @end
