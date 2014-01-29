@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90DB1BE1897D12D0093C047 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DB1BD1897D12D0093C047 /* Parse.framework */; };
+		E90DB1C01897D1C30093C047 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DB1BF1897D1C30093C047 /* AudioToolbox.framework */; };
+		E90DB1C21897D1DA0093C047 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DB1C11897D1DA0093C047 /* CFNetwork.framework */; };
+		E90DB1C41897D1ED0093C047 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DB1C31897D1ED0093C047 /* CoreLocation.framework */; };
+		E90DB1C61897D1F60093C047 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DB1C51897D1F60093C047 /* libz.dylib */; };
+		E90DB1C81897D1FE0093C047 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DB1C71897D1FE0093C047 /* MobileCoreServices.framework */; };
+		E90DB1CA1897D2050093C047 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DB1C91897D2050093C047 /* QuartzCore.framework */; };
+		E90DB1CC1897D20B0093C047 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DB1CB1897D20B0093C047 /* Security.framework */; };
+		E90DB1CE1897D20F0093C047 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DB1CD1897D20F0093C047 /* StoreKit.framework */; };
+		E90DB1D01897D2190093C047 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90DB1CF1897D2190093C047 /* SystemConfiguration.framework */; };
+		E94563121898231A004699FB /* PROJ1Evento.m in Sources */ = {isa = PBXBuildFile; fileRef = E94563111898231A004699FB /* PROJ1Evento.m */; };
 		E974F3AD188D39CB00DF1C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E974F3AC188D39CB00DF1C70 /* Foundation.framework */; };
 		E974F3AF188D39CB00DF1C70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E974F3AE188D39CB00DF1C70 /* CoreGraphics.framework */; };
 		E974F3B1188D39CB00DF1C70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E974F3B0188D39CB00DF1C70 /* UIKit.framework */; };
@@ -46,6 +57,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E90DB1BD1897D12D0093C047 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E90DB1BF1897D1C30093C047 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E90DB1C11897D1DA0093C047 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E90DB1C31897D1ED0093C047 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E90DB1C51897D1F60093C047 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E90DB1C71897D1FE0093C047 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E90DB1C91897D2050093C047 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E90DB1CB1897D20B0093C047 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E90DB1CD1897D20F0093C047 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E90DB1CF1897D2190093C047 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E94563101898231A004699FB /* PROJ1Evento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1Evento.h; sourceTree = "<group>"; };
+		E94563111898231A004699FB /* PROJ1Evento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1Evento.m; sourceTree = "<group>"; };
 		E974F3A9188D39CB00DF1C70 /* PROJ1TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJ1TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E974F3AC188D39CB00DF1C70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E974F3AE188D39CB00DF1C70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,8 +107,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90DB1D01897D2190093C047 /* SystemConfiguration.framework in Frameworks */,
+				E90DB1CE1897D20F0093C047 /* StoreKit.framework in Frameworks */,
+				E90DB1CC1897D20B0093C047 /* Security.framework in Frameworks */,
+				E90DB1CA1897D2050093C047 /* QuartzCore.framework in Frameworks */,
+				E90DB1C81897D1FE0093C047 /* MobileCoreServices.framework in Frameworks */,
+				E90DB1C61897D1F60093C047 /* libz.dylib in Frameworks */,
+				E90DB1C41897D1ED0093C047 /* CoreLocation.framework in Frameworks */,
 				E974F3AF188D39CB00DF1C70 /* CoreGraphics.framework in Frameworks */,
+				E90DB1C21897D1DA0093C047 /* CFNetwork.framework in Frameworks */,
+				E90DB1C01897D1C30093C047 /* AudioToolbox.framework in Frameworks */,
 				E974F3B1188D39CB00DF1C70 /* UIKit.framework in Frameworks */,
+				E90DB1BE1897D12D0093C047 /* Parse.framework in Frameworks */,
 				E974F3AD188D39CB00DF1C70 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +158,16 @@
 		E974F3AB188D39CB00DF1C70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E90DB1CF1897D2190093C047 /* SystemConfiguration.framework */,
+				E90DB1CD1897D20F0093C047 /* StoreKit.framework */,
+				E90DB1CB1897D20B0093C047 /* Security.framework */,
+				E90DB1C91897D2050093C047 /* QuartzCore.framework */,
+				E90DB1C71897D1FE0093C047 /* MobileCoreServices.framework */,
+				E90DB1C51897D1F60093C047 /* libz.dylib */,
+				E90DB1C31897D1ED0093C047 /* CoreLocation.framework */,
+				E90DB1C11897D1DA0093C047 /* CFNetwork.framework */,
+				E90DB1BF1897D1C30093C047 /* AudioToolbox.framework */,
+				E90DB1BD1897D12D0093C047 /* Parse.framework */,
 				E974F3AC188D39CB00DF1C70 /* Foundation.framework */,
 				E974F3AE188D39CB00DF1C70 /* CoreGraphics.framework */,
 				E974F3B0188D39CB00DF1C70 /* UIKit.framework */,
@@ -136,10 +179,10 @@
 		E974F3B2188D39CB00DF1C70 /* PROJ1TableView */ = {
 			isa = PBXGroup;
 			children = (
-				E974F3BB188D39CB00DF1C70 /* PROJ1AppDelegate.h */,
-				E974F3BC188D39CB00DF1C70 /* PROJ1AppDelegate.m */,
 				E9E7DC331891275500B53BE2 /* PROJ1ViewController.h */,
 				E9E7DC321891275500B53BE2 /* PROJ1ViewController.m */,
+				E94563101898231A004699FB /* PROJ1Evento.h */,
+				E94563111898231A004699FB /* PROJ1Evento.m */,
 				E974F3BE188D39CB00DF1C70 /* Main_iPhone.storyboard */,
 				E974F3C7188D39CB00DF1C70 /* Images.xcassets */,
 				E9E7DC2B1891267D00B53BE2 /* Imagens */,
@@ -151,6 +194,8 @@
 		E974F3B3188D39CB00DF1C70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E974F3BB188D39CB00DF1C70 /* PROJ1AppDelegate.h */,
+				E974F3BC188D39CB00DF1C70 /* PROJ1AppDelegate.m */,
 				E974F3B4188D39CB00DF1C70 /* PROJ1TableView-Info.plist */,
 				E974F3B5188D39CB00DF1C70 /* InfoPlist.strings */,
 				E974F3B8188D39CB00DF1C70 /* main.m */,
@@ -307,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E974F3B9188D39CB00DF1C70 /* main.m in Sources */,
+				E94563121898231A004699FB /* PROJ1Evento.m in Sources */,
 				E974F3BD188D39CB00DF1C70 /* PROJ1AppDelegate.m in Sources */,
 				E9E7DC341891275500B53BE2 /* PROJ1ViewController.m in Sources */,
 			);
@@ -391,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -425,7 +471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -437,6 +483,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/txaidw/Documents/GitHub/Working-Proj/PROJ1TableView",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PROJ1TableView/PROJ1TableView-Prefix.pch";
 				INFOPLIST_FILE = "PROJ1TableView/PROJ1TableView-Info.plist";
@@ -451,6 +501,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/txaidw/Documents/GitHub/Working-Proj/PROJ1TableView",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PROJ1TableView/PROJ1TableView-Prefix.pch";
 				INFOPLIST_FILE = "PROJ1TableView/PROJ1TableView-Info.plist";

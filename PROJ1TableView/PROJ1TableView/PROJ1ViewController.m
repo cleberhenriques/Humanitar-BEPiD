@@ -7,35 +7,98 @@
 //
 
 #import "PROJ1ViewController.h"
+#import <Parse/Parse.h>
+#import "PROJ1Evento.h"
 
 @interface PROJ1ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *timeLineTableView;
 @property (nonatomic) CGPoint lastOffset;
+@property (strong, nonatomic) NSArray *arrayOfEvents; // contem objetos do tipo EVENTO para serem mostrados na timeline.
+@property (nonatomic) int selectedTimeLineFilter;
+
 @end
 
 @implementation PROJ1ViewController
 
 
-
-- (NSArray *)photosName
+- (NSArray *)arrayOfEvents
 {
-    NSArray *myArray = [NSArray arrayWithObjects:@"Arvore.jpg", @"Praia.jpg", @"Aguas.jpg", @"Onda.jpg", @"Breaking Bad.jpg", @"Cachoeira.jpg", @"Caminho.jpg", @"Cosmos.jpg", @"Leopard Screen.jpg", @"Milky Way.jpg", @"The Road.jpg", @"iPhone Generations.jpg", nil];
-    NSSortDescriptor* sortOrder = [NSSortDescriptor sortDescriptorWithKey: @"self" ascending: YES];
-    return [myArray sortedArrayUsingDescriptors: [NSArray arrayWithObject: sortOrder]];
+    if (!_arrayOfEvents) {
+        
+        _arrayOfEvents = [[NSArray alloc] initWithArray:[self buscaArrayDeEventos]];
+    }
+    NSLog(@"%@", _arrayOfEvents);
+    return _arrayOfEvents;
 }
 
+- (NSArray *)buscaArrayDeEventos
+{
+    
+    NSMutableArray *arrayDeEventosTemporario = [[NSMutableArray alloc] init];
+    
+    ///////////////
+    if (self.selectedTimeLineFilter == 0) {
+        ///////////////////////////////////////
+        for (int i=0; i<12; i++) {
+            PROJ1Evento *umEventoTemporario = [[PROJ1Evento alloc] init];
+            
+            umEventoTemporario.nomeDoEvento = [NSString stringWithFormat:@"Post %d",i+1];
+            umEventoTemporario.descricaoDoEvento = [NSString stringWithFormat:@"Descricao do evento de numero %d",i+1];
+            NSLog(@"%d",i);
+            NSArray *myArray = [NSArray arrayWithObjects:@"The Road.jpg", @"Arvore.jpg", @"Praia.jpg", @"Aguas.jpg", @"Onda.jpg", @"Breaking Bad.jpg", @"Cachoeira.jpg", @"Caminho.jpg", @"Cosmos.jpg", @"Leopard Screen.jpg", @"Milky Way.jpg", @"iPhone Generations.jpg", nil];
+            
+            umEventoTemporario.albumDeFotosDoEvento = [NSArray arrayWithObject:[UIImage imageNamed:myArray[i]]];
+            
+            [arrayDeEventosTemporario addObject:umEventoTemporario];
+            
+        }
+        ///////////////////////////////////////
+    }
+    else if (self.selectedTimeLineFilter == 1) {
+        ///////////////////////////////////////
+        for (int i=0; i<4; i++) {
+            PROJ1Evento *umEventoTemporario = [[PROJ1Evento alloc] init];
+            
+            umEventoTemporario.nomeDoEvento = [NSString stringWithFormat:@"Post %d",i+1];
+            umEventoTemporario.descricaoDoEvento = [NSString stringWithFormat:@"Descricao do evento de numero %d",i+1];
+            NSLog(@"%d",i);
+            NSArray *myArray = [NSArray arrayWithObjects:@"Onda.jpg", @"Breaking Bad.jpg", @"Cachoeira.jpg", @"Caminho.jpg", @"Cosmos.jpg", nil];
+            
+            umEventoTemporario.albumDeFotosDoEvento = [NSArray arrayWithObject:[UIImage imageNamed:myArray[i]]];
+            
+            [arrayDeEventosTemporario addObject:umEventoTemporario];
+            
+        }
+        ///////////////////////////////////////
+    }
+    else if (self.selectedTimeLineFilter == 2) {
+        ///////////////////////////////////////
+        for (int i=0; i<2; i++) {
+            PROJ1Evento *umEventoTemporario = [[PROJ1Evento alloc] init];
+            
+            umEventoTemporario.nomeDoEvento = [NSString stringWithFormat:@"Post %d",i+1];
+            umEventoTemporario.descricaoDoEvento = [NSString stringWithFormat:@"Descricao do evento de numero %d",i+1];
+            NSLog(@"%d",i);
+            NSArray *myArray = [NSArray arrayWithObjects:@"Milky Way.jpg", @"The Road.jpg", @"iPhone Generations.jpg", nil];
+            
+            umEventoTemporario.albumDeFotosDoEvento = [NSArray arrayWithObject:[UIImage imageNamed:myArray[i]]];
+            
+            [arrayDeEventosTemporario addObject:umEventoTemporario];
+            
+        }
+        ///////////////////////////////////////
+        
+    }
+    
+    
+    return arrayDeEventosTemporario;
 
-
+}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return 12;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
-{
-    return 460;
+    return self.arrayOfEvents.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -45,63 +108,58 @@
     
     // Configure the cell...
 
-#define TITLEHEIGHT 30
-#define TOPMARGIN 6
-    
+    PROJ1Evento *eventoDaCell = self.arrayOfEvents[indexPath.row];
     // ADICIONA TITULO NA CELULA
-    UILabel *titleCellLabel = [[UILabel alloc] initWithFrame:CGRectMake(2, TOPMARGIN, cell.bounds.size.width-2, TITLEHEIGHT)];
+    UILabel *titleCellLabel = (UILabel *)[cell viewWithTag:100];
     [titleCellLabel setTextAlignment:NSTextAlignmentCenter];
-    titleCellLabel.text = @"TITULO";
-    titleCellLabel.font = [UIFont fontWithName:@"Helvetica" size:30];
-    [cell addSubview:titleCellLabel];
-    
+    titleCellLabel.text = eventoDaCell.nomeDoEvento;
+    //titleCellLabel.textColor = [UIColor colorWithRed:46/255. green:204/255. blue:113/255. alpha:1.0];
+    titleCellLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:30];
     
     //ADICIONA IMAGEM NA CELULA
     
     // Image settings
-    UIImage *image = [UIImage imageNamed:[self.photosName objectAtIndex:indexPath.row]];
+    UIImageView *cellImageView = (UIImageView *)[cell viewWithTag:101];
+    UIImage *image = [eventoDaCell.albumDeFotosDoEvento firstObject];
     // reducing the image size
-#define IMAGEMARGINWIDTH 12
-    int imageSizeInt = cell.bounds.size.width-(2*IMAGEMARGINWIDTH);
-    CGSize newSize = CGSizeMake(imageSizeInt, imageSizeInt);
+    CGSize newSize = CGSizeMake(cellImageView.frame.size.width, cellImageView.frame.size.height);
     UIGraphicsBeginImageContext( newSize );
-    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)]; //newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     // cropping the image
     
-    CGRect clippedRect  = CGRectMake(0, 0, imageSizeInt, imageSizeInt);
+    CGRect clippedRect  = CGRectMake(0, 0, cellImageView.frame.size.width, cellImageView.frame.size.width);
     CGImageRef imageRef = CGImageCreateWithImageInRect([newImage CGImage], clippedRect);
     UIImage *newNewImage = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
-    UIImageView *imageViewCell = [[UIImageView alloc]initWithFrame:CGRectMake(IMAGEMARGINWIDTH, TOPMARGIN+TITLEHEIGHT+10, imageSizeInt, imageSizeInt)];
-    imageViewCell.image = newNewImage;
-    [cell addSubview:imageViewCell];
+    
+    [cellImageView setImage:newNewImage];
+    
     // making the image rounded
     
-//    cell.imageView.frame = cell.frame;
-//    cell.imageView.layer.cornerRadius = imageSizeInt/2; //image.size.width/2;
-//    cell.imageView.layer.masksToBounds = YES;
+    cellImageView.layer.cornerRadius = cellImageView.frame.size.width/12; //image.size.width/2;
+    cellImageView.layer.masksToBounds = YES;
     
 #define BOTTOMIMAGESIZE 40
-    UIButton *likeButtonsCell = [[UIButton alloc] initWithFrame:CGRectMake(IMAGEMARGINWIDTH, TOPMARGIN+TITLEHEIGHT+imageSizeInt+15, imageSizeInt/2 -4, BOTTOMIMAGESIZE)];
+    UIButton *likeButtonsCell = (UIButton *)[cell viewWithTag:110];
     
-
     [likeButtonsCell.titleLabel setTextAlignment:NSTextAlignmentLeft];
-    [likeButtonsCell setTitle:@"Likes" forState:UIControlStateNormal];
-    [likeButtonsCell setBackgroundColor:[UIColor greenColor]];
-    [cell addSubview:likeButtonsCell];
+    [likeButtonsCell setTitle:@"Curtir" forState:UIControlStateNormal];
+    //[likeButtonsCell setBackgroundColor:[UIColor greenColor]];
     
-    UIButton *commentButtonsCell = [[UIButton alloc] initWithFrame:CGRectMake(IMAGEMARGINWIDTH+imageSizeInt/2 +4, TOPMARGIN+TITLEHEIGHT+imageSizeInt+15, imageSizeInt/2 -4, BOTTOMIMAGESIZE)];
-    
+    UIButton *commentButtonsCell = (UIButton *)[cell viewWithTag:111];
     
     [commentButtonsCell.titleLabel setTextAlignment:NSTextAlignmentRight];
     [commentButtonsCell setTitle:@"Comentários" forState:UIControlStateNormal];
-    [commentButtonsCell setBackgroundColor:[UIColor greenColor]];
-    [cell addSubview:commentButtonsCell];
+    //[commentButtonsCell setBackgroundColor:[UIColor greenColor]];
     
 
+    UILabel *descricaoEventoLabel = (UILabel *)[cell viewWithTag:1000];
+    descricaoEventoLabel.text = eventoDaCell.descricaoDoEvento;
+    
+    
     return cell;
     
 }
@@ -112,8 +170,57 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.timeLineTableView.allowsSelection = NO;
+    [self loginParseUserInfo];
 
+    self.timeLineTableView.allowsSelection = NO;
+    self.title = @"TimeLine";
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:46/255. green:204/255. blue:113/255. alpha:1.0]];
+    
+    
+    UIView *headerViewSelectionButtons = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.timeLineTableView.frame.size.width, 46)];
+    
+    //headerViewSelectionButtons.backgroundColor = [UIColor greenColor];
+#define MARGINHEADERSEGMENT 6
+    
+    UISegmentedControl *segmentButtons = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"News", @"Próximo", @"??" ,nil]];
+    segmentButtons.frame = CGRectMake(MARGINHEADERSEGMENT, MARGINHEADERSEGMENT, headerViewSelectionButtons.frame.size.width-(2*MARGINHEADERSEGMENT), headerViewSelectionButtons.frame.size.height-(2*MARGINHEADERSEGMENT));
+    
+    [segmentButtons addTarget:self action:@selector(didJustChangeOptionOnSegmentedControl:) forControlEvents:UIControlEventValueChanged];
+    [segmentButtons setSelectedSegmentIndex:0];
+    
+    [headerViewSelectionButtons addSubview:segmentButtons];
+    
+    
+    self.timeLineTableView.tableHeaderView = headerViewSelectionButtons;
+
+}
+
+- (void)didJustChangeOptionOnSegmentedControl:(UISegmentedControl *)segment
+{
+    self.selectedTimeLineFilter = segment.selectedSegmentIndex;
+    self.arrayOfEvents = nil;
+    [self.timeLineTableView reloadData];
+}
+
+- (void)loginParseUserInfo
+{
+    PFUser *user = [PFUser user];
+    user.username = @"my name";
+    user.password = @"my pass";
+    user.email = @"email@example.com";
+    
+    // other fields can be set if you want to save more information
+    user[@"phone"] = @"650-555-0000";
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            // Hooray! Let them use the app now.
+        } else {
+            NSString *errorString = [error userInfo][@"error"];
+            // Show the errorString somewhere and let the user try again.
+            NSLog(@"%@", errorString);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -133,14 +240,10 @@
 - (void)scrollViewDidScroll :(UIScrollView *)scrollView {
     if (scrollView.contentOffset.y > self.lastOffset.y) {
         // hide
-        //[self.navigationController setNavigationBarHidden:YES animated:YES];
-        [UIView animateWithDuration:3. animations:^{
         [self.navigationController setNavigationBarHidden:YES animated:YES];
-        }];
         
     } else{
         // unhide
-    
         [self.navigationController setNavigationBarHidden:NO animated:YES];
 
     }
