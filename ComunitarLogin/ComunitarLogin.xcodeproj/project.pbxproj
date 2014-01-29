@@ -32,6 +32,8 @@
 		BA30D5DF189683D100CD20AA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5DE189683D100CD20AA /* StoreKit.framework */; };
 		BA30D5E1189683DA00CD20AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5E0189683DA00CD20AA /* SystemConfiguration.framework */; };
 		BA30D61E1896892100CD20AA /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = BA30D61D1896892100CD20AA /* lock.png */; };
+		BAFD378D189930D30088623A /* CHMyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFD378C189930D30088623A /* CHMyLoginViewController.m */; };
+		BAFD378F189936230088623A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFD378E189936230088623A /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,9 @@
 		BA30D5DE189683D100CD20AA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BA30D5E0189683DA00CD20AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BA30D61D1896892100CD20AA /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock.png; path = ../../../Dropbox/ScrollZoom/ScrollZoom/lock.png; sourceTree = "<group>"; };
+		BAFD378B189930D30088623A /* CHMyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMyLoginViewController.h; sourceTree = "<group>"; };
+		BAFD378C189930D30088623A /* CHMyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMyLoginViewController.m; sourceTree = "<group>"; };
+		BAFD378E189936230088623A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +167,9 @@
 				BA30D5AF1896823100CD20AA /* CHViewController.m */,
 				BA30D5B11896823100CD20AA /* Images.xcassets */,
 				BA30D5A01896823100CD20AA /* Supporting Files */,
+				BAFD378B189930D30088623A /* CHMyLoginViewController.h */,
+				BAFD378C189930D30088623A /* CHMyLoginViewController.m */,
+				BAFD378E189936230088623A /* logo.png */,
 			);
 			path = ComunitarLogin;
 			sourceTree = "<group>";
@@ -273,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA30D61E1896892100CD20AA /* lock.png in Resources */,
+				BAFD378F189936230088623A /* logo.png in Resources */,
 				BA30D5B21896823100CD20AA /* Images.xcassets in Resources */,
 				BA30D5A41896823100CD20AA /* InfoPlist.strings in Resources */,
 				BA30D5AD1896823100CD20AA /* Main.storyboard in Resources */,
@@ -295,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA30D5A61896823100CD20AA /* main.m in Sources */,
+				BAFD378D189930D30088623A /* CHMyLoginViewController.m in Sources */,
 				BA30D5AA1896823100CD20AA /* CHAppDelegate.m in Sources */,
 				BA30D5B01896823100CD20AA /* CHViewController.m in Sources */,
 			);
@@ -513,6 +523,7 @@
 				BA30D5CA1896823100CD20AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA30D5CB1896823100CD20AA /* Build configuration list for PBXNativeTarget "ComunitarLoginTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +532,7 @@
 				BA30D5CD1896823100CD20AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
