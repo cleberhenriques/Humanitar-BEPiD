@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kgs-q5-gLL">
-                                <rect key="frame" x="0.0" y="64" width="320" height="170"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="172"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="Heh-gh-dap"/>
-                                </constraints>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-YA-4xn">
                                 <rect key="frame" x="0.0" y="236" width="320" height="283"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="283" id="T6p-Zy-YwU"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NearInstitutionsCheckInCell" textLabel="rCn-S8-EDF" detailTextLabel="F5h-1H-zpf" style="IBUITableViewCellStyleValue1" id="4IC-z0-e6Q">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -58,13 +58,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Yoa-YA-4xn" secondAttribute="trailing" id="7W6-Kc-HN0"/>
-                            <constraint firstItem="Yoa-YA-4xn" firstAttribute="top" secondItem="kgs-q5-gLL" secondAttribute="bottom" constant="2" id="Asu-Lk-RMX"/>
-                            <constraint firstItem="kgs-q5-gLL" firstAttribute="top" secondItem="B95-Ho-6EB" secondAttribute="bottom" id="kzz-kw-c1N"/>
-                            <constraint firstItem="kgs-q5-gLL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="qjN-1K-Xzi"/>
-                            <constraint firstItem="Yoa-YA-4xn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="utq-Ur-IQC"/>
-                            <constraint firstItem="7rc-fe-09i" firstAttribute="top" secondItem="Yoa-YA-4xn" secondAttribute="bottom" id="vr4-ld-I86"/>
-                            <constraint firstAttribute="trailing" secondItem="kgs-q5-gLL" secondAttribute="trailing" id="xmb-nb-BjT"/>
+                            <constraint firstItem="kgs-q5-gLL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0mw-m4-G8S"/>
+                            <constraint firstAttribute="trailing" secondItem="kgs-q5-gLL" secondAttribute="trailing" id="45n-vL-OEx"/>
+                            <constraint firstItem="kgs-q5-gLL" firstAttribute="top" secondItem="B95-Ho-6EB" secondAttribute="bottom" id="66I-CY-EAm"/>
+                            <constraint firstItem="Yoa-YA-4xn" firstAttribute="top" secondItem="kgs-q5-gLL" secondAttribute="bottom" id="ShK-Dv-QAq"/>
+                            <constraint firstAttribute="trailing" secondItem="Yoa-YA-4xn" secondAttribute="trailing" id="U5w-n0-yqq"/>
+                            <constraint firstItem="7rc-fe-09i" firstAttribute="top" secondItem="Yoa-YA-4xn" secondAttribute="bottom" id="nHl-9B-ezI"/>
+                            <constraint firstItem="Yoa-YA-4xn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="uaW-Dr-nqP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vsq-RY-rhJ"/>

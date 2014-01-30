@@ -23,6 +23,7 @@
 		E9D288361899D0170091170D /* PROJ1CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D288351899D0170091170D /* PROJ1CheckInViewController.m */; };
 		E9D2883B1899DFBF0091170D /* PROJ1Entidade.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D288381899DFBF0091170D /* PROJ1Entidade.m */; };
 		E9D2883C1899DFBF0091170D /* PROJ1Entidade+Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D2883A1899DFBF0091170D /* PROJ1Entidade+Annotation.m */; };
+		E9D4AC8A189AAC66009D4F27 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D4AC89189AAC66009D4F27 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E9D288381899DFBF0091170D /* PROJ1Entidade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1Entidade.m; sourceTree = "<group>"; };
 		E9D288391899DFBF0091170D /* PROJ1Entidade+Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PROJ1Entidade+Annotation.h"; sourceTree = "<group>"; };
 		E9D2883A1899DFBF0091170D /* PROJ1Entidade+Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PROJ1Entidade+Annotation.m"; sourceTree = "<group>"; };
+		E9D4AC89189AAC66009D4F27 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D4AC8A189AAC66009D4F27 /* MapKit.framework in Frameworks */,
 				E9D288021899CFD30091170D /* CoreGraphics.framework in Frameworks */,
 				E9D288041899CFD30091170D /* UIKit.framework in Frameworks */,
 				E9D288001899CFD30091170D /* Foundation.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		E9D287FE1899CFD30091170D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9D4AC89189AAC66009D4F27 /* MapKit.framework */,
 				E9D287FF1899CFD30091170D /* Foundation.framework */,
 				E9D288011899CFD30091170D /* CoreGraphics.framework */,
 				E9D288031899CFD30091170D /* UIKit.framework */,
@@ -473,6 +477,7 @@
 				E9D288301899CFD30091170D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E9D288311899CFD30091170D /* Build configuration list for PBXNativeTarget "PROJ1CheckInTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +486,7 @@
 				E9D288331899CFD30091170D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
