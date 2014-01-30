@@ -39,6 +39,9 @@
     
     ///////////////
     if (self.selectedTimeLineFilter == 0) {
+        
+        // ENTRE OS // RETIRAR O CODIGO EXEMPLO E RETORNAR UM ARRAY arraydeEventosTemporario com os eventos da classe Evento
+        // Aqui é os RECENTES
         ///////////////////////////////////////
         for (int i=0; i<12; i++) {
             PROJ1Evento *umEventoTemporario = [[PROJ1Evento alloc] init];
@@ -56,6 +59,8 @@
         ///////////////////////////////////////
     }
     else if (self.selectedTimeLineFilter == 1) {
+        // ENTRE OS // RETIRAR O CODIGO EXEMPLO E RETORNAR UM ARRAY arraydeEventosTemporario com os eventos da classe Evento
+        // Aqui é os PROXIMOS
         ///////////////////////////////////////
         for (int i=0; i<4; i++) {
             PROJ1Evento *umEventoTemporario = [[PROJ1Evento alloc] init];
@@ -73,6 +78,8 @@
         ///////////////////////////////////////
     }
     else if (self.selectedTimeLineFilter == 2) {
+        // ENTRE OS // RETIRAR O CODIGO EXEMPLO E RETORNAR UM ARRAY arraydeEventosTemporario com os eventos da classe Evento
+        // Aqui é os PERTOS
         ///////////////////////////////////////
         for (int i=0; i<2; i++) {
             PROJ1Evento *umEventoTemporario = [[PROJ1Evento alloc] init];
