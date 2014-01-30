@@ -102,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="1709" y="-1358"/>
         </scene>
-        <!--Mapa Instituicoes View Controller - Item-->
+        <!--Mapa Instituicoes View Controller - Mapa-->
         <scene sceneID="oWu-Ju-SXa">
             <objects>
                 <viewController id="ICu-5I-c7a" customClass="PROJ1MapaInstituicoesViewController" sceneMemberID="viewController">
@@ -125,7 +125,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Item" id="cXm-Nz-TdW"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" id="cXm-Nz-TdW"/>
                     <connections>
                         <outlet property="instituicoesMapView" destination="GL0-k6-l3u" id="mvN-U2-ltI"/>
                     </connections>
@@ -169,15 +169,15 @@
                         <segue destination="hUR-01-roA" kind="modal" identifier="modalSegueToCheckInView" modalTransitionStyle="coverVertical" id="O2I-9V-Y9K"/>
                         <segue destination="2Oh-ao-gQe" kind="relationship" relationship="viewControllers" id="LUl-Wh-07x"/>
                         <segue destination="ICu-5I-c7a" kind="relationship" relationship="viewControllers" id="9vl-fS-Nwd"/>
-                        <segue destination="6ab-u7-6W5" kind="relationship" relationship="viewControllers" id="6B8-K7-42y"/>
                         <segue destination="fQ0-97-xYh" kind="relationship" relationship="viewControllers" id="Uj6-vD-ujP"/>
+                        <segue destination="6ab-u7-6W5" kind="relationship" relationship="viewControllers" id="6B8-K7-42y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpM-f1-Dty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="339" y="-530"/>
         </scene>
-        <!--View Controller - Item-->
+        <!--View Controller - Perfil-->
         <scene sceneID="w1M-eq-lg0">
             <objects>
                 <viewController id="6ab-u7-6W5" sceneMemberID="viewController">
@@ -190,18 +190,18 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qGO-Z4-fF2"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" id="qGO-Z4-fF2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Na6-oQ-JTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1059" y="-2245"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Time Line-->
         <scene sceneID="TBu-Jf-QTF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="2Oh-ao-gQe" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Item" id="vCG-ss-UDU"/>
+                    <tabBarItem key="tabBarItem" title="Time Line" id="vCG-ss-UDU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="P84-m7-Pgj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
