@@ -21,7 +21,6 @@
 		BA30D5BB1896823100CD20AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D59D1896823100CD20AA /* UIKit.framework */; };
 		BA30D5C31896823100CD20AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA30D5C11896823100CD20AA /* InfoPlist.strings */; };
 		BA30D5C51896823100CD20AA /* ComunitarLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA30D5C41896823100CD20AA /* ComunitarLoginTests.m */; };
-		BA30D5CF1896834300CD20AA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5CE1896834300CD20AA /* Parse.framework */; };
 		BA30D5D11896837E00CD20AA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5D01896837E00CD20AA /* AudioToolbox.framework */; };
 		BA30D5D31896838B00CD20AA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5D21896838B00CD20AA /* CFNetwork.framework */; };
 		BA30D5D5189683A000CD20AA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5D4189683A000CD20AA /* CoreLocation.framework */; };
@@ -31,7 +30,7 @@
 		BA30D5DD189683C900CD20AA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5DC189683C900CD20AA /* Security.framework */; };
 		BA30D5DF189683D100CD20AA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5DE189683D100CD20AA /* StoreKit.framework */; };
 		BA30D5E1189683DA00CD20AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA30D5E0189683DA00CD20AA /* SystemConfiguration.framework */; };
-		BA30D61E1896892100CD20AA /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = BA30D61D1896892100CD20AA /* lock.png */; };
+		BAB1D8421899CF600082F7E3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB1D8411899CF600082F7E3 /* Parse.framework */; };
 		BAFD378D189930D30088623A /* CHMyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFD378C189930D30088623A /* CHMyLoginViewController.m */; };
 		BAFD378F189936230088623A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFD378E189936230088623A /* logo.png */; };
 /* End PBXBuildFile section */
@@ -66,7 +65,6 @@
 		BA30D5C01896823100CD20AA /* ComunitarLoginTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ComunitarLoginTests-Info.plist"; sourceTree = "<group>"; };
 		BA30D5C21896823100CD20AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA30D5C41896823100CD20AA /* ComunitarLoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComunitarLoginTests.m; sourceTree = "<group>"; };
-		BA30D5CE1896834300CD20AA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ComunitarLogin/Parse.framework; sourceTree = "<group>"; };
 		BA30D5D01896837E00CD20AA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BA30D5D21896838B00CD20AA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BA30D5D4189683A000CD20AA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -76,7 +74,7 @@
 		BA30D5DC189683C900CD20AA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BA30D5DE189683D100CD20AA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BA30D5E0189683DA00CD20AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		BA30D61D1896892100CD20AA /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock.png; path = ../../../Dropbox/ScrollZoom/ScrollZoom/lock.png; sourceTree = "<group>"; };
+		BAB1D8411899CF600082F7E3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ComunitarLogin/Parse.framework; sourceTree = "<group>"; };
 		BAFD378B189930D30088623A /* CHMyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMyLoginViewController.h; sourceTree = "<group>"; };
 		BAFD378C189930D30088623A /* CHMyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMyLoginViewController.m; sourceTree = "<group>"; };
 		BAFD378E189936230088623A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -93,12 +91,12 @@
 				BA30D5DB189683C100CD20AA /* QuartzCore.framework in Frameworks */,
 				BA30D5D9189683B900CD20AA /* MobileCoreServices.framework in Frameworks */,
 				BA30D5D7189683B000CD20AA /* libz.dylib in Frameworks */,
+				BAB1D8421899CF600082F7E3 /* Parse.framework in Frameworks */,
 				BA30D5D5189683A000CD20AA /* CoreLocation.framework in Frameworks */,
 				BA30D59C1896823100CD20AA /* CoreGraphics.framework in Frameworks */,
 				BA30D5D31896838B00CD20AA /* CFNetwork.framework in Frameworks */,
 				BA30D5D11896837E00CD20AA /* AudioToolbox.framework in Frameworks */,
 				BA30D59E1896823100CD20AA /* UIKit.framework in Frameworks */,
-				BA30D5CF1896834300CD20AA /* Parse.framework in Frameworks */,
 				BA30D59A1896823100CD20AA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,7 +117,7 @@
 		BA30D58D1896823100CD20AA = {
 			isa = PBXGroup;
 			children = (
-				BA30D61D1896892100CD20AA /* lock.png */,
+				BAB1D8411899CF600082F7E3 /* Parse.framework */,
 				BA30D59F1896823100CD20AA /* ComunitarLogin */,
 				BA30D5BE1896823100CD20AA /* ComunitarLoginTests */,
 				BA30D5981896823100CD20AA /* Frameworks */,
@@ -148,7 +146,6 @@
 				BA30D5D4189683A000CD20AA /* CoreLocation.framework */,
 				BA30D5D21896838B00CD20AA /* CFNetwork.framework */,
 				BA30D5D01896837E00CD20AA /* AudioToolbox.framework */,
-				BA30D5CE1896834300CD20AA /* Parse.framework */,
 				BA30D5991896823100CD20AA /* Foundation.framework */,
 				BA30D59B1896823100CD20AA /* CoreGraphics.framework */,
 				BA30D59D1896823100CD20AA /* UIKit.framework */,
@@ -280,7 +277,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA30D61E1896892100CD20AA /* lock.png in Resources */,
 				BAFD378F189936230088623A /* logo.png in Resources */,
 				BA30D5B21896823100CD20AA /* Images.xcassets in Resources */,
 				BA30D5A41896823100CD20AA /* InfoPlist.strings in Resources */,
@@ -436,10 +432,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/cleberhenriques/Documents/Working-Proj/ComunitarLogin/ComunitarLogin",
+					"/Users/cleberhenriques/Working-Proj/ComunitarLogin/ComunitarLogin",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ComunitarLogin/ComunitarLogin-Prefix.pch";
 				INFOPLIST_FILE = "ComunitarLogin/ComunitarLogin-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -453,10 +451,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/cleberhenriques/Documents/Working-Proj/ComunitarLogin/ComunitarLogin",
+					"/Users/cleberhenriques/Working-Proj/ComunitarLogin/ComunitarLogin",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ComunitarLogin/ComunitarLogin-Prefix.pch";
 				INFOPLIST_FILE = "ComunitarLogin/ComunitarLogin-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
