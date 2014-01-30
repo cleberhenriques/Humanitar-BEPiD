@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSArray *arrayOfEvents; // contem objetos do tipo EVENTO para serem mostrados na timeline.
 @property (nonatomic) int selectedTimeLineFilter;
 
+@property (nonatomic) int previousScrollViewYOffset;
 @end
 
 @implementation PROJ1InstitutionTableViewController
@@ -171,9 +172,9 @@
     // Do any additional setup after loading the view.
     
     self.timeLineTableView.allowsSelection = NO;
-    self.title = @"TimeLine";
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:46/255. green:204/255. blue:113/255. alpha:1.0]];
     
+    [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:0.11 green:0.47 blue:0.58 alpha:1.0]];
+    [self.tabBarController.tabBar setBarTintColor:[UIColor colorWithRed:0.11 green:0.47 blue:0.58 alpha:1.0]];
     
     UIView *headerViewSelectionButtons = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.timeLineTableView.frame.size.width, 46)];
     
@@ -208,24 +209,25 @@
 }
 
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
-    self.lastOffset = scrollView.contentOffset;
-    
-}
-
-- (void)scrollViewDidScroll :(UIScrollView *)scrollView {
-    if (scrollView.contentOffset.y > self.lastOffset.y) {
-        // hide
-        [self.navigationController setNavigationBarHidden:YES animated:YES];
-        
-    } else{
-        // unhide
-        [self.navigationController setNavigationBarHidden:NO animated:YES];
-
-    }
-    
-}
+//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+//{
+//    self.lastOffset = scrollView.contentOffset;
+//    
+//}
+//
+//- (void)scrollViewDidScroll :(UIScrollView *)scrollView {
+//    if (scrollView.contentOffset.y > self.lastOffset.y) {
+//        // hide
+//        [self.navigationController setNavigationBarHidden:YES animated:YES];
+//        [self.tabBarController.tabBar setHidden:YES];
+//        
+//    } else{
+//        // unhide
+//        [self.navigationController setNavigationBarHidden:NO animated:YES];
+//        [self.tabBarController.tabBar setHidden:NO];
+//    }
+//    
+//}
 
 
 /*
@@ -238,5 +240,139 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGRect topFrame = self.navigationController.navigationBar.frame;
+    CGRect bottomFrame = self.tabBarController.tabBar.frame;
+    
+    CGFloat topSize = topFrame.size.height - 21;
+    CGFloat bottomSize = bottomFrame.size.height;
+    //CGFloat topFramePercentageHidden = ((20 - topFrame.origin.y) / (topFrame.size.height - 1));
+    //CGFloat bottomFramePercentageHidden = ((20 -bottomFrame.origin.y) / (bottomFrame.size.height -1));
+    
+    CGFloat scrollOffset = scrollView.contentOffset.y;
+    CGFloat scrollDiff = scrollOffset - self.previousScrollViewYOffset;
+    CGFloat scrollHeight = scrollView.frame.size.height;
+    CGFloat scrollContentSizeHeight = scrollView.contentSize.height + scrollView.contentInset.bottom;
+    
+#define POSYCOMECOBOTTOMBAR 568-49
+    
+    if (scrollOffset <= -scrollView.contentInset.top) {
+        //posição inicial
+        topFrame.origin.y = 20;
+        bottomFrame.origin.y = POSYCOMECOBOTTOMBAR;
+    } else if ((scrollOffset + scrollHeight) >= scrollContentSizeHeight) {
+        //
+        topFrame.origin.y = -topSize;
+        bottomFrame.origin.y = POSYCOMECOBOTTOMBAR+bottomSize;
+    } else {
+        topFrame.origin.y = MIN(20, MAX(-topSize, topFrame.origin.y - scrollDiff));
+        bottomFrame.origin.y = MAX(POSYCOMECOBOTTOMBAR, MIN(POSYCOMECOBOTTOMBAR+bottomSize, bottomFrame.origin.y + scrollDiff));
+    }
+    
+    [self.navigationController.navigationBar setFrame:topFrame];
+    [self.tabBarController.tabBar setFrame:bottomFrame];
+    
+    //[self updateTopBarButtonItems:(1 - topFramePercentageHidden)];
+    //[self updateBottomBarButtonItems:(1 - bottomFramePercentageHidden)];
+    
+    self.previousScrollViewYOffset = scrollOffset;
+    
+    
+    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self stoppedScrolling];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
+                  willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate) {
+        [self stoppedScrolling];
+    }
+}
+
+- (void)stoppedScrolling
+{
+    CGRect frame = self.navigationController.navigationBar.frame;
+    if (frame.origin.y < 20) {
+        [self animateNavBarTo:-(frame.size.height - 21)];
+    }
+    
+    frame = self.tabBarController.tabBar.frame;
+    
+    if (frame.origin.y > POSYCOMECOBOTTOMBAR) {
+        [self animateBottomBarTo:POSYCOMECOBOTTOMBAR+frame.size.height];
+    }
+    
+    
+}
+
+- (void)animateBottomBarTo:(CGFloat)y
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        CGRect frame = self.tabBarController.tabBar.frame;
+        CGFloat alpha = (frame.origin.y >= y ? 0 : 1);
+        frame.origin.y = y;
+        [self.tabBarController.tabBar setFrame:frame];
+        [self updateBottomBarButtonItems:alpha];
+    }];
+}
+
+
+- (void)animateNavBarTo:(CGFloat)y
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        CGRect frame = self.navigationController.navigationBar.frame;
+        CGFloat alpha = (frame.origin.y >= y ? 0 : 1);
+        frame.origin.y = y;
+        [self.navigationController.navigationBar setFrame:frame];
+        [self updateTopBarButtonItems:alpha];
+    }];
+}
+
+- (void)updateTopBarButtonItems:(CGFloat)alpha
+{
+    [self.navigationItem.leftBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {
+        item.customView.alpha = alpha;
+    }];
+    [self.navigationItem.rightBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {
+        item.customView.alpha = alpha;
+    }];
+    [self.navigationItem.titleView setAlpha:alpha];
+    [self.navigationItem.titleView setAlpha:alpha];
+    self.navigationController.navigationBar.tintColor = [self.navigationController.navigationBar.tintColor colorWithAlphaComponent:alpha];
+}
+
+- (void)updateBottomBarButtonItems:(CGFloat)alpha
+{
+    [self.navigationItem.leftBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {
+        item.customView.alpha = alpha;
+    }];
+    [self.navigationItem.rightBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {
+        item.customView.alpha = alpha;
+    }];
+    [self.navigationItem.titleView setAlpha:alpha];
+    [self.navigationItem.titleView setAlpha:alpha];
+    self.navigationController.navigationBar.tintColor = [self.navigationController.navigationBar.tintColor colorWithAlphaComponent:alpha];
+}
+
+
 
 @end
