@@ -43,7 +43,6 @@
             
             umaInstituicaoTemporaria.nomeEntidade = [NSString stringWithFormat:@"Instituicao %d",i+1];
             //umEventoTemporario.descricaoDoEvento = [NSString stringWithFormat:@"Descricao do evento de numero %d",i+1];
-            NSLog(@"%d",i);
             NSArray *myArrayLat = [NSArray arrayWithObjects:@"51.219656", @"-30034634", @"-30032654", @"-30032624", @"-30042634", @"-30442634", @"-30033634", @"-30032629", nil];
             
             NSArray *myArrayLong = [NSArray arrayWithObjects:@"-30.034712", @"-51.250944", @"-51.220540", @"-51.225947", @"-51.220994", @"-51.210944", @"-51.220974", @"-51.220900", nil];

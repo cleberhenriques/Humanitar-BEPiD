@@ -44,6 +44,12 @@
 		E998F34D1899303E0046381F /* Praia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3411899303E0046381F /* Praia.jpg */; };
 		E998F34E1899303E0046381F /* The Road.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3421899303E0046381F /* The Road.jpg */; };
 		E998F351189931F10046381F /* PROJ1Entidade+Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E998F350189931F10046381F /* PROJ1Entidade+Annotation.m */; };
+		E9D4AC8D189ABFEF009D4F27 /* PROJ1CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */; };
+		E9D4AC90189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */; };
+		E9D4AC93189AE9BC009D4F27 /* tabBar_cameraButton_ready_matte.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D4AC91189AE9BC009D4F27 /* tabBar_cameraButton_ready_matte.png */; };
+		E9D4AC94189AE9BC009D4F27 /* tabBar_cameraButton_ready_matte@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D4AC92189AE9BC009D4F27 /* tabBar_cameraButton_ready_matte@2x.png */; };
+		E9D4AC97189AE9DD009D4F27 /* camera_button_take.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D4AC95189AE9DD009D4F27 /* camera_button_take.png */; };
+		E9D4AC98189AE9DD009D4F27 /* camera_button_take@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D4AC96189AE9DD009D4F27 /* camera_button_take@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +114,14 @@
 		E998F3421899303E0046381F /* The Road.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Road.jpg"; sourceTree = "<group>"; };
 		E998F34F189931F10046381F /* PROJ1Entidade+Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PROJ1Entidade+Annotation.h"; sourceTree = "<group>"; };
 		E998F350189931F10046381F /* PROJ1Entidade+Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PROJ1Entidade+Annotation.m"; sourceTree = "<group>"; };
+		E9D4AC8B189ABFEF009D4F27 /* PROJ1CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1CheckInViewController.h; sourceTree = "<group>"; };
+		E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1CheckInViewController.m; sourceTree = "<group>"; };
+		E9D4AC8E189AC12B009D4F27 /* PROJ1InitialTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1InitialTabBarViewController.h; sourceTree = "<group>"; };
+		E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1InitialTabBarViewController.m; sourceTree = "<group>"; };
+		E9D4AC91189AE9BC009D4F27 /* tabBar_cameraButton_ready_matte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabBar_cameraButton_ready_matte.png; path = "../../../../../Downloads/idev-recipes-master/RaisedCenterTabBar/Images/DailyBooth/tabBar_cameraButton_ready_matte.png"; sourceTree = "<group>"; };
+		E9D4AC92189AE9BC009D4F27 /* tabBar_cameraButton_ready_matte@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabBar_cameraButton_ready_matte@2x.png"; path = "../../../../../Downloads/idev-recipes-master/RaisedCenterTabBar/Images/DailyBooth/tabBar_cameraButton_ready_matte@2x.png"; sourceTree = "<group>"; };
+		E9D4AC95189AE9DD009D4F27 /* camera_button_take.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_button_take.png; path = "../../../../../Downloads/idev-recipes-master/RaisedCenterTabBar/Images/DailyBooth/camera_button_take.png"; sourceTree = "<group>"; };
+		E9D4AC96189AE9DD009D4F27 /* camera_button_take@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_button_take@2x.png"; path = "../../../../../Downloads/idev-recipes-master/RaisedCenterTabBar/Images/DailyBooth/camera_button_take@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +229,10 @@
 		E91B8A5618991F5E008FD64E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E9D4AC8E189AC12B009D4F27 /* PROJ1InitialTabBarViewController.h */,
+				E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */,
+				E9D4AC8B189ABFEF009D4F27 /* PROJ1CheckInViewController.h */,
+				E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */,
 				E91B8A5918992055008FD64E /* PROJ1InstitutionTableViewController.h */,
 				E91B8A5A18992055008FD64E /* PROJ1InstitutionTableViewController.m */,
 				E91B8A71189920CF008FD64E /* PROJ1MapaInstituicoesViewController.h */,
@@ -257,6 +275,10 @@
 		E998F33618992FCA0046381F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E9D4AC95189AE9DD009D4F27 /* camera_button_take.png */,
+				E9D4AC96189AE9DD009D4F27 /* camera_button_take@2x.png */,
+				E9D4AC91189AE9BC009D4F27 /* tabBar_cameraButton_ready_matte.png */,
+				E9D4AC92189AE9BC009D4F27 /* tabBar_cameraButton_ready_matte@2x.png */,
 				E998F3371899303E0046381F /* Aguas.jpg */,
 				E998F3381899303E0046381F /* Arvore.jpg */,
 				E998F3391899303E0046381F /* Breaking Bad.jpg */,
@@ -353,16 +375,20 @@
 				E91B8A7B18992A0B008FD64E /* Main-iPhone.storyboard in Resources */,
 				E998F3491899303E0046381F /* iPhone Generations.jpg in Resources */,
 				E998F3471899303E0046381F /* Caminho.jpg in Resources */,
+				E9D4AC93189AE9BC009D4F27 /* tabBar_cameraButton_ready_matte.png in Resources */,
 				E998F3451899303E0046381F /* Breaking Bad.jpg in Resources */,
 				E998F3431899303E0046381F /* Aguas.jpg in Resources */,
+				E9D4AC97189AE9DD009D4F27 /* camera_button_take.png in Resources */,
 				E998F3461899303E0046381F /* Cachoeira.jpg in Resources */,
 				E998F3481899303E0046381F /* Cosmos.jpg in Resources */,
+				E9D4AC98189AE9DD009D4F27 /* camera_button_take@2x.png in Resources */,
 				E91B8A3118991F21008FD64E /* InfoPlist.strings in Resources */,
 				E91B8A3918991F21008FD64E /* Images.xcassets in Resources */,
 				E998F34A1899303E0046381F /* Leopard Screen.jpg in Resources */,
 				E998F3441899303E0046381F /* Arvore.jpg in Resources */,
 				E998F34D1899303E0046381F /* Praia.jpg in Resources */,
 				E998F34C1899303E0046381F /* Onda.jpg in Resources */,
+				E9D4AC94189AE9BC009D4F27 /* tabBar_cameraButton_ready_matte@2x.png in Resources */,
 				E998F34B1899303E0046381F /* Milky Way.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E91B8A3318991F21008FD64E /* main.m in Sources */,
+				E9D4AC8D189ABFEF009D4F27 /* PROJ1CheckInViewController.m in Sources */,
 				E91B8A6E18992096008FD64E /* PROJ1Evento.m in Sources */,
 				E91B8A73189920CF008FD64E /* PROJ1MapaInstituicoesViewController.m in Sources */,
 				E91B8A6C18992096008FD64E /* PROJ1Doacoes.m in Sources */,
@@ -391,6 +418,7 @@
 				E91B8A6F18992096008FD64E /* PROJ1TipoEntidade.m in Sources */,
 				E91B8A5B18992055008FD64E /* PROJ1InstitutionTableViewController.m in Sources */,
 				E91B8A6D18992096008FD64E /* PROJ1Entidade.m in Sources */,
+				E9D4AC90189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m in Sources */,
 				E91B8A3718991F21008FD64E /* PROJ1AppDelegate.m in Sources */,
 				E91B8A6B18992096008FD64E /* PROJ1Curtir.m in Sources */,
 				E91B8A7018992096008FD64E /* PROJ1Usuario.m in Sources */,
