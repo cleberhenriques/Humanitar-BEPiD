@@ -69,6 +69,7 @@
     }
     
     [button addTarget:self action:@selector(checkInButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [button setTag:17712];
     [self.view addSubview:button];
     
 }

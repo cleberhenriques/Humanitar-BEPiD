@@ -305,8 +305,7 @@
     
     CGFloat topSize = topFrame.size.height - 21;
     CGFloat bottomSize = bottomFrame.size.height;
-    //CGFloat topFramePercentageHidden = ((20 - topFrame.origin.y) / (topFrame.size.height - 1));
-    //CGFloat bottomFramePercentageHidden = ((20 -bottomFrame.origin.y) / (bottomFrame.size.height -1));
+    CGFloat FramePercentageHidden = ((20 - topFrame.origin.y) / (topFrame.size.height - 1));
     
     CGFloat scrollOffset = scrollView.contentOffset.y;
     CGFloat scrollDiff = scrollOffset - self.previousScrollViewYOffset;
@@ -331,8 +330,8 @@
     [self.navigationController.navigationBar setFrame:topFrame];
     [self.tabBarController.tabBar setFrame:bottomFrame];
     
-    //[self updateTopBarButtonItems:(1 - topFramePercentageHidden)];
-    //[self updateBottomBarButtonItems:(1 - bottomFramePercentageHidden)];
+    [self updateTopBarButtonItems:(1 - FramePercentageHidden)];
+    [self updateBottomBarButtonItems:(1 - FramePercentageHidden)];
     
     self.previousScrollViewYOffset = scrollOffset;
     
@@ -366,7 +365,6 @@
         [self animateBottomBarTo:POSYCOMECOBOTTOMBAR+frame.size.height];
     }
     
-    
 }
 
 - (void)animateBottomBarTo:(CGFloat)y
@@ -394,6 +392,8 @@
 
 - (void)updateTopBarButtonItems:(CGFloat)alpha
 {
+    NSLog(@"TOP: %f",alpha);
+
     [self.navigationItem.leftBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {
         item.customView.alpha = alpha;
     }];
@@ -407,15 +407,36 @@
 
 - (void)updateBottomBarButtonItems:(CGFloat)alpha
 {
-    [self.navigationItem.leftBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {
-        item.customView.alpha = alpha;
-    }];
-    [self.navigationItem.rightBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {
-        item.customView.alpha = alpha;
-    }];
-    [self.navigationItem.titleView setAlpha:alpha];
-    [self.navigationItem.titleView setAlpha:alpha];
-    self.navigationController.navigationBar.tintColor = [self.navigationController.navigationBar.tintColor colorWithAlphaComponent:alpha];
+    NSLog(@"%f",alpha);
+//    UITabBarController *o1 = self.tabBarController;
+//    NSArray *o2 = o1.viewControllers;
+//    UIViewController *o3 = [o2 firstObject];
+//    NSLog(@"%@",o3);
+//    UIView *o4 = o3.view;
+//    [o4 setAlpha:alpha];
+//    
+
+    //[[[self.tabBarController.viewControllers firstObject] viewWithTag:1010] setAlpha:alpha];
+//    [self.tabBarController.viewControllers enumerateObjectsUsingBlock:^(UIView* item, NSUInteger i, BOOL *stop) {
+//        item.alpha = alpha;
+//        //NSLog(@"oi");
+//    }];
+    [self.tabBarController.tabBar.subviews[1] setAlpha:alpha];
+    [self.tabBarController.tabBar.subviews[2] setAlpha:alpha];
+    [self.tabBarController.tabBar.subviews[3] setAlpha:alpha];
+    [self.tabBarController.tabBar.subviews[4] setAlpha:alpha];
+    [self.tabBarController.tabBar.subviews[5] setAlpha:alpha];
+    [[self.tabBarController.view viewWithTag:17712] setAlpha:alpha];
+    
+    NSLog(@"%@",[self.tabBarController.tabBar.subviews[5] class]);
+    
+    
+    //[self.navigationItem.rightBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {
+    //    item.customView.alpha = alpha;
+    //}];
+    //[self.navigationItem.titleView setAlpha:alpha];
+    //[self.navigationItem.titleView setAlpha:alpha];
+   // self.navigationController.navigationBar.tintColor = [self.navigationController.navigationBar.tintColor colorWithAlphaComponent:alpha];
 }
 
 
