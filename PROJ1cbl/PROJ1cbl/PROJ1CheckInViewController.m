@@ -20,6 +20,9 @@
 
 @implementation PROJ1CheckInViewController
 
+- (IBAction)fecharModalAction {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (NSArray *)arrayOfNearInstitutions
 {
