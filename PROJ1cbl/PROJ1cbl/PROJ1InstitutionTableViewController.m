@@ -6,21 +6,48 @@
 //  Copyright (c) 2014 com.TDW.app. All rights reserved.
 //
 
-#import "PROJ1InstitutionTableViewController.h"
+//#import "PROJ1InstitutionTableViewController.h"
 #import "PROJ1Evento.h"
-
-@interface PROJ1InstitutionTableViewController ()
+#import <Parse/Parse.h>
+@interface PROJ1InstitutionTableViewController : PFQueryTableViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *timeLineTableView;
 @property (nonatomic) CGPoint lastOffset;
 @property (strong, nonatomic) NSArray *arrayOfEvents; // contem objetos do tipo EVENTO para serem mostrados na timeline.
 @property (nonatomic) int selectedTimeLineFilter;
-
+@property (weak, nonatomic) IBOutlet PFImageView *myImage;
+@property (strong, nonatomic) NSString *className;
 @property (nonatomic) int previousScrollViewYOffset;
 @end
 
 @implementation PROJ1InstitutionTableViewController
 
+- (id)initWithStyle:(UITableViewStyle)style {
+    self = [super initWithStyle:style];
+    if (self) {
+        // This table displays items in the Todo class
+        self.className = @"evento";
+        self.pullToRefreshEnabled = YES;
+        self.paginationEnabled = NO;
+        self.objectsPerPage = 25;
+    }
+    return self;
+}
+
+- (PFQuery *)queryForTable {
+    PFQuery *query = [PFQuery queryWithClassName:@"evento" ];
+    [query whereKey:@"type" equalTo:[NSString stringWithFormat:@"%d", self.selectedTimeLineFilter]];
+    // If no objects are loaded in memory, we look to the cache
+    // first to fill the table and then subsequently do a query
+    // against the network.
+    if ([self.objects count] == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    }
+    
+    [query orderByDescending:@"createdAt"];
+    
+    return query;
+}
 
 - (NSArray *)arrayOfEvents
 {
@@ -103,53 +130,63 @@
 
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
     
-    return self.arrayOfEvents.count;
-}
+//    return self.arrayOfEvents.count;
+//}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     static NSString *CellIdentifier = @"TimeLineCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[PFTableViewCell alloc]
+                initWithStyle:UITableViewCellStyleDefault
+                reuseIdentifier:CellIdentifier];
+    }
     // Configure the cell...
 
     PROJ1Evento *eventoDaCell = self.arrayOfEvents[indexPath.row];
     // ADICIONA TITULO NA CELULA
     UILabel *titleCellLabel = (UILabel *)[cell viewWithTag:100];
     [titleCellLabel setTextAlignment:NSTextAlignmentCenter];
-    titleCellLabel.text = eventoDaCell.nomeEvento;
+    titleCellLabel.text = [object objectForKey:@"titulo"];
     //titleCellLabel.textColor = [UIColor colorWithRed:46/255. green:204/255. blue:113/255. alpha:1.0];
     titleCellLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:30];
     
     //ADICIONA IMAGEM NA CELULA
     
-    // Image settings
-    UIImageView *cellImageView = (UIImageView *)[cell viewWithTag:101];
-    UIImage *image = [eventoDaCell.albumFotosEvento firstObject];
-    // reducing the image size
-    CGSize newSize = CGSizeMake(cellImageView.frame.size.width, cellImageView.frame.size.height);
-    UIGraphicsBeginImageContext( newSize );
-    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)]; //newSize.width, newSize.height)];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    PFImageView *cellImageView = (PFImageView *)[cell viewWithTag:101];
     
-    // cropping the image
-    
-    CGRect clippedRect  = CGRectMake(0, 0, cellImageView.frame.size.width, cellImageView.frame.size.width);
-    CGImageRef imageRef = CGImageCreateWithImageInRect([newImage CGImage], clippedRect);
-    UIImage *newNewImage = [UIImage imageWithCGImage:imageRef];
-    CGImageRelease(imageRef);
-    
-    [cellImageView setImage:newNewImage];
+    PFFile *thumbnail = [object objectForKey:@"imagem"];
+    if (thumbnail && ![thumbnail isEqual:[NSNull null]]) {
+        cellImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+        cellImageView.file = thumbnail;
+        [cellImageView loadInBackground:^(UIImage *image, NSError *error) {
+            if(!error){
+                // se tiver que editar a imagem, edita aqui dentro desse if.
+                CGSize newSize = CGSizeMake(cellImageView.frame.size.width, cellImageView.frame.size.height);
+                UIGraphicsBeginImageContext( newSize );
+                [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)]; //newSize.width, newSize.height)];
+                UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                
+                // cropping the image
+                
+                CGRect clippedRect  = CGRectMake(0, 0, cellImageView.frame.size.width, cellImageView.frame.size.width);
+                CGImageRef imageRef = CGImageCreateWithImageInRect([newImage CGImage], clippedRect);
+                UIImage *newNewImage = [UIImage imageWithCGImage:imageRef];
+                CGImageRelease(imageRef);
+                
+            }
+        }];
+    }
     
     // making the image rounded
     
     cellImageView.layer.cornerRadius = cellImageView.frame.size.width/12; //image.size.width/2;
     cellImageView.layer.masksToBounds = YES;
-    
+
 #define BOTTOMIMAGESIZE 40
     UIButton *likeButtonsCell = (UIButton *)[cell viewWithTag:110];
     
@@ -165,7 +202,7 @@
     
 
     UILabel *descricaoEventoLabel = (UILabel *)[cell viewWithTag:1000];
-    descricaoEventoLabel.text = eventoDaCell.descricaoEvento;
+    descricaoEventoLabel.text = [object objectForKey:@"descricao"];
     
     
     return cell;
@@ -203,9 +240,10 @@
 
 - (void)didJustChangeOptionOnSegmentedControl:(UISegmentedControl *)segment
 {
+    
     self.selectedTimeLineFilter = segment.selectedSegmentIndex;
     self.arrayOfEvents = nil;
-    [self.timeLineTableView reloadData];
+    [self loadObjects];
 }
 
 - (void)didReceiveMemoryWarning
