@@ -302,9 +302,11 @@
 {
     CGRect topFrame = self.navigationController.navigationBar.frame;
     CGRect bottomFrame = self.tabBarController.tabBar.frame;
+    CGRect centerButtonFrame = [self.tabBarController.view viewWithTag:17712].frame;
     
     CGFloat topSize = topFrame.size.height - 21;
     CGFloat bottomSize = bottomFrame.size.height;
+    CGFloat centralButtonBottomBarSize = centerButtonFrame.size.height;
     CGFloat FramePercentageHidden = ((20 - topFrame.origin.y) / (topFrame.size.height - 1));
     
     CGFloat scrollOffset = scrollView.contentOffset.y;
@@ -313,22 +315,29 @@
     CGFloat scrollContentSizeHeight = scrollView.contentSize.height + scrollView.contentInset.bottom;
     
 #define POSYCOMECOBOTTOMBAR 568-49
+#define POSYCOMECOBOTAOCENTRALBOTTOMBAR 500
     
     if (scrollOffset <= -scrollView.contentInset.top) {
         //posição inicial
         topFrame.origin.y = 20;
         bottomFrame.origin.y = POSYCOMECOBOTTOMBAR;
+        centerButtonFrame.origin.y = POSYCOMECOBOTAOCENTRALBOTTOMBAR;
+        
     } else if ((scrollOffset + scrollHeight) >= scrollContentSizeHeight) {
         //
         topFrame.origin.y = -topSize;
         bottomFrame.origin.y = POSYCOMECOBOTTOMBAR+bottomSize;
+        centerButtonFrame.origin.y = POSYCOMECOBOTAOCENTRALBOTTOMBAR+centralButtonBottomBarSize;
+        
     } else {
         topFrame.origin.y = MIN(20, MAX(-topSize, topFrame.origin.y - scrollDiff));
         bottomFrame.origin.y = MAX(POSYCOMECOBOTTOMBAR, MIN(POSYCOMECOBOTTOMBAR+bottomSize, bottomFrame.origin.y + scrollDiff));
+        centerButtonFrame.origin.y = MAX(POSYCOMECOBOTAOCENTRALBOTTOMBAR, MIN(POSYCOMECOBOTAOCENTRALBOTTOMBAR+centralButtonBottomBarSize, centerButtonFrame.origin.y +scrollDiff));
     }
     
     [self.navigationController.navigationBar setFrame:topFrame];
     [self.tabBarController.tabBar setFrame:bottomFrame];
+    [[self.tabBarController.view viewWithTag:17712] setFrame:centerButtonFrame];
     
     [self updateTopBarButtonItems:(1 - FramePercentageHidden)];
     [self updateBottomBarButtonItems:(1 - FramePercentageHidden)];
@@ -360,20 +369,25 @@
     }
     
     frame = self.tabBarController.tabBar.frame;
+    CGRect frameCenterButton = [self.tabBarController.view viewWithTag:17712].frame;
     
     if (frame.origin.y > POSYCOMECOBOTTOMBAR) {
-        [self animateBottomBarTo:POSYCOMECOBOTTOMBAR+frame.size.height];
+        [self animateBottomBarTo:POSYCOMECOBOTTOMBAR+frame.size.height and:POSYCOMECOBOTTOMBAR+frameCenterButton.size.height];
     }
     
 }
 
-- (void)animateBottomBarTo:(CGFloat)y
+- (void)animateBottomBarTo:(CGFloat)y and:(CGFloat)y2
 {
     [UIView animateWithDuration:0.3 animations:^{
         CGRect frame = self.tabBarController.tabBar.frame;
+        CGRect frameCenterButton = [self.tabBarController.view viewWithTag:17712].frame;
         CGFloat alpha = (frame.origin.y >= y ? 0 : 1);
+        
         frame.origin.y = y;
+        frameCenterButton.origin.y = y2;
         [self.tabBarController.tabBar setFrame:frame];
+        [[self.tabBarController.view viewWithTag:17712] setFrame:frameCenterButton];
         [self updateBottomBarButtonItems:alpha];
     }];
 }
@@ -401,8 +415,8 @@
         item.customView.alpha = alpha;
     }];
     [self.navigationItem.titleView setAlpha:alpha];
-    [self.navigationItem.titleView setAlpha:alpha];
-    self.navigationController.navigationBar.tintColor = [self.navigationController.navigationBar.tintColor colorWithAlphaComponent:alpha];
+    [self.navigationController.navigationBar.subviews[1] setAlpha:alpha];
+    
 }
 
 - (void)updateBottomBarButtonItems:(CGFloat)alpha

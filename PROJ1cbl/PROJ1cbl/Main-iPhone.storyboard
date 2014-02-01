@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Institution Table View Controller-->
+        <!--Institution Table View Controller - Humaniza-->
         <scene sceneID="ZGD-hX-tAr">
             <objects>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="cM1-iQ-CV6" customClass="PROJ1InstitutionTableViewController" sceneMemberID="viewController">
@@ -242,7 +242,7 @@
                             <outlet property="delegate" destination="cM1-iQ-CV6" id="SZD-x9-cSi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gm3-mA-CBw"/>
+                    <navigationItem key="navigationItem" title="Humaniza" id="gm3-mA-CBw"/>
                     <connections>
                         <outlet property="timeLineTableView" destination="vHh-lp-yry" id="DpJ-ff-z4R"/>
                     </connections>
