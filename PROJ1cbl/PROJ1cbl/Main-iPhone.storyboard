@@ -318,7 +318,7 @@
                         <segue destination="hUR-01-roA" kind="modal" identifier="modalSegueToCheckInView" modalTransitionStyle="coverVertical" id="O2I-9V-Y9K"/>
                         <segue destination="2Oh-ao-gQe" kind="relationship" relationship="viewControllers" id="LUl-Wh-07x"/>
                         <segue destination="ICu-5I-c7a" kind="relationship" relationship="viewControllers" id="9vl-fS-Nwd"/>
-                        <segue destination="6ab-u7-6W5" kind="relationship" relationship="viewControllers" id="6B8-K7-42y"/>
+                        <segue destination="haO-CZ-HXt" kind="relationship" relationship="viewControllers" id="6B8-K7-42y"/>
                         <segue destination="fQ0-97-xYh" kind="relationship" relationship="viewControllers" id="Uj6-vD-ujP"/>
                     </connections>
                 </tabBarController>
@@ -326,7 +326,7 @@
             </objects>
             <point key="canvasLocation" x="339" y="-530"/>
         </scene>
-        <!--Profile View Controller - Perfil-->
+        <!--Profile View Controller-->
         <scene sceneID="w1M-eq-lg0">
             <objects>
                 <viewController id="6ab-u7-6W5" customClass="PROJ1ProfileViewController" sceneMemberID="viewController">
@@ -339,7 +339,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vTL-Qg-8Ol">
-                                <rect key="frame" x="4" y="24" width="130" height="130"/>
+                                <rect key="frame" x="4" y="68" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="qH2-E3-IZC"/>
@@ -355,20 +355,20 @@
                                 </constraints>
                             </tableView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Pessoa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67y-ud-0gS">
-                                <rect key="frame" x="142" y="22" width="132" height="21"/>
+                                <rect key="frame" x="142" y="66" width="132" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instituições Visitadas: 15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0y-8f-IQv">
-                                <rect key="frame" x="142" y="51" width="132" height="17"/>
+                                <rect key="frame" x="142" y="95" width="132" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interesse em ajudar: Crianças Carentes, Idosos, Animais." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="178" translatesAutoresizingMaskIntoConstraints="NO" id="eYP-Mh-EmL">
-                                <rect key="frame" x="142" y="76" width="178" height="51"/>
+                                <rect key="frame" x="142" y="120" width="178" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
@@ -398,7 +398,7 @@
                             <constraint firstItem="eYP-Mh-EmL" firstAttribute="top" secondItem="Q0y-8f-IQv" secondAttribute="bottom" constant="8" id="zAb-Di-aM3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Perfil" image="user" id="qGO-Z4-fF2"/>
+                    <navigationItem key="navigationItem" id="Cfu-7F-Eit"/>
                     <connections>
                         <outlet property="imagemDoPerfil" destination="vTL-Qg-8Ol" id="bTg-AE-F59"/>
                         <outlet property="instutuicoesMaisVisitadasProfile" destination="aTM-2I-8sd" id="dYc-N5-wgk"/>
@@ -407,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Na6-oQ-JTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1059" y="395"/>
+            <point key="canvasLocation" x="1709" y="395"/>
         </scene>
         <!--Navigation Controller - Time Line-->
         <scene sceneID="TBu-Jf-QTF">
@@ -534,6 +534,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gj1-E0-GZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1059" y="-530"/>
+        </scene>
+        <!--Navigation Controller - Perfil-->
+        <scene sceneID="38b-Fb-yVd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="haO-CZ-HXt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Perfil" image="user" id="qGO-Z4-fF2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E5h-9r-bfw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6ab-u7-6W5" kind="relationship" relationship="rootViewController" id="bqW-EI-A8d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUn-Pl-E2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="395"/>
         </scene>
     </scenes>
     <resources>

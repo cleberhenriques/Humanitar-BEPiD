@@ -7,7 +7,7 @@
 //
 
 #import "PROJ1ProfileViewController.h"
-#import "PROJ1Usuario.m"
+#import "PROJ1Usuario.h"
 
 @interface PROJ1ProfileViewController ()
 
@@ -44,7 +44,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *CellIdentifier = @"NearInstitutionsCheckInCell";
+    static NSString *CellIdentifier = @"m";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
