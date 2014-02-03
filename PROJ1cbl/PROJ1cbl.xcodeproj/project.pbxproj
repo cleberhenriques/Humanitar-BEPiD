@@ -39,6 +39,7 @@
 		E91B8A771899275C008FD64E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91B8A761899275C008FD64E /* MapKit.framework */; };
 		E91B8A79189928EB008FD64E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91B8A78189928EB008FD64E /* QuartzCore.framework */; };
 		E91B8A7B18992A0B008FD64E /* Main-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91B8A7A18992A0B008FD64E /* Main-iPhone.storyboard */; };
+		E921063D189FBD4D00804527 /* PROJ1ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E921063C189FBD4D00804527 /* PROJ1ProfileViewController.m */; };
 		E998F3431899303E0046381F /* Aguas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3371899303E0046381F /* Aguas.jpg */; };
 		E998F3441899303E0046381F /* Arvore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3381899303E0046381F /* Arvore.jpg */; };
 		E998F3451899303E0046381F /* Breaking Bad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3391899303E0046381F /* Breaking Bad.jpg */; };
@@ -113,6 +114,8 @@
 		E91B8A761899275C008FD64E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E91B8A78189928EB008FD64E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E91B8A7A18992A0B008FD64E /* Main-iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main-iPhone.storyboard"; sourceTree = "<group>"; };
+		E921063B189FBD4D00804527 /* PROJ1ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1ProfileViewController.h; sourceTree = "<group>"; };
+		E921063C189FBD4D00804527 /* PROJ1ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1ProfileViewController.m; sourceTree = "<group>"; };
 		E998F3371899303E0046381F /* Aguas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aguas.jpg; sourceTree = "<group>"; };
 		E998F3381899303E0046381F /* Arvore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Arvore.jpg; sourceTree = "<group>"; };
 		E998F3391899303E0046381F /* Breaking Bad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Breaking Bad.jpg"; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 		E91B8A5618991F5E008FD64E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E921063B189FBD4D00804527 /* PROJ1ProfileViewController.h */,
+				E921063C189FBD4D00804527 /* PROJ1ProfileViewController.m */,
 				E9D4AC8E189AC12B009D4F27 /* PROJ1InitialTabBarViewController.h */,
 				E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */,
 				E9D4AC8B189ABFEF009D4F27 /* PROJ1CheckInViewController.h */,
@@ -431,6 +436,7 @@
 				E91B8A3318991F21008FD64E /* main.m in Sources */,
 				E9D4AC8D189ABFEF009D4F27 /* PROJ1CheckInViewController.m in Sources */,
 				E91B8A6E18992096008FD64E /* PROJ1Evento.m in Sources */,
+				E921063D189FBD4D00804527 /* PROJ1ProfileViewController.m in Sources */,
 				E91B8A73189920CF008FD64E /* PROJ1MapaInstituicoesViewController.m in Sources */,
 				E91B8A6C18992096008FD64E /* PROJ1Doacoes.m in Sources */,
 				E91B8A6A18992096008FD64E /* PROJ1Comentarios.m in Sources */,

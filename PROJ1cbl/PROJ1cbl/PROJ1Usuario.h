@@ -10,4 +10,10 @@
 
 @interface PROJ1Usuario : NSObject
 
+@property (nonatomic) NSNumber *codUsuario; // int
+@property (nonatomic) NSString *nomeUsuario;
+@property (nonatomic) NSString *loginUsuario;
+@property (nonatomic) NSString *senhaUsuario;
+@property (nonatomic) NSNumber *tipoUsuario; // int
+@property (nonatomic) NSArray *instituicoesMaisVisitadas;
 @end

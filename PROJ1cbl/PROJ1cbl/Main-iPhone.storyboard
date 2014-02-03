@@ -326,10 +326,10 @@
             </objects>
             <point key="canvasLocation" x="339" y="-530"/>
         </scene>
-        <!--View Controller - Perfil-->
+        <!--Profile View Controller - Perfil-->
         <scene sceneID="w1M-eq-lg0">
             <objects>
-                <viewController id="6ab-u7-6W5" sceneMemberID="viewController">
+                <viewController id="6ab-u7-6W5" customClass="PROJ1ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Yy-8F-WoT"/>
                         <viewControllerLayoutGuide type="bottom" id="fK4-N7-J3F"/>
@@ -337,9 +337,73 @@
                     <view key="view" contentMode="scaleToFill" id="ezv-E9-Eki">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vTL-Qg-8Ol">
+                                <rect key="frame" x="4" y="24" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="qH2-E3-IZC"/>
+                                    <constraint firstAttribute="height" constant="130" id="ux3-rI-BBi"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aTM-2I-8sd">
+                                <rect key="frame" x="0.0" y="199" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="g7P-E7-CvA"/>
+                                </constraints>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Pessoa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67y-ud-0gS">
+                                <rect key="frame" x="142" y="22" width="132" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instituições Visitadas: 15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0y-8f-IQv">
+                                <rect key="frame" x="142" y="51" width="132" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interesse em ajudar: Crianças Carentes, Idosos, Animais." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="178" translatesAutoresizingMaskIntoConstraints="NO" id="eYP-Mh-EmL">
+                                <rect key="frame" x="142" y="76" width="178" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instituições mais visitadas:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prR-On-PCN">
+                                <rect key="frame" x="4" y="170" width="206" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q0y-8f-IQv" firstAttribute="top" secondItem="67y-ud-0gS" secondAttribute="bottom" constant="8" id="1JB-oC-1Tv"/>
+                            <constraint firstItem="fK4-N7-J3F" firstAttribute="top" secondItem="aTM-2I-8sd" secondAttribute="bottom" id="5r4-8v-Qbc"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Q0y-8f-IQv" secondAttribute="trailing" id="Aeg-qS-O9K"/>
+                            <constraint firstItem="aTM-2I-8sd" firstAttribute="leading" secondItem="ezv-E9-Eki" secondAttribute="leading" id="BYr-wR-xyH"/>
+                            <constraint firstAttribute="trailing" secondItem="aTM-2I-8sd" secondAttribute="trailing" id="CgV-uv-JmF"/>
+                            <constraint firstItem="vTL-Qg-8Ol" firstAttribute="top" secondItem="1Yy-8F-WoT" secondAttribute="bottom" constant="4" id="H6g-YE-Uzc"/>
+                            <constraint firstItem="Q0y-8f-IQv" firstAttribute="leading" secondItem="vTL-Qg-8Ol" secondAttribute="trailing" constant="8" id="Lwa-NS-ssF"/>
+                            <constraint firstItem="vTL-Qg-8Ol" firstAttribute="leading" secondItem="ezv-E9-Eki" secondAttribute="leading" constant="4" id="XGe-Mb-jw1"/>
+                            <constraint firstItem="eYP-Mh-EmL" firstAttribute="leading" secondItem="vTL-Qg-8Ol" secondAttribute="trailing" constant="8" id="XVh-Ob-RDK"/>
+                            <constraint firstAttribute="trailing" secondItem="eYP-Mh-EmL" secondAttribute="trailing" id="YwU-70-Saw"/>
+                            <constraint firstItem="67y-ud-0gS" firstAttribute="leading" secondItem="vTL-Qg-8Ol" secondAttribute="trailing" constant="8" id="dFl-j1-heY"/>
+                            <constraint firstItem="67y-ud-0gS" firstAttribute="top" secondItem="1Yy-8F-WoT" secondAttribute="bottom" constant="2" id="j89-zC-f8e"/>
+                            <constraint firstAttribute="trailing" secondItem="Q0y-8f-IQv" secondAttribute="trailing" constant="46" id="lKK-pM-ui3"/>
+                            <constraint firstItem="eYP-Mh-EmL" firstAttribute="top" secondItem="Q0y-8f-IQv" secondAttribute="bottom" constant="8" id="zAb-Di-aM3"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="user" id="qGO-Z4-fF2"/>
+                    <connections>
+                        <outlet property="imagemDoPerfil" destination="vTL-Qg-8Ol" id="bTg-AE-F59"/>
+                        <outlet property="instutuicoesMaisVisitadasProfile" destination="aTM-2I-8sd" id="dYc-N5-wgk"/>
+                        <outlet property="labelNomeDaPessoa" destination="67y-ud-0gS" id="dkt-d6-of8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Na6-oQ-JTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
