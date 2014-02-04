@@ -26,7 +26,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // This table displays items in the Todo class
-        self.className = @"evento";
+        self.className = @"Evento";
         self.pullToRefreshEnabled = YES;
         self.paginationEnabled = NO;
         self.objectsPerPage = 25;
@@ -35,7 +35,7 @@
 }
 
 - (PFQuery *)queryForTable {
-    PFQuery *query = [PFQuery queryWithClassName:@"evento" ];
+    PFQuery *query = [PFQuery queryWithClassName:@"Evento" ];
     [query whereKey:@"type" equalTo:[NSString stringWithFormat:@"%d", self.selectedTimeLineFilter]];
     // If no objects are loaded in memory, we look to the cache
     // first to fill the table and then subsequently do a query
