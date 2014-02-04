@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA834A0D18A1017400319373 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA834A0C18A1017400319373 /* FacebookSDK.framework */; };
+		BA834A1018A1034400319373 /* PROJ1LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA834A0F18A1034400319373 /* PROJ1LoginViewController.m */; };
+		BA834A1218A1045600319373 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA834A1118A1045600319373 /* Parse.framework */; };
 		BAC37776189B3A4B003CC303 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC37775189B3A4B003CC303 /* AudioToolbox.framework */; };
 		BAC37778189B3A56003CC303 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC37777189B3A56003CC303 /* CFNetwork.framework */; };
 		BAC3777A189B3A64003CC303 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC37779189B3A64003CC303 /* CoreLocation.framework */; };
@@ -55,7 +58,6 @@
 		E998F351189931F10046381F /* PROJ1Entidade+Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E998F350189931F10046381F /* PROJ1Entidade+Annotation.m */; };
 		E9D4AC8D189ABFEF009D4F27 /* PROJ1CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */; };
 		E9D4AC90189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */; };
-		E9D6719C189C0D5100B376B7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6719B189C0D5100B376B7 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA834A0C18A1017400319373 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		BA834A0E18A1034400319373 /* PROJ1LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1LoginViewController.h; sourceTree = "<group>"; };
+		BA834A0F18A1034400319373 /* PROJ1LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1LoginViewController.m; sourceTree = "<group>"; };
+		BA834A1118A1045600319373 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		BAC37775189B3A4B003CC303 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BAC37777189B3A56003CC303 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BAC37779189B3A64003CC303 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -134,7 +140,6 @@
 		E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1CheckInViewController.m; sourceTree = "<group>"; };
 		E9D4AC8E189AC12B009D4F27 /* PROJ1InitialTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1InitialTabBarViewController.h; sourceTree = "<group>"; };
 		E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1InitialTabBarViewController.m; sourceTree = "<group>"; };
-		E9D6719B189C0D5100B376B7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = PROJ1cbl/Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,13 +151,14 @@
 				BAC37782189B3A8E003CC303 /* StoreKit.framework in Frameworks */,
 				BAC37780189B3A87003CC303 /* Security.framework in Frameworks */,
 				E91B8A79189928EB008FD64E /* QuartzCore.framework in Frameworks */,
-				E9D6719C189C0D5100B376B7 /* Parse.framework in Frameworks */,
+				BA834A1218A1045600319373 /* Parse.framework in Frameworks */,
 				BAC3777E189B3A78003CC303 /* MobileCoreServices.framework in Frameworks */,
 				BAC3777C189B3A70003CC303 /* libz.dylib in Frameworks */,
 				BAC3777A189B3A64003CC303 /* CoreLocation.framework in Frameworks */,
 				E91B8A2918991F21008FD64E /* CoreGraphics.framework in Frameworks */,
 				BAC37778189B3A56003CC303 /* CFNetwork.framework in Frameworks */,
 				BAC37776189B3A4B003CC303 /* AudioToolbox.framework in Frameworks */,
+				BA834A0D18A1017400319373 /* FacebookSDK.framework in Frameworks */,
 				E91B8A771899275C008FD64E /* MapKit.framework in Frameworks */,
 				E91B8A2B18991F21008FD64E /* UIKit.framework in Frameworks */,
 				E91B8A2718991F21008FD64E /* Foundation.framework in Frameworks */,
@@ -194,7 +200,8 @@
 		E91B8A2518991F21008FD64E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E9D6719B189C0D5100B376B7 /* Parse.framework */,
+				BA834A1118A1045600319373 /* Parse.framework */,
+				BA834A0C18A1017400319373 /* FacebookSDK.framework */,
 				BAC37783189B3A99003CC303 /* SystemConfiguration.framework */,
 				BAC37781189B3A8E003CC303 /* StoreKit.framework */,
 				BAC3777F189B3A87003CC303 /* Security.framework */,
@@ -270,6 +277,8 @@
 				E91B8A5A18992055008FD64E /* PROJ1InstitutionTableViewController.m */,
 				E91B8A71189920CF008FD64E /* PROJ1MapaInstituicoesViewController.h */,
 				E91B8A72189920CF008FD64E /* PROJ1MapaInstituicoesViewController.m */,
+				BA834A0E18A1034400319373 /* PROJ1LoginViewController.h */,
+				BA834A0F18A1034400319373 /* PROJ1LoginViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -442,6 +451,7 @@
 				E91B8A6A18992096008FD64E /* PROJ1Comentarios.m in Sources */,
 				E998F351189931F10046381F /* PROJ1Entidade+Annotation.m in Sources */,
 				E91B8A6F18992096008FD64E /* PROJ1TipoEntidade.m in Sources */,
+				BA834A1018A1034400319373 /* PROJ1LoginViewController.m in Sources */,
 				E91B8A5B18992055008FD64E /* PROJ1InstitutionTableViewController.m in Sources */,
 				E91B8A6D18992096008FD64E /* PROJ1Entidade.m in Sources */,
 				E9D4AC90189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m in Sources */,
@@ -570,6 +580,8 @@
 					"$(inherited)",
 					"/Users/cleberhenriques/Projetos/Working-Proj/PROJ1cbl",
 					"/Users/txaidw/Documents/GitHub/Working-Proj/PROJ1cbl/PROJ1cbl",
+					/Users/cleberhenriques/Documents/FacebookSDK,
+					"/Users/cleberhenriques/Documents/Working-Proj/PROJ1cbl",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PROJ1cbl/PROJ1cbl-Prefix.pch";
@@ -590,6 +602,8 @@
 					"$(inherited)",
 					"/Users/cleberhenriques/Projetos/Working-Proj/PROJ1cbl",
 					"/Users/txaidw/Documents/GitHub/Working-Proj/PROJ1cbl/PROJ1cbl",
+					/Users/cleberhenriques/Documents/FacebookSDK,
+					"/Users/cleberhenriques/Documents/Working-Proj/PROJ1cbl",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PROJ1cbl/PROJ1cbl-Prefix.pch";
