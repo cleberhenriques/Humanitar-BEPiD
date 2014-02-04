@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface PROJ1InstitutionTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface PROJ1InstitutionTableViewController : PFQueryTableViewController <UITableViewDataSource, UITableViewDelegate, PFLogInViewControllerDelegate>
 
 @end
