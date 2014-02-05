@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PROJ1PrefetencesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface PROJ1PrefetencesViewController : UIViewController
 
 @end

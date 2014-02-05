@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA834A0D18A1017400319373 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA834A0C18A1017400319373 /* FacebookSDK.framework */; };
 		BA834A1018A1034400319373 /* PROJ1LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA834A0F18A1034400319373 /* PROJ1LoginViewController.m */; };
 		BA834A1218A1045600319373 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA834A1118A1045600319373 /* Parse.framework */; };
 		BAC37776189B3A4B003CC303 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC37775189B3A4B003CC303 /* AudioToolbox.framework */; };
@@ -44,7 +43,6 @@
 		E91B8A7B18992A0B008FD64E /* Main-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91B8A7A18992A0B008FD64E /* Main-iPhone.storyboard */; };
 		E921063D189FBD4D00804527 /* PROJ1ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E921063C189FBD4D00804527 /* PROJ1ProfileViewController.m */; };
 		E95471E118A11663000B40C8 /* PROJ1PrefetencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95471E018A11663000B40C8 /* PROJ1PrefetencesViewController.m */; };
-		E95471E518A117F0000B40C8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95471E418A117F0000B40C8 /* FacebookSDK.framework */; };
 		E998F3431899303E0046381F /* Aguas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3371899303E0046381F /* Aguas.jpg */; };
 		E998F3441899303E0046381F /* Arvore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3381899303E0046381F /* Arvore.jpg */; };
 		E998F3451899303E0046381F /* Breaking Bad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3391899303E0046381F /* Breaking Bad.jpg */; };
@@ -58,6 +56,7 @@
 		E998F34D1899303E0046381F /* Praia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3411899303E0046381F /* Praia.jpg */; };
 		E998F34E1899303E0046381F /* The Road.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3421899303E0046381F /* The Road.jpg */; };
 		E998F351189931F10046381F /* PROJ1Entidade+Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E998F350189931F10046381F /* PROJ1Entidade+Annotation.m */; };
+		E99E036218A1D2A40072E21D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99E036118A1D2A40072E21D /* FacebookSDK.framework */; };
 		E9D4AC8D189ABFEF009D4F27 /* PROJ1CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */; };
 		E9D4AC90189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */; };
 /* End PBXBuildFile section */
@@ -73,7 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA834A0C18A1017400319373 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		BA834A0E18A1034400319373 /* PROJ1LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1LoginViewController.h; sourceTree = "<group>"; };
 		BA834A0F18A1034400319373 /* PROJ1LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1LoginViewController.m; sourceTree = "<group>"; };
 		BA834A1118A1045600319373 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 		E921063C189FBD4D00804527 /* PROJ1ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1ProfileViewController.m; sourceTree = "<group>"; };
 		E95471DF18A11663000B40C8 /* PROJ1PrefetencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1PrefetencesViewController.h; sourceTree = "<group>"; };
 		E95471E018A11663000B40C8 /* PROJ1PrefetencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1PrefetencesViewController.m; sourceTree = "<group>"; };
-		E95471E418A117F0000B40C8 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Downloads/FacebookSDK.framework; sourceTree = "<group>"; };
 		E998F3371899303E0046381F /* Aguas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aguas.jpg; sourceTree = "<group>"; };
 		E998F3381899303E0046381F /* Arvore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Arvore.jpg; sourceTree = "<group>"; };
 		E998F3391899303E0046381F /* Breaking Bad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Breaking Bad.jpg"; sourceTree = "<group>"; };
@@ -141,6 +138,7 @@
 		E998F3421899303E0046381F /* The Road.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Road.jpg"; sourceTree = "<group>"; };
 		E998F34F189931F10046381F /* PROJ1Entidade+Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PROJ1Entidade+Annotation.h"; sourceTree = "<group>"; };
 		E998F350189931F10046381F /* PROJ1Entidade+Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PROJ1Entidade+Annotation.m"; sourceTree = "<group>"; };
+		E99E036118A1D2A40072E21D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK.framework; sourceTree = "<group>"; };
 		E9D4AC8B189ABFEF009D4F27 /* PROJ1CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1CheckInViewController.h; sourceTree = "<group>"; };
 		E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1CheckInViewController.m; sourceTree = "<group>"; };
 		E9D4AC8E189AC12B009D4F27 /* PROJ1InitialTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1InitialTabBarViewController.h; sourceTree = "<group>"; };
@@ -160,12 +158,11 @@
 				BAC3777E189B3A78003CC303 /* MobileCoreServices.framework in Frameworks */,
 				BAC3777C189B3A70003CC303 /* libz.dylib in Frameworks */,
 				BAC3777A189B3A64003CC303 /* CoreLocation.framework in Frameworks */,
+				E99E036218A1D2A40072E21D /* FacebookSDK.framework in Frameworks */,
 				E91B8A2918991F21008FD64E /* CoreGraphics.framework in Frameworks */,
 				BAC37778189B3A56003CC303 /* CFNetwork.framework in Frameworks */,
 				BAC37776189B3A4B003CC303 /* AudioToolbox.framework in Frameworks */,
-				BA834A0D18A1017400319373 /* FacebookSDK.framework in Frameworks */,
 				E91B8A771899275C008FD64E /* MapKit.framework in Frameworks */,
-				E95471E518A117F0000B40C8 /* FacebookSDK.framework in Frameworks */,
 				E91B8A2B18991F21008FD64E /* UIKit.framework in Frameworks */,
 				E91B8A2718991F21008FD64E /* Foundation.framework in Frameworks */,
 			);
@@ -206,9 +203,8 @@
 		E91B8A2518991F21008FD64E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E95471E418A117F0000B40C8 /* FacebookSDK.framework */,
+				E99E036118A1D2A40072E21D /* FacebookSDK.framework */,
 				BA834A1118A1045600319373 /* Parse.framework */,
-				BA834A0C18A1017400319373 /* FacebookSDK.framework */,
 				BAC37783189B3A99003CC303 /* SystemConfiguration.framework */,
 				BAC37781189B3A8E003CC303 /* StoreKit.framework */,
 				BAC3777F189B3A87003CC303 /* Security.framework */,
@@ -593,6 +589,7 @@
 					/Users/cleberhenriques/Documents/FacebookSDK,
 					"/Users/cleberhenriques/Documents/Working-Proj/PROJ1cbl",
 					/Users/txaidw/Downloads,
+					"/Users/txaidw/Documents/GitHub/Working-Proj",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PROJ1cbl/PROJ1cbl-Prefix.pch";
@@ -616,6 +613,7 @@
 					/Users/cleberhenriques/Documents/FacebookSDK,
 					"/Users/cleberhenriques/Documents/Working-Proj/PROJ1cbl",
 					/Users/txaidw/Downloads,
+					"/Users/txaidw/Documents/GitHub/Working-Proj",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PROJ1cbl/PROJ1cbl-Prefix.pch";
