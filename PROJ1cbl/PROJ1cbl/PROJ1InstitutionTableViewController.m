@@ -488,8 +488,6 @@
         
         // Present Log In View Controller
         [self presentViewController:logInViewController animated:NO completion:NULL];
-    }else{
-        [self performSegueWithIdentifier:@"loggedIn" sender:@"asd"];
     }
 }
 
