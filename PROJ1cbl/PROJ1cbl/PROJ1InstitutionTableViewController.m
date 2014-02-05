@@ -8,7 +8,7 @@
 
 #import "PROJ1InstitutionTableViewController.h"
 #import "PROJ1Evento.h"
-
+#import "PROJ1UserInfoSingleton.h"
 @interface PROJ1InstitutionTableViewController()
 
 @property (weak, nonatomic) IBOutlet UITableView *timeLineTableView;
@@ -31,10 +31,13 @@
         self.paginationEnabled = NO;
         self.objectsPerPage = 25;
     }
+    
     return self;
 }
 
 - (PFQuery *)queryForTable {
+    PROJ1UserInfoSingleton *userInfo = [PROJ1UserInfoSingleton sharedManager];
+    NSLog(@"nome %@",[userInfo nome]);
     PFQuery *query = [PFQuery queryWithClassName:@"Evento" ];
     [query whereKey:@"type" equalTo:[NSString stringWithFormat:@"%d", self.selectedTimeLineFilter]];
     // If no objects are loaded in memory, we look to the cache
