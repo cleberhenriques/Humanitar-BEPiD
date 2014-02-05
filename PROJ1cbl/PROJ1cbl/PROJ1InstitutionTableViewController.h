@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
-
-@interface PROJ1InstitutionTableViewController : PFQueryTableViewController <UITableViewDataSource, UITableViewDelegate, PFLogInViewControllerDelegate>
+#import "TDW_HideBarsOnScroll.h"
+@interface PROJ1InstitutionTableViewController : TDW_HideBarsOnScroll <UITableViewDataSource, UITableViewDelegate>
 
 @end

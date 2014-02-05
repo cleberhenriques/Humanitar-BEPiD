@@ -60,6 +60,7 @@
 		E9D4AC8D189ABFEF009D4F27 /* PROJ1CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */; };
 		E9D4AC90189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */; };
 		E9D74CE618A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D74CE518A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m */; };
+		E9D74CE918A2643B00520EEA /* TDW_HideBarsOnScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D74CE818A2643B00520EEA /* TDW_HideBarsOnScroll.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,8 @@
 		E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1InitialTabBarViewController.m; sourceTree = "<group>"; };
 		E9D74CE418A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1SettingInstitutionPreferencesViewController.h; sourceTree = "<group>"; };
 		E9D74CE518A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1SettingInstitutionPreferencesViewController.m; sourceTree = "<group>"; };
+		E9D74CE718A2643B00520EEA /* TDW_HideBarsOnScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDW_HideBarsOnScroll.h; sourceTree = "<group>"; };
+		E9D74CE818A2643B00520EEA /* TDW_HideBarsOnScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDW_HideBarsOnScroll.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +284,8 @@
 				E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */,
 				E91B8A5918992055008FD64E /* PROJ1InstitutionTableViewController.h */,
 				E91B8A5A18992055008FD64E /* PROJ1InstitutionTableViewController.m */,
+				E9D74CE718A2643B00520EEA /* TDW_HideBarsOnScroll.h */,
+				E9D74CE818A2643B00520EEA /* TDW_HideBarsOnScroll.m */,
 				E91B8A71189920CF008FD64E /* PROJ1MapaInstituicoesViewController.h */,
 				E91B8A72189920CF008FD64E /* PROJ1MapaInstituicoesViewController.m */,
 				BA834A0E18A1034400319373 /* PROJ1LoginViewController.h */,
@@ -465,6 +470,7 @@
 				E9D74CE618A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m in Sources */,
 				BA834A1018A1034400319373 /* PROJ1LoginViewController.m in Sources */,
 				E91B8A5B18992055008FD64E /* PROJ1InstitutionTableViewController.m in Sources */,
+				E9D74CE918A2643B00520EEA /* TDW_HideBarsOnScroll.m in Sources */,
 				E91B8A6D18992096008FD64E /* PROJ1Entidade.m in Sources */,
 				E9D4AC90189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m in Sources */,
 				E91B8A3718991F21008FD64E /* PROJ1AppDelegate.m in Sources */,
