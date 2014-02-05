@@ -8,10 +8,12 @@
 
 #import "PROJ1MapaInstituicoesViewController.h"
 #import "PROJ1Entidade.h"
+#import <Parse/Parse.h>
+
 
 @interface PROJ1MapaInstituicoesViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *instituicoesMapView;
-@property (nonatomic) NSArray *arrayOfInstitutions;
+@property (nonatomic) NSMutableArray *arrayOfInstitutions;
 @property (nonatomic) int selectedMapViewFilter;
 @end
 
@@ -58,23 +60,26 @@
     else {
         ///////////////////////////////////////
        
-        for (int i=0; i<4; i++) {
-            PROJ1Entidade *umaInstituicaoTemporaria = [[PROJ1Entidade alloc] init];
-            
-            umaInstituicaoTemporaria.nomeEntidade = [NSString stringWithFormat:@"Instituicao %d",i+1];
-            //umEventoTemporario.descricaoDoEvento = [NSString stringWithFormat:@"Descricao do evento de numero %d",i+1];
-            NSLog(@"%d",i);
-            NSArray *myArrayLat = [NSArray arrayWithObjects:@"-30.032634", @"-30.034634", @"-30.042634", @"-30.034634", @"-30.032624", nil];
-            
-            NSArray *myArrayLong = [NSArray arrayWithObjects:@"-51.225944", @"-51.220994", @"-51.210944", @"-51.220974", @"-51.220900", nil];
-            
-            umaInstituicaoTemporaria.latitude = [NSNumber numberWithDouble:[myArrayLat[i] doubleValue]];
-            umaInstituicaoTemporaria.longitude = [NSNumber numberWithDouble:[myArrayLong[i] doubleValue]];
-            
-            [arrayDeInstituicoesTemporario addObject:umaInstituicaoTemporaria];
-            
-        }
-        
+        PFQuery *query = [PFQuery queryWithClassName:@"Instituicoes"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                // The find succeeded.
+                // Do something with the found objects
+                for (PFObject *object in objects) {
+                    PROJ1Entidade *institution = [[PROJ1Entidade alloc] init];
+                    
+                    institution.nomeEntidade = [object objectForKey:@"name"];
+                    PFGeoPoint *position = [object objectForKey:@"location"];
+                    institution.latitude = [NSNumber numberWithDouble:position.latitude];
+                    institution.longitude = [NSNumber numberWithDouble:position.longitude];
+                    
+                    [arrayDeInstituicoesTemporario addObject:institution];
+                }
+            } else {
+                // Log details of the failure
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
         ///////////////////////////////////////
     }
     

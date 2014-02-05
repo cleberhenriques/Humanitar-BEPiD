@@ -61,6 +61,7 @@
 		E9D4AC90189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */; };
 		E9D74CE618A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D74CE518A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m */; };
 		E9D74CE918A2643B00520EEA /* TDW_HideBarsOnScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D74CE818A2643B00520EEA /* TDW_HideBarsOnScroll.m */; };
+		E9D74CEC18A26E1F00520EEA /* PROJ1UserInfoSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D74CEB18A26E1F00520EEA /* PROJ1UserInfoSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,8 @@
 		E9D74CE518A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1SettingInstitutionPreferencesViewController.m; sourceTree = "<group>"; };
 		E9D74CE718A2643B00520EEA /* TDW_HideBarsOnScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDW_HideBarsOnScroll.h; sourceTree = "<group>"; };
 		E9D74CE818A2643B00520EEA /* TDW_HideBarsOnScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDW_HideBarsOnScroll.m; sourceTree = "<group>"; };
+		E9D74CEA18A26E1F00520EEA /* PROJ1UserInfoSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1UserInfoSingleton.h; sourceTree = "<group>"; };
+		E9D74CEB18A26E1F00520EEA /* PROJ1UserInfoSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1UserInfoSingleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +312,8 @@
 		E91B8A5818991F6D008FD64E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E9D74CEA18A26E1F00520EEA /* PROJ1UserInfoSingleton.h */,
+				E9D74CEB18A26E1F00520EEA /* PROJ1UserInfoSingleton.m */,
 				E91B8A5C18992096008FD64E /* PROJ1Comentarios.h */,
 				E91B8A5D18992096008FD64E /* PROJ1Comentarios.m */,
 				E91B8A5E18992096008FD64E /* PROJ1Curtir.h */,
@@ -470,6 +475,7 @@
 				E9D74CE618A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m in Sources */,
 				BA834A1018A1034400319373 /* PROJ1LoginViewController.m in Sources */,
 				E91B8A5B18992055008FD64E /* PROJ1InstitutionTableViewController.m in Sources */,
+				E9D74CEC18A26E1F00520EEA /* PROJ1UserInfoSingleton.m in Sources */,
 				E9D74CE918A2643B00520EEA /* TDW_HideBarsOnScroll.m in Sources */,
 				E91B8A6D18992096008FD64E /* PROJ1Entidade.m in Sources */,
 				E9D4AC90189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m in Sources */,
