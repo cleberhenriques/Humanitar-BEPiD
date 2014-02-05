@@ -148,8 +148,6 @@
                 reuseIdentifier:CellIdentifier];
     }
     // Configure the cell...
-
-    PROJ1Evento *eventoDaCell = self.arrayOfEvents[indexPath.row];
     // ADICIONA TITULO NA CELULA
     UILabel *titleCellLabel = (UILabel *)[cell viewWithTag:100];
     [titleCellLabel setTextAlignment:NSTextAlignmentCenter];
@@ -178,8 +176,12 @@
                 
                 CGRect clippedRect  = CGRectMake(0, 0, cellImageView.frame.size.width, cellImageView.frame.size.width);
                 CGImageRef imageRef = CGImageCreateWithImageInRect([newImage CGImage], clippedRect);
-                UIImage *newNewImage = [UIImage imageWithCGImage:imageRef];
+                image = [UIImage imageWithCGImage:imageRef];
+                
                 CGImageRelease(imageRef);
+                
+                cellImageView.layer.cornerRadius = cellImageView.frame.size.width/12; //image.size.width/2;
+                cellImageView.layer.masksToBounds = YES;
                 
             }
         }];
@@ -187,8 +189,6 @@
     
     // making the image rounded
     
-    cellImageView.layer.cornerRadius = cellImageView.frame.size.width/12; //image.size.width/2;
-    cellImageView.layer.masksToBounds = YES;
 
 #define BOTTOMIMAGESIZE 40
     UIButton *likeButtonsCell = (UIButton *)[cell viewWithTag:110];
@@ -274,51 +274,6 @@
     // Dispose of any resources that can be recreated.
     NSLog(@"MEMORY WARNING");
 }
-
-
-//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-//{
-//    self.lastOffset = scrollView.contentOffset;
-//    
-//}
-//
-//- (void)scrollViewDidScroll :(UIScrollView *)scrollView {
-//    if (scrollView.contentOffset.y > self.lastOffset.y) {
-//        // hide
-//        [self.navigationController setNavigationBarHidden:YES animated:YES];
-//        [self.tabBarController.tabBar setHidden:YES];
-//        
-//    } else{
-//        // unhide
-//        [self.navigationController setNavigationBarHidden:NO animated:YES];
-//        [self.tabBarController.tabBar setHidden:NO];
-//    }
-//    
-//}
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
@@ -491,8 +446,6 @@
         
         // Present Log In View Controller
         [self presentViewController:logInViewController animated:NO completion:NULL];
-    }else{
-        [self performSegueWithIdentifier:@"loggedIn" sender:@"asd"];
     }
 }
 

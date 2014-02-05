@@ -59,6 +59,7 @@
 		E99E036218A1D2A40072E21D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99E036118A1D2A40072E21D /* FacebookSDK.framework */; };
 		E9D4AC8D189ABFEF009D4F27 /* PROJ1CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */; };
 		E9D4AC90189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */; };
+		E9D74CE618A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D74CE518A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1CheckInViewController.m; sourceTree = "<group>"; };
 		E9D4AC8E189AC12B009D4F27 /* PROJ1InitialTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1InitialTabBarViewController.h; sourceTree = "<group>"; };
 		E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1InitialTabBarViewController.m; sourceTree = "<group>"; };
+		E9D74CE418A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1SettingInstitutionPreferencesViewController.h; sourceTree = "<group>"; };
+		E9D74CE518A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1SettingInstitutionPreferencesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +287,8 @@
 				BA834A0F18A1034400319373 /* PROJ1LoginViewController.m */,
 				E95471DF18A11663000B40C8 /* PROJ1PrefetencesViewController.h */,
 				E95471E018A11663000B40C8 /* PROJ1PrefetencesViewController.m */,
+				E9D74CE418A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.h */,
+				E9D74CE518A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				E95471E118A11663000B40C8 /* PROJ1PrefetencesViewController.m in Sources */,
 				E998F351189931F10046381F /* PROJ1Entidade+Annotation.m in Sources */,
 				E91B8A6F18992096008FD64E /* PROJ1TipoEntidade.m in Sources */,
+				E9D74CE618A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m in Sources */,
 				BA834A1018A1034400319373 /* PROJ1LoginViewController.m in Sources */,
 				E91B8A5B18992055008FD64E /* PROJ1InstitutionTableViewController.m in Sources */,
 				E91B8A6D18992096008FD64E /* PROJ1Entidade.m in Sources */,
