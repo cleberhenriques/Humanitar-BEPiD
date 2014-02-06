@@ -8,6 +8,7 @@
 
 #import "PROJ1PrefetencesViewController.h"
 #import "PROJ1SettingInstitutionPreferencesViewController.h"
+#import <Parse/Parse.h>
 
 @interface PROJ1PrefetencesViewController ()
 
@@ -35,6 +36,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)removeAcountButton:(id)sender {
+
+    #warning REMOVE User from parse
+    
+    [PFUser logOut];
+    [self.tabBarController setSelectedIndex:0];
+
+}
+- (IBAction)sairDaContaButton {
+    [PFUser logOut];
+    [self.tabBarController setSelectedIndex:0];
+}
+
 - (IBAction)editarMeusInteressesButton {
 
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main-iPhone"

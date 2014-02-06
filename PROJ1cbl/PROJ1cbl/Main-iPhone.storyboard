@@ -425,6 +425,9 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="removeAcountButton:" destination="G9x-qe-j87" eventType="touchUpInside" id="7W4-0r-D5C"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dss-Ug-dNc">
                                 <rect key="frame" x="20" y="60" width="113" height="30"/>
@@ -448,6 +451,16 @@
                                 </state>
                                 <connections>
                                     <action selector="editarMeusInteressesButton" destination="G9x-qe-j87" eventType="touchUpInside" id="EnX-cd-bwJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKx-O0-YRz">
+                                <rect key="frame" x="91" y="435" width="138" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sair da minha conta">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sairDaContaButton" destination="G9x-qe-j87" eventType="touchUpInside" id="EeF-Qm-ksE"/>
                                 </connections>
                             </button>
                         </subviews>
