@@ -7,6 +7,7 @@
 //
 
 #import "PROJ1PrefetencesViewController.h"
+#import "PROJ1SettingInstitutionPreferencesViewController.h"
 
 @interface PROJ1PrefetencesViewController ()
 
@@ -34,5 +35,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)editarMeusInteressesButton {
+
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main-iPhone"
+                                                         bundle:nil];
+    UINavigationController *add = [storyboard instantiateViewControllerWithIdentifier:@"selecinarInteressesView"];
+
+    [self presentViewController:add animated:YES completion:nil];
+}
+
 
 @end

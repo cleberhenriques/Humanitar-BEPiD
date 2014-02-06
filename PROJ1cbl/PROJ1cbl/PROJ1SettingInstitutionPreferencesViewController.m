@@ -78,4 +78,17 @@
 {
     return self.arrayOfInstitutionsPrefences.count;
 }
+- (IBAction)saveButtonAction:(id)sender {
+    
+#warning SALVAR INTERESSES
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+- (IBAction)closeButtonAction {
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 @end
