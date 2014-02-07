@@ -221,11 +221,31 @@
     self.timeLineTableView.allowsSelection = NO;
     
     [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
-    [self.tabBarController.tabBar setBarTintColor: [UIColor colorWithRed:52/255. green:152/255. blue:219/255. alpha:1.0]];
+    [self.tabBarController.tabBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
     
     [self.navigationController.navigationBar setTranslucent:NO];
     [self.tabBarController.tabBar setTranslucent:NO];
+    [self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:0 green:45/255. blue:100/255. alpha:1.0]];
+
     
+    //[self.tabBarController.tabBar.subviews objectAtIndex:1];
+    //[self.tabBarController.tabBar.subviews[2] setAlpha:alpha];
+    //[self.tabBarController.tabBar.subviews[3] setAlpha:alpha];
+    //[self.tabBarController.tabBar.subviews[4] setAlpha:alpha];
+    //[self.tabBarController.tabBar.subviews[5] setAlpha:alpha];
+    //[[self.tabBarController.view viewWithTag:17712] setAlpha:alpha];
+    
+    
+    
+    //[self.tabBarController.tabBar  :[NSDictionary dictionaryWithObjectsAndKeys:[UIColor greenColor], UITextAttributeTextColor, nil] forState:UIControlStateNormal];
+//    
+//    for (UITabBarItem *item in self.tabBarController.tabBar.items) {
+//        item
+////    }
+//    [[self.tabBarController.tabBarItem] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
+//                                                        NSForegroundColorAttributeName : [UIColor greenColor]
+//                                                        } forState:UIControlStateNormal];
+//    
     
     UIView *headerViewSelectionButtons = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.timeLineTableView.frame.size.width, 46)];
     
@@ -301,7 +321,15 @@
 
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    [self dismissViewControllerAnimated:NO completion:NULL];
+    
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main-iPhone"
+                                                         bundle:nil];
+    
+    UINavigationController *add = [storyboard instantiateViewControllerWithIdentifier:@"selecinarInteressesView"];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self presentViewController:add animated:YES completion:nil];
+
 }
 
 // Sent to the delegate when the log in attempt fails.
@@ -312,6 +340,8 @@
 // Sent to the delegate when the log in screen is dismissed.
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
     [self.navigationController popViewControllerAnimated:YES];
+    
+    [self ]
 }
 
 
@@ -329,9 +359,5 @@
                       otherButtonTitles:nil] show];
     return NO; // Interrupt login process
 }
-
-
-
-
 
 @end
