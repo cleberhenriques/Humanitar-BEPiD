@@ -497,7 +497,7 @@
         <image name="timeLine" width="32" height="32"/>
         <image name="user" width="32" height="32"/>
     </resources>
-    <color key="tintColor" red="0.14117647707462311" green="0.65882354974746704" blue="0.77647066116333008" alpha="1" colorSpace="deviceRGB"/>
+    <color key="tintColor" red="0.20392158627510071" green="0.56078433990478516" blue="0.80000007152557373" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
