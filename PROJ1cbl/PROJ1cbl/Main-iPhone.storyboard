@@ -475,7 +475,7 @@
         <!--Navigation Controller-->
         <scene sceneID="uNG-IJ-6K6">
             <objects>
-                <navigationController storyboardIdentifier="selecinarInteressesView" automaticallyAdjustsScrollViewInsets="NO" id="cUi-iV-PFp" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="selecionarInteressesView" automaticallyAdjustsScrollViewInsets="NO" id="cUi-iV-PFp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="baq-a0-6QA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

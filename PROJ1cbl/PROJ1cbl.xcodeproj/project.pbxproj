@@ -43,18 +43,6 @@
 		E91B8A7B18992A0B008FD64E /* Main-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91B8A7A18992A0B008FD64E /* Main-iPhone.storyboard */; };
 		E921063D189FBD4D00804527 /* PROJ1ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E921063C189FBD4D00804527 /* PROJ1ProfileViewController.m */; };
 		E95471E118A11663000B40C8 /* PROJ1PrefetencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95471E018A11663000B40C8 /* PROJ1PrefetencesViewController.m */; };
-		E998F3431899303E0046381F /* Aguas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3371899303E0046381F /* Aguas.jpg */; };
-		E998F3441899303E0046381F /* Arvore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3381899303E0046381F /* Arvore.jpg */; };
-		E998F3451899303E0046381F /* Breaking Bad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3391899303E0046381F /* Breaking Bad.jpg */; };
-		E998F3461899303E0046381F /* Cachoeira.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F33A1899303E0046381F /* Cachoeira.jpg */; };
-		E998F3471899303E0046381F /* Caminho.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F33B1899303E0046381F /* Caminho.jpg */; };
-		E998F3481899303E0046381F /* Cosmos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F33C1899303E0046381F /* Cosmos.jpg */; };
-		E998F3491899303E0046381F /* iPhone Generations.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F33D1899303E0046381F /* iPhone Generations.jpg */; };
-		E998F34A1899303E0046381F /* Leopard Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F33E1899303E0046381F /* Leopard Screen.jpg */; };
-		E998F34B1899303E0046381F /* Milky Way.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F33F1899303E0046381F /* Milky Way.jpg */; };
-		E998F34C1899303E0046381F /* Onda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3401899303E0046381F /* Onda.jpg */; };
-		E998F34D1899303E0046381F /* Praia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3411899303E0046381F /* Praia.jpg */; };
-		E998F34E1899303E0046381F /* The Road.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E998F3421899303E0046381F /* The Road.jpg */; };
 		E998F351189931F10046381F /* PROJ1Entidade+Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E998F350189931F10046381F /* PROJ1Entidade+Annotation.m */; };
 		E99E036218A1D2A40072E21D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99E036118A1D2A40072E21D /* FacebookSDK.framework */; };
 		E9D4AC8D189ABFEF009D4F27 /* PROJ1CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */; };
@@ -127,18 +115,6 @@
 		E921063C189FBD4D00804527 /* PROJ1ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1ProfileViewController.m; sourceTree = "<group>"; };
 		E95471DF18A11663000B40C8 /* PROJ1PrefetencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJ1PrefetencesViewController.h; sourceTree = "<group>"; };
 		E95471E018A11663000B40C8 /* PROJ1PrefetencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROJ1PrefetencesViewController.m; sourceTree = "<group>"; };
-		E998F3371899303E0046381F /* Aguas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aguas.jpg; sourceTree = "<group>"; };
-		E998F3381899303E0046381F /* Arvore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Arvore.jpg; sourceTree = "<group>"; };
-		E998F3391899303E0046381F /* Breaking Bad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Breaking Bad.jpg"; sourceTree = "<group>"; };
-		E998F33A1899303E0046381F /* Cachoeira.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cachoeira.jpg; sourceTree = "<group>"; };
-		E998F33B1899303E0046381F /* Caminho.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Caminho.jpg; sourceTree = "<group>"; };
-		E998F33C1899303E0046381F /* Cosmos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cosmos.jpg; sourceTree = "<group>"; };
-		E998F33D1899303E0046381F /* iPhone Generations.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iPhone Generations.jpg"; sourceTree = "<group>"; };
-		E998F33E1899303E0046381F /* Leopard Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Leopard Screen.jpg"; sourceTree = "<group>"; };
-		E998F33F1899303E0046381F /* Milky Way.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Milky Way.jpg"; sourceTree = "<group>"; };
-		E998F3401899303E0046381F /* Onda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Onda.jpg; sourceTree = "<group>"; };
-		E998F3411899303E0046381F /* Praia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Praia.jpg; sourceTree = "<group>"; };
-		E998F3421899303E0046381F /* The Road.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Road.jpg"; sourceTree = "<group>"; };
 		E998F34F189931F10046381F /* PROJ1Entidade+Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PROJ1Entidade+Annotation.h"; sourceTree = "<group>"; };
 		E998F350189931F10046381F /* PROJ1Entidade+Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PROJ1Entidade+Annotation.m"; sourceTree = "<group>"; };
 		E99E036118A1D2A40072E21D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK.framework; sourceTree = "<group>"; };
@@ -337,18 +313,6 @@
 		E998F33618992FCA0046381F /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				E998F3371899303E0046381F /* Aguas.jpg */,
-				E998F3381899303E0046381F /* Arvore.jpg */,
-				E998F3391899303E0046381F /* Breaking Bad.jpg */,
-				E998F33A1899303E0046381F /* Cachoeira.jpg */,
-				E998F33B1899303E0046381F /* Caminho.jpg */,
-				E998F33C1899303E0046381F /* Cosmos.jpg */,
-				E998F33D1899303E0046381F /* iPhone Generations.jpg */,
-				E998F33E1899303E0046381F /* Leopard Screen.jpg */,
-				E998F33F1899303E0046381F /* Milky Way.jpg */,
-				E998F3401899303E0046381F /* Onda.jpg */,
-				E998F3411899303E0046381F /* Praia.jpg */,
-				E998F3421899303E0046381F /* The Road.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -429,21 +393,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E998F34E1899303E0046381F /* The Road.jpg in Resources */,
 				E91B8A7B18992A0B008FD64E /* Main-iPhone.storyboard in Resources */,
-				E998F3491899303E0046381F /* iPhone Generations.jpg in Resources */,
-				E998F3471899303E0046381F /* Caminho.jpg in Resources */,
-				E998F3451899303E0046381F /* Breaking Bad.jpg in Resources */,
-				E998F3431899303E0046381F /* Aguas.jpg in Resources */,
-				E998F3461899303E0046381F /* Cachoeira.jpg in Resources */,
-				E998F3481899303E0046381F /* Cosmos.jpg in Resources */,
 				E91B8A3118991F21008FD64E /* InfoPlist.strings in Resources */,
 				E91B8A3918991F21008FD64E /* Images.xcassets in Resources */,
-				E998F34A1899303E0046381F /* Leopard Screen.jpg in Resources */,
-				E998F3441899303E0046381F /* Arvore.jpg in Resources */,
-				E998F34D1899303E0046381F /* Praia.jpg in Resources */,
-				E998F34C1899303E0046381F /* Onda.jpg in Resources */,
-				E998F34B1899303E0046381F /* Milky Way.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

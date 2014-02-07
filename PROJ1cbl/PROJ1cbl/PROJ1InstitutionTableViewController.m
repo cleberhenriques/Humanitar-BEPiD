@@ -227,7 +227,7 @@
     [self.tabBarController.tabBar setTranslucent:NO];
     [self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:0 green:45/255. blue:100/255. alpha:1.0]];
 
-    
+    [PFUser logOut];
     //[self.tabBarController.tabBar.subviews objectAtIndex:1];
     //[self.tabBarController.tabBar.subviews[2] setAlpha:alpha];
     //[self.tabBarController.tabBar.subviews[3] setAlpha:alpha];
@@ -265,23 +265,7 @@
 
     
     
-    
-    
-    [PFFacebookUtils initializeFacebook];
-    
-    if (![PFUser currentUser]) {
-        // Customize the Log In View Controller
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
-        [logInViewController setDelegate:self];
-        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"friends_about_me", nil]];
-        [logInViewController setFields: PFLogInFieldsFacebook];
-        
-        // Present Log In View Controller
-        [self presentViewController:logInViewController animated:NO completion:NULL];
-    }
-
-    
-    
+    [self LogInCheckAndPreferences];
 }
 
 - (void)didJustChangeOptionOnSegmentedControl:(UISegmentedControl *)segment
@@ -300,9 +284,15 @@
 }
 
 
-
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
+    [self LogInCheckAndPreferences];
+}
+
+
+- (void)LogInCheckAndPreferences
+{
     [PFFacebookUtils initializeFacebook];
     
     if (![PFUser currentUser]) {
@@ -313,23 +303,24 @@
         [logInViewController setFields: PFLogInFieldsFacebook];
         
         // Present Log In View Controller
-        [self presentViewController:logInViewController animated:NO completion:NULL];
+        [self presentViewController:logInViewController animated:NO completion:nil];
     }
+
 }
 
-
-
-
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:NO completion:^{
+#warning Check if user already has preferences, change the 1 on the if
+        
+        if (1) {
+            UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main-iPhone"
+                                                                 bundle:nil];
+            UINavigationController *add = [storyboard instantiateViewControllerWithIdentifier:@"selecionarInteressesView"];
+            [self presentViewController:add animated:NO completion:nil];
+        }
+        
+    }];
     
-    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main-iPhone"
-                                                         bundle:nil];
-    
-    UINavigationController *add = [storyboard instantiateViewControllerWithIdentifier:@"selecinarInteressesView"];
-    //[self dismissViewControllerAnimated:YES completion:nil];
-    
-    [self presentViewController:add animated:YES completion:nil];
-
 }
 
 // Sent to the delegate when the log in attempt fails.
@@ -340,10 +331,7 @@
 // Sent to the delegate when the log in screen is dismissed.
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
     [self.navigationController popViewControllerAnimated:YES];
-    
-    [self ]
 }
-
 
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
 - (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
