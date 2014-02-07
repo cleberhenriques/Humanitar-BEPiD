@@ -9,6 +9,8 @@
 #import "PROJ1InstitutionTableViewController.h"
 #import "PROJ1Evento.h"
 #import "PROJ1UserInfoSingleton.h"
+#import "PROJ1LoginViewController.h"
+
 @interface PROJ1InstitutionTableViewController()
 
 @property (weak, nonatomic) IBOutlet UITableView *timeLineTableView;
@@ -297,7 +299,7 @@
     
     if (![PFUser currentUser]) {
         // Customize the Log In View Controller
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        PROJ1LoginViewController *logInViewController = [[PROJ1LoginViewController alloc] init];
         [logInViewController setDelegate:self];
         [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"friends_about_me", nil]];
         [logInViewController setFields: PFLogInFieldsFacebook];

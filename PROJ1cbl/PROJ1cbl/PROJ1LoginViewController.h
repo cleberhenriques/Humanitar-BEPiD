@@ -8,5 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-@interface PROJ1LoginViewController : UIViewController <PFLogInViewControllerDelegate>
+@interface PROJ1LoginViewController : PFLogInViewController
+
 @end
