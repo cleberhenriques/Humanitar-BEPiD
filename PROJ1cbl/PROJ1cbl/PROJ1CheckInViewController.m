@@ -117,8 +117,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:0.11 green:0.47 blue:0.58 alpha:1.0]];
-    [self.tabBarController.tabBar setBarTintColor:[UIColor colorWithRed:0.11 green:0.47 blue:0.58 alpha:1.0]];
+    [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
+    [self.tabBarController.tabBar setBarTintColor:[UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
 	// Do any additional setup after loading the view.
     
     

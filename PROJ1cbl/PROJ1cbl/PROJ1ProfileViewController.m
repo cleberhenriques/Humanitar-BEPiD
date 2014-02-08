@@ -12,30 +12,33 @@
 
 @interface PROJ1ProfileViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *instutuicoesMaisVisitadasProfile;
+@property (weak, nonatomic) IBOutlet UITableView *tableViewinstituicoesMaisVisitadasProfile;
 @property (weak, nonatomic) IBOutlet UIImageView *imagemDoPerfil;
-@property (weak, nonatomic) IBOutlet UILabel *labelNomeDaPessoa;
 @property (strong, nonatomic) PROJ1Usuario *usuarioParaMostrar;
 @end
 
 @implementation PROJ1ProfileViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+- (PROJ1Usuario *)usuarioParaMostrar
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    PROJ1Usuario *aUser = [[PROJ1Usuario alloc] init];
+    
+    aUser.instituicoesMaisVisitadas = @[@"Lar das criancas", @"Casa do Vovo", @"Salve Animais", @"blablabla"];
+    return aUser;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.instutuicoesMaisVisitadasProfile setDelegate:self];
-    [self.instutuicoesMaisVisitadasProfile setDataSource:self];
+    [self.tableViewinstituicoesMaisVisitadasProfile setDelegate:self];
+    [self.tableViewinstituicoesMaisVisitadasProfile setDataSource:self];
 	// Do any additional setup after loading the view.
     
+    [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
+    [self.tableViewinstituicoesMaisVisitadasProfile setBounces:NO];
+    
+    [self setTitle:@"Nome da Pessoa"];
     
     NSLog(@"TESTE OK");
     
@@ -101,20 +104,26 @@
     
     
 }
- -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.usuarioParaMostrar.instituicoesMaisVisitadas.count;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.tableViewinstituicoesMaisVisitadasProfile.bounds.size.height/self.usuarioParaMostrar.instituicoesMaisVisitadas.count;
+}
 
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *CellIdentifier = @"m";
+    static NSString *CellIdentifier = @"CellOfMostVisitedInstitutions";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
 
+    [cell.textLabel setText:self.usuarioParaMostrar.instituicoesMaisVisitadas[indexPath.row]];
+    
     return cell;
     
 }

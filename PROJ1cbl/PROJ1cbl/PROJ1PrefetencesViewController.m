@@ -16,26 +16,15 @@
 
 @implementation PROJ1PrefetencesViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
+    [self setTitle:@"Preferencias"];
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 - (IBAction)removeAcountButton:(id)sender {
 
     #warning REMOVE User from parse
@@ -44,6 +33,7 @@
     [self.tabBarController setSelectedIndex:0];
 
 }
+
 - (IBAction)sairDaContaButton {
     [PFUser logOut];
     [self.tabBarController setSelectedIndex:0];

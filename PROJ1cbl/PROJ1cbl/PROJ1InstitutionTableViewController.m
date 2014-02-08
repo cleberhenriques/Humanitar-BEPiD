@@ -230,6 +230,9 @@
     [self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:0 green:45/255. blue:100/255. alpha:1.0]];
 
     [PFUser logOut];
+    
+    [self setTitle:@"Humanitar"];
+
     //[self.tabBarController.tabBar.subviews objectAtIndex:1];
     //[self.tabBarController.tabBar.subviews[2] setAlpha:alpha];
     //[self.tabBarController.tabBar.subviews[3] setAlpha:alpha];

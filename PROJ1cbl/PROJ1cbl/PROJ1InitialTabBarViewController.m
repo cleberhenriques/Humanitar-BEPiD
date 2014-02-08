@@ -37,6 +37,7 @@
     self.viewControllers = (NSArray *)arrayOfViewControllersTemp;
     arrayOfViewControllersTemp = nil;
 
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated

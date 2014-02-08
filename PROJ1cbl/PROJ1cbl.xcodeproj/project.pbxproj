@@ -255,24 +255,24 @@
 		E91B8A5618991F5E008FD64E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E921063B189FBD4D00804527 /* PROJ1ProfileViewController.h */,
-				E921063C189FBD4D00804527 /* PROJ1ProfileViewController.m */,
 				E9D4AC8E189AC12B009D4F27 /* PROJ1InitialTabBarViewController.h */,
 				E9D4AC8F189AC12B009D4F27 /* PROJ1InitialTabBarViewController.m */,
-				E9D4AC8B189ABFEF009D4F27 /* PROJ1CheckInViewController.h */,
-				E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */,
 				E91B8A5918992055008FD64E /* PROJ1InstitutionTableViewController.h */,
 				E91B8A5A18992055008FD64E /* PROJ1InstitutionTableViewController.m */,
-				E9D74CE718A2643B00520EEA /* TDW_HideBarsOnScroll.h */,
-				E9D74CE818A2643B00520EEA /* TDW_HideBarsOnScroll.m */,
 				E91B8A71189920CF008FD64E /* PROJ1MapaInstituicoesViewController.h */,
 				E91B8A72189920CF008FD64E /* PROJ1MapaInstituicoesViewController.m */,
-				BA834A0E18A1034400319373 /* PROJ1LoginViewController.h */,
-				BA834A0F18A1034400319373 /* PROJ1LoginViewController.m */,
+				E9D4AC8B189ABFEF009D4F27 /* PROJ1CheckInViewController.h */,
+				E9D4AC8C189ABFEF009D4F27 /* PROJ1CheckInViewController.m */,
+				E921063B189FBD4D00804527 /* PROJ1ProfileViewController.h */,
+				E921063C189FBD4D00804527 /* PROJ1ProfileViewController.m */,
 				E95471DF18A11663000B40C8 /* PROJ1PrefetencesViewController.h */,
 				E95471E018A11663000B40C8 /* PROJ1PrefetencesViewController.m */,
 				E9D74CE418A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.h */,
 				E9D74CE518A250EF00520EEA /* PROJ1SettingInstitutionPreferencesViewController.m */,
+				BA834A0E18A1034400319373 /* PROJ1LoginViewController.h */,
+				BA834A0F18A1034400319373 /* PROJ1LoginViewController.m */,
+				E9D74CE718A2643B00520EEA /* TDW_HideBarsOnScroll.h */,
+				E9D74CE818A2643B00520EEA /* TDW_HideBarsOnScroll.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
