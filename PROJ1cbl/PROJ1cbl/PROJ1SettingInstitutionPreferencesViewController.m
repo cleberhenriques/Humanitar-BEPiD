@@ -33,6 +33,7 @@
 - (NSArray *)arrayOfInstitutionsPrefences
 {
     if (!_arrayOfInstitutionsPrefences) {
+#warning PRENCHER OUTROS TIPOS DE INSTITUICOES
         _arrayOfInstitutionsPrefences = [NSArray arrayWithObjects:@"Crianças", @"Idosos", @"Animais", @"Moradores de Rua", nil];
     }
     return _arrayOfInstitutionsPrefences;
