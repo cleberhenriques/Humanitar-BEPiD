@@ -27,7 +27,7 @@
 
 - (IBAction)removeAcountButton:(id)sender {
 
-    #warning REMOVE User from parse
+    #warning REMOVE USER FROM PARSE
     
     [PFUser logOut];
     [self.tabBarController setSelectedIndex:0];

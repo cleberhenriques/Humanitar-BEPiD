@@ -22,7 +22,7 @@
 - (id)init{
     NSLog(@"setting nome");
     if (self = [super init]) {
-        _nome = @"Default Property Value";
+        self.nome = @"Default Property Value";
     }
     return self;
 }

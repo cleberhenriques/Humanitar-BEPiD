@@ -315,7 +315,7 @@
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     [self dismissViewControllerAnimated:NO completion:^{
-#warning Check if user already has preferences, change the 1 on the if
+#warning CHECK IF USER ALREADY HAS PREFERENCES, CHANGE THE 1 ON THE IF
         
         if (1) {
             UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main-iPhone"

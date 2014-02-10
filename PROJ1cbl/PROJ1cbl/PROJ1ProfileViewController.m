@@ -24,7 +24,7 @@
 {
     PROJ1Usuario *aUser = [[PROJ1Usuario alloc] init];
     
-    aUser.instituicoesMaisVisitadas = @[@"Lar das criancas", @"Casa do Vovo", @"Salve Animais", @"blablabla"];
+    aUser.instituicoesMaisVisitadas = @[@"Lar das criancas", @"Casa do Vovo", @"Salve Animais", @"blablabla", @"strings"];
     return aUser;
 }
 
@@ -38,7 +38,7 @@
     [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
     [self.tableViewinstituicoesMaisVisitadasProfile setBounces:NO];
     
-    [self setTitle:@"Nome da Pessoa"];
+    //[self setTitle:@"Nome da Pessoa"];
     
     NSLog(@"TESTE OK");
     

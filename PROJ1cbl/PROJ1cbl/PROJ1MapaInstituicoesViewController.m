@@ -26,7 +26,7 @@
 {
     if (!_arrayOfInstitutions) {
         //lazzy instanciation
-         _arrayOfInstitutions = [[NSArray alloc] initWithArray:[self buscaArrayDeInstituicoes]];
+         _arrayOfInstitutions = [[NSMutableArray alloc] initWithArray:[self buscaArrayDeInstituicoes]];
     }
     return _arrayOfInstitutions;
 }
@@ -156,15 +156,6 @@
     //NSLog(@"%d", segmented.selectedSegmentIndex);
     self.arrayOfInstitutions = nil;
     [self updateInstituicoesMapViewAnnotations];
-}
-
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    NSLog(@"MEMORY WARNING");
 }
 
 

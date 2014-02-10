@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PROJ1UserInfoSingleton : NSObject {
-    NSString *nome;
-}
+@interface PROJ1UserInfoSingleton : NSObject
 
-@property NSString *nome;
+@property (nonatomic) NSString *nome;
 
 + (id)sharedManager;
+
 @end
