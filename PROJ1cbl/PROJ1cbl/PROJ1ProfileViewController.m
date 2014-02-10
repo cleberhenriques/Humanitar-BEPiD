@@ -9,6 +9,7 @@
 #import "PROJ1ProfileViewController.h"
 #import "PROJ1Usuario.h"
 #import <Parse/Parse.h>
+#import "PROJ1UserInfoSingleton.h"
 
 @interface PROJ1ProfileViewController ()
 
@@ -38,9 +39,10 @@
     [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
     [self.tableViewinstituicoesMaisVisitadasProfile setBounces:NO];
     
-    //[self setTitle:@"Nome da Pessoa"];
-    
-    NSLog(@"TESTE OK");
+    [self setTitle:[[PROJ1UserInfoSingleton sharedManager] nome]];
+
+    [[self imagemDoPerfil] setImage:[[PROJ1UserInfoSingleton sharedManager] foto]];
+    //NSLog(@"TESTE OK");
     
     // salvar
     PFObject *gameScore = [PFObject objectWithClassName:@"Evento"];
