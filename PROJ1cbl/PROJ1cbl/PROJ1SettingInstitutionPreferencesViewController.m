@@ -12,26 +12,22 @@
 
 @property (nonatomic) NSArray *arrayOfInstitutionsPrefences;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewOfSettingInstitutionsPreferences;
+@property (strong, nonatomic) NSMutableArray *listaDePreferencias;
 
 @end
+
 
 @implementation PROJ1SettingInstitutionPreferencesViewController
 
 
-
+- (NSMutableArray *)listaDePreferencias
+{
+    return [NSMutableArray arrayWithObjects:@"Crianças", nil];
+}
 - (NSArray *)arrayOfInstitutionsPrefences
 {
     
     return [NSArray arrayWithObjects:@"Crianças", @"Idosos", @"Animais", nil];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
 }
 
 - (void)viewDidLoad
@@ -41,6 +37,11 @@
     
     [self.tableViewOfSettingInstitutionsPreferences setDelegate:self];
     [self.tableViewOfSettingInstitutionsPreferences setDataSource:self];
+    
+    [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,8 +59,13 @@
     
     cell.textLabel.text = self.arrayOfInstitutionsPrefences[indexPath.row];
     
-    cell.accessoryType = UITableViewCellAccessoryNone;
     
+    if ([self.listaDePreferencias containsObject:self.arrayOfInstitutionsPrefences[indexPath.row]]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     return cell;
 }
 
@@ -82,12 +88,6 @@
     
 #warning SALVAR INTERESSES
     
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
-- (IBAction)closeButtonAction {
-
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
