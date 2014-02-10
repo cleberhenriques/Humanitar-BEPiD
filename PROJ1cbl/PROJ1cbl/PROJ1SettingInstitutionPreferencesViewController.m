@@ -22,12 +22,20 @@
 
 - (NSMutableArray *)listaDePreferencias
 {
-    return [NSMutableArray arrayWithObjects:@"Crianças", nil];
+    if (!_listaDePreferencias) {
+#warning PEGAR PREFERENCIAS DO USUARIOS PARSE
+        _listaDePreferencias = [NSMutableArray arrayWithObjects:@"Crianças", @"Animais", nil];
+    }
+    return _listaDePreferencias;
 }
+
+
 - (NSArray *)arrayOfInstitutionsPrefences
 {
-    
-    return [NSArray arrayWithObjects:@"Crianças", @"Idosos", @"Animais", nil];
+    if (!_arrayOfInstitutionsPrefences) {
+        _arrayOfInstitutionsPrefences = [NSArray arrayWithObjects:@"Crianças", @"Idosos", @"Animais", @"Moradores de Rua", nil];
+    }
+    return _arrayOfInstitutionsPrefences;
 }
 
 - (void)viewDidLoad
@@ -42,12 +50,6 @@
     
     
     
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,15 +71,23 @@
     return cell;
 }
 
--(NSIndexPath *)tableView:(UITableView *)tableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
-    return indexPath;
+    if([self.listaDePreferencias containsObject:self.arrayOfInstitutionsPrefences[indexPath.row]])
+    {
+        [self.listaDePreferencias removeObject:self.arrayOfInstitutionsPrefences[indexPath.row]];
+    }
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+    if(![self.listaDePreferencias containsObject:self.arrayOfInstitutionsPrefences[indexPath.row]])
+    {
+        [self.listaDePreferencias addObject:self.arrayOfInstitutionsPrefences[indexPath.row]];
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
