@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet PFImageView *myImage;
 @property (strong, nonatomic) NSString *className;
 @property (nonatomic) int previousScrollViewYOffset;
+
 @end
 
 @implementation PROJ1InstitutionTableViewController
@@ -309,6 +310,34 @@
         
         // Present Log In View Controller
         [self presentViewController:logInViewController animated:NO completion:nil];
+    }else{
+        // Create request for user's Facebook data
+        FBRequest *request = [FBRequest requestForMe];
+        
+        // Send request to Facebook
+        [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+            if (!error) {
+                // result is a dictionary with the user's Facebook data
+                NSDictionary *userData = (NSDictionary *)result;
+                
+                NSString *facebookID = userData[@"id"];
+                NSString *name = userData[@"name"];
+                
+                NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
+                
+                NSData *imageData = [NSData dataWithContentsOfURL:pictureURL];
+                
+                UIImage *image = [UIImage imageWithData:imageData];
+                
+                PROJ1UserInfoSingleton *userInfo = [PROJ1UserInfoSingleton sharedManager];
+                [userInfo setNome:name];
+                [userInfo setFoto:image];
+                
+                NSLog(@"Name %@", name);
+            }else{
+                NSLog(@"%@",error);
+            }
+        }];
     }
 
 }

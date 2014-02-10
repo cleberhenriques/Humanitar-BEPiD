@@ -11,6 +11,7 @@
 @interface PROJ1UserInfoSingleton : NSObject
 
 @property (nonatomic) NSString *nome;
+@property (nonatomic) UIImage *foto;
 
 + (id)sharedManager;
 
