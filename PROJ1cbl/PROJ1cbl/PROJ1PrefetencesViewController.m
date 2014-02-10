@@ -43,7 +43,7 @@
 
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main-iPhone"
                                                          bundle:nil];
-    UINavigationController *add = [storyboard instantiateViewControllerWithIdentifier:@"selecinarInteressesView"];
+    UINavigationController *add = [storyboard instantiateViewControllerWithIdentifier:@"selecionarInteressesView"];
 
     [self presentViewController:add animated:YES completion:nil];
 }

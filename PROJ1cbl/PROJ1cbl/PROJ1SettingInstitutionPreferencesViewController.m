@@ -12,26 +12,30 @@
 
 @property (nonatomic) NSArray *arrayOfInstitutionsPrefences;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewOfSettingInstitutionsPreferences;
+@property (strong, nonatomic) NSMutableArray *listaDePreferencias;
 
 @end
+
 
 @implementation PROJ1SettingInstitutionPreferencesViewController
 
 
+- (NSMutableArray *)listaDePreferencias
+{
+    if (!_listaDePreferencias) {
+#warning PEGAR PREFERENCIAS DO USUARIOS PARSE
+        _listaDePreferencias = [NSMutableArray arrayWithObjects:@"Crianças", @"Animais", nil];
+    }
+    return _listaDePreferencias;
+}
+
 
 - (NSArray *)arrayOfInstitutionsPrefences
 {
-    
-    return [NSArray arrayWithObjects:@"Crianças", @"Idosos", @"Animais", nil];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (!_arrayOfInstitutionsPrefences) {
+        _arrayOfInstitutionsPrefences = [NSArray arrayWithObjects:@"Crianças", @"Idosos", @"Animais", @"Moradores de Rua", nil];
     }
-    return self;
+    return _arrayOfInstitutionsPrefences;
 }
 
 - (void)viewDidLoad
@@ -41,12 +45,11 @@
     
     [self.tableViewOfSettingInstitutionsPreferences setDelegate:self];
     [self.tableViewOfSettingInstitutionsPreferences setDataSource:self];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
+    
+    
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -58,20 +61,33 @@
     
     cell.textLabel.text = self.arrayOfInstitutionsPrefences[indexPath.row];
     
-    cell.accessoryType = UITableViewCellAccessoryNone;
     
+    if ([self.listaDePreferencias containsObject:self.arrayOfInstitutionsPrefences[indexPath.row]]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     return cell;
 }
 
--(NSIndexPath *)tableView:(UITableView *)tableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
-    return indexPath;
+    if([self.listaDePreferencias containsObject:self.arrayOfInstitutionsPrefences[indexPath.row]])
+    {
+        [self.listaDePreferencias removeObject:self.arrayOfInstitutionsPrefences[indexPath.row]];
+    }
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+    if(![self.listaDePreferencias containsObject:self.arrayOfInstitutionsPrefences[indexPath.row]])
+    {
+        [self.listaDePreferencias addObject:self.arrayOfInstitutionsPrefences[indexPath.row]];
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -82,12 +98,6 @@
     
 #warning SALVAR INTERESSES
     
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
-- (IBAction)closeButtonAction {
-
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
