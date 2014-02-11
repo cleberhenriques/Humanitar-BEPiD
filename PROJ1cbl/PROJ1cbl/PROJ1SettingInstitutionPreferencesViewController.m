@@ -7,6 +7,7 @@
 //
 
 #import "PROJ1SettingInstitutionPreferencesViewController.h"
+#import <Parse/Parse.h>
 
 @interface PROJ1SettingInstitutionPreferencesViewController ()
 
@@ -25,7 +26,8 @@
     if (!_listaDePreferencias) {
 #warning PEGAR PREFERENCIAS DO USUARIOS PARSE
         
-        _listaDePreferencias = [NSMutableArray arrayWithObjects:@"Crianças", @"Animais", nil];
+        _listaDePreferencias = [[NSMutableArray alloc] init];
+        _listaDePreferencias = [[PFUser currentUser] objectForKey:@"entidadePref"];
     }
     return _listaDePreferencias;
 }
@@ -34,11 +36,13 @@
 - (NSArray *)arrayOfInstitutionsPrefences
 {
     if (!_arrayOfInstitutionsPrefences) {
-#warning PRENCHER OUTROS TIPOS DE INSTITUICOES
-        _arrayOfInstitutionsPrefences = [NSArray arrayWithObjects:@"Crianças", @"Idosos", @"Animais", @"Moradores de Rua", nil];
+        
+        _arrayOfInstitutionsPrefences = [[NSMutableArray alloc] init];
+        
     }
     return _arrayOfInstitutionsPrefences;
 }
+         
 
 - (void)viewDidLoad
 {
@@ -50,6 +54,24 @@
     
     [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
     
+    // retorna as instituições do Parse
+    PFQuery *listar = [PFQuery queryWithClassName:@"TipoInstituicao"];
+    [listar orderByDescending:@"Instituicao"];
+    listar.limit = 100;
+    
+    
+    __block NSMutableArray *arrayTemporarioBlock = [[NSMutableArray alloc] init];
+    [listar findObjectsInBackgroundWithBlock:^(NSArray *result, NSError *error) {
+        
+        for (PFObject *resultado in result) {
+            PFObject *post = resultado[@"Instituicao"];
+            NSLog(@"%@", post);
+            [arrayTemporarioBlock addObject:[NSString stringWithFormat:@"%@", post]];
+        }
+        
+    }];
+    NSLog(@"%@", arrayTemporarioBlock);
+    self.arrayOfInstitutionsPrefences = arrayTemporarioBlock;
     
     
 }
@@ -98,8 +120,11 @@
 }
 
 - (IBAction)saveButtonAction:(id)sender {
-    
-#warning SALVAR INTERESSES
+
+    // salva preferências do usuário
+    [[PFUser currentUser]  setObject:self.listaDePreferencias forKey:@"entidadePref"];
+    [[PFUser currentUser] saveInBackground];
+
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
