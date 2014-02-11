@@ -275,7 +275,12 @@
         
         // Present Log In View Controller
         [self presentViewController:logInViewController animated:NO completion:nil];
-    }else{
+    }
+}
+
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:NO completion:^{
+        
         // Create request for user's Facebook data
         FBRequest *request = [FBRequest requestForMe];
         
@@ -303,14 +308,10 @@
                 NSLog(@"%@",error);
             }
         }];
-    }
 
-}
 
-- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    [self dismissViewControllerAnimated:NO completion:^{
-#warning CHECK IF USER ALREADY HAS PREFERENCES, CHANGE THE 1 ON THE IF
-        
+        #warning CHECK IF USER ALREADY HAS PREFERENCES, CHANGE THE 1 ON THE IF
+
         if (1) {
             UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main-iPhone"
                                                                  bundle:nil];
@@ -346,5 +347,6 @@
                       otherButtonTitles:nil] show];
     return NO; // Interrupt login process
 }
+
 
 @end
