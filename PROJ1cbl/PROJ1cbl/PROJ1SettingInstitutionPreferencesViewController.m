@@ -24,6 +24,7 @@
 - (NSMutableArray *)listaDePreferencias
 {
     if (!_listaDePreferencias) {
+#warning PEGAR PREFERENCIAS DO USUARIOS PARSE
         
         _listaDePreferencias = [[NSMutableArray alloc] init];
         _listaDePreferencias = [[PFUser currentUser] objectForKey:@"entidadePref"];
