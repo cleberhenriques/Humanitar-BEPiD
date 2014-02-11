@@ -24,6 +24,7 @@
 {
     if (!_listaDePreferencias) {
 #warning PEGAR PREFERENCIAS DO USUARIOS PARSE
+        
         _listaDePreferencias = [NSMutableArray arrayWithObjects:@"Crianças", @"Animais", nil];
     }
     return _listaDePreferencias;
@@ -95,10 +96,10 @@
 {
     return self.arrayOfInstitutionsPrefences.count;
 }
+
 - (IBAction)saveButtonAction:(id)sender {
     
 #warning SALVAR INTERESSES
-    
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
