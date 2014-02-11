@@ -105,15 +105,6 @@
 
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -126,7 +117,7 @@
     [self.tableViewNearLocationsCheckIn setDelegate:self];
     [self.tableViewNearLocationsCheckIn setDataSource:self];
     [self.tableViewNearLocationsCheckIn setBounces:NO];
-    [self.tableViewNearLocationsCheckIn setAllowsSelection:YES];
+//    [self.tableViewNearLocationsCheckIn setAllowsSelection:YES];
     
     // Configurando MapView
     [self.mapViewCheckInShow setDelegate:self];
@@ -137,10 +128,18 @@
     
 }
 
-- (void)didReceiveMemoryWarning
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.mapViewCheckInShow showAnnotations:[NSArray arrayWithObject:[self.arrayOfNearInstitutions objectAtIndex:indexPath.row]] animated:YES];
+    [self.tableViewNearLocationsCheckIn reloadData];
+    [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];
+    
 }
 
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryNone];
+    
+}
 @end
