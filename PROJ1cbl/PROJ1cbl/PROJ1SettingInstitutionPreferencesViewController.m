@@ -11,7 +11,7 @@
 
 @interface PROJ1SettingInstitutionPreferencesViewController ()
 
-@property (nonatomic) NSArray *arrayOfInstitutionsPrefences;
+@property (nonatomic) NSMutableArray *arrayOfInstitutionsPrefences;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewOfSettingInstitutionsPreferences;
 @property (strong, nonatomic) NSMutableArray *listaDePreferencias;
 
@@ -23,11 +23,11 @@
 
 - (NSMutableArray *)listaDePreferencias
 {
-    if (!_listaDePreferencias) {
-#warning PEGAR PREFERENCIAS DO USUARIOS PARSE
-        
+    if (!_listaDePreferencias) {        
         _listaDePreferencias = [[NSMutableArray alloc] init];
-        _listaDePreferencias = [[PFUser currentUser] objectForKey:@"entidadePref"];
+        if ([[PFUser currentUser] objectForKey:@"entidadePref"]) {
+            _listaDePreferencias = [[PFUser currentUser] objectForKey:@"entidadePref"];
+        }
     }
     return _listaDePreferencias;
 }
@@ -38,8 +38,8 @@
     if (!_arrayOfInstitutionsPrefences) {
         
         _arrayOfInstitutionsPrefences = [[NSMutableArray alloc] init];
-        
     }
+    
     return _arrayOfInstitutionsPrefences;
 }
          
@@ -65,13 +65,16 @@
         
         for (PFObject *resultado in result) {
             PFObject *post = resultado[@"Instituicao"];
-            NSLog(@"%@", post);
+            //NSLog(@"%@", post);
             [arrayTemporarioBlock addObject:[NSString stringWithFormat:@"%@", post]];
         }
         
+        NSLog(@"%@", arrayTemporarioBlock);
+        _arrayOfInstitutionsPrefences = [[NSMutableArray alloc] initWithArray:arrayTemporarioBlock];
+        
+        [self.tableViewOfSettingInstitutionsPreferences reloadData];
     }];
-    NSLog(@"%@", arrayTemporarioBlock);
-    self.arrayOfInstitutionsPrefences = arrayTemporarioBlock;
+    
     
     
 }
@@ -107,11 +110,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"%@", self.arrayOfInstitutionsPrefences[indexPath.row]);
     [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
     if(![self.listaDePreferencias containsObject:self.arrayOfInstitutionsPrefences[indexPath.row]])
     {
         [self.listaDePreferencias addObject:self.arrayOfInstitutionsPrefences[indexPath.row]];
     }
+    NSLog(@"%@", self.listaDePreferencias);
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
