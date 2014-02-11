@@ -110,26 +110,6 @@
         }
         ///////////////////////////////////////
     }
-    else if (self.selectedTimeLineFilter == 2) {
-        // ENTRE OS // RETIRAR O CODIGO EXEMPLO E RETORNAR UM ARRAY arraydeEventosTemporario com os eventos da classe Evento
-        // Aqui é os PERTOS
-        ///////////////////////////////////////
-        for (int i=0; i<2; i++) {
-            PROJ1Evento *umEventoTemporario = [[PROJ1Evento alloc] init];
-            
-            umEventoTemporario.nomeEvento = [NSString stringWithFormat:@"Post %d",i+1];
-            umEventoTemporario.descricaoEvento = [NSString stringWithFormat:@"Descricao do evento de numero %d",i+1];
-            NSLog(@"%d",i);
-            NSArray *myArray = [NSArray arrayWithObjects:@"Milky Way.jpg", @"The Road.jpg", @"iPhone Generations.jpg", nil];
-            
-            umEventoTemporario.albumFotosEvento = [NSArray arrayWithObject:[UIImage imageNamed:myArray[i]]];
-            
-            [arrayDeEventosTemporario addObject:umEventoTemporario];
-            
-        }
-        ///////////////////////////////////////
-        
-    }
     
     
     return arrayDeEventosTemporario;
@@ -152,15 +132,11 @@
     }
     // Configure the cell...
     // ADICIONA TITULO NA CELULA
-    UILabel *titleCellLabel = (UILabel *)[cell viewWithTag:100];
-    [titleCellLabel setTextAlignment:NSTextAlignmentCenter];
-    titleCellLabel.text = [object objectForKey:@"titulo"];
-    //titleCellLabel.textColor = [UIColor colorWithRed:46/255. green:204/255. blue:113/255. alpha:1.0];
-    titleCellLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:30];
-    
+    UIButton *titleCellLabel = (UIButton *)[cell viewWithTag:101];
+    [titleCellLabel setTitle:[object objectForKey:@"titulo"] forState:UIControlStateNormal];
     //ADICIONA IMAGEM NA CELULA
     
-    PFImageView *cellImageView = (PFImageView *)[cell viewWithTag:101];
+    PFImageView *cellImageView = (PFImageView *)[cell viewWithTag:100];
     
     PFFile *thumbnail = [object objectForKey:@"imagem"];
     if (thumbnail && ![thumbnail isEqual:[NSNull null]]) {
@@ -194,20 +170,8 @@
     
 
 #define BOTTOMIMAGESIZE 40
-    UIButton *likeButtonsCell = (UIButton *)[cell viewWithTag:110];
-    
-    [likeButtonsCell.titleLabel setTextAlignment:NSTextAlignmentLeft];
-    [likeButtonsCell setTitle:@"Curtir" forState:UIControlStateNormal];
-    //[likeButtonsCell setBackgroundColor:[UIColor greenColor]];
-    
-    UIButton *commentButtonsCell = (UIButton *)[cell viewWithTag:111];
-    
-    [commentButtonsCell.titleLabel setTextAlignment:NSTextAlignmentRight];
-    [commentButtonsCell setTitle:@"Comentários" forState:UIControlStateNormal];
-    //[commentButtonsCell setBackgroundColor:[UIColor greenColor]];
-    
 
-    UILabel *descricaoEventoLabel = (UILabel *)[cell viewWithTag:1000];
+    UILabel *descricaoEventoLabel = (UILabel *)[cell viewWithTag:102];
     descricaoEventoLabel.text = [object objectForKey:@"descricao"];
     
     
@@ -230,7 +194,8 @@
     [self.tabBarController.tabBar setTranslucent:NO];
     [self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:0 green:45/255. blue:100/255. alpha:1.0]];
 
-    [PFUser logOut];
+#warning LOGOUT FOR LOGIN TESTS
+    //[PFUser logOut];
     
     [self setTitle:@"Humanitar"];
 
@@ -258,7 +223,7 @@
     //headerViewSelectionButtons.backgroundColor = [UIColor greenColor];
 #define MARGINHEADERSEGMENT 6
     
-    UISegmentedControl *segmentButtons = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Recentes", @"Próximo", @"Perto" ,nil]];
+    UISegmentedControl *segmentButtons = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Recentes", @"Próximo",nil]];
     segmentButtons.frame = CGRectMake(MARGINHEADERSEGMENT, MARGINHEADERSEGMENT, headerViewSelectionButtons.frame.size.width-(2*MARGINHEADERSEGMENT), headerViewSelectionButtons.frame.size.height-(2*MARGINHEADERSEGMENT));
     
     [segmentButtons addTarget:self action:@selector(didJustChangeOptionOnSegmentedControl:) forControlEvents:UIControlEventValueChanged];

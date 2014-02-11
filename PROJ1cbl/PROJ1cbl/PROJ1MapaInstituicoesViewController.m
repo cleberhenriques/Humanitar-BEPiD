@@ -107,6 +107,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view
     self.instituicoesMapView.delegate = self;
+    _arrayOfInstitutions = [[NSMutableArray alloc] initWithArray:[self buscaArrayDeInstituicoes]];
+
 }
 
 
