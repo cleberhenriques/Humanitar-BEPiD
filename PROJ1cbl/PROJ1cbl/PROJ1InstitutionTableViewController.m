@@ -199,25 +199,7 @@
     
     [self setTitle:@"Humanitar"];
 
-    //[self.tabBarController.tabBar.subviews objectAtIndex:1];
-    //[self.tabBarController.tabBar.subviews[2] setAlpha:alpha];
-    //[self.tabBarController.tabBar.subviews[3] setAlpha:alpha];
-    //[self.tabBarController.tabBar.subviews[4] setAlpha:alpha];
-    //[self.tabBarController.tabBar.subviews[5] setAlpha:alpha];
-    //[[self.tabBarController.view viewWithTag:17712] setAlpha:alpha];
-    
-    
-    
-    //[self.tabBarController.tabBar  :[NSDictionary dictionaryWithObjectsAndKeys:[UIColor greenColor], UITextAttributeTextColor, nil] forState:UIControlStateNormal];
-//    
-//    for (UITabBarItem *item in self.tabBarController.tabBar.items) {
-//        item
-////    }
-//    [[self.tabBarController.tabBarItem] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
-//                                                        NSForegroundColorAttributeName : [UIColor greenColor]
-//                                                        } forState:UIControlStateNormal];
-//    
-    
+       
     UIView *headerViewSelectionButtons = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.timeLineTableView.frame.size.width, 46)];
     
     //headerViewSelectionButtons.backgroundColor = [UIColor greenColor];
@@ -245,13 +227,6 @@
     self.selectedTimeLineFilter = segment.selectedSegmentIndex;
     self.arrayOfEvents = nil;
     [self loadObjects];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    NSLog(@"MEMORY WARNING");
 }
 
 
