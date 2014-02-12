@@ -16,5 +16,6 @@
 @property (nonatomic, strong) NSNumber *latitude; // double
 @property (nonatomic, strong) NSNumber *longitude; // double
 @property (nonatomic) NSNumber *codTipoEntidade; // int
-
+@property (nonatomic) int qtdDeCheckIns;
+@property (nonatomic) NSString *interesses;
 @end

@@ -14,34 +14,11 @@
 
 @implementation PROJ1InitialTabBarViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-
-//    UIViewController *emptyViewController = [[UIViewController alloc] init];
-//
-//    NSMutableArray *arrayOfViewControllersTemp = [[NSMutableArray alloc] initWithArray:self.viewControllers];
-//    
-////    [arrayOfViewControllersTemp insertObject:emptyViewController atIndex:2];
-//
-////    self.viewControllers = (NSArray *)arrayOfViewControllersTemp;
-//    arrayOfViewControllersTemp = nil;
-//    
-//    UIButton *btMeio = [[UIButton alloc] initWithFrame:CGRectMake(120, 0, 40, 40)];
-//    btMeio.backgroundColor  = [UIColor redColor];
-//    [self.tabBar addSubview:btMeio];
-
-    
+   
 }
 
 -(void)viewWillAppear:(BOOL)animated

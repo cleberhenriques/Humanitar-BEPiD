@@ -11,6 +11,6 @@
 
 @interface PROJ1EntidadeViewController : UIViewController
 
-@property (nonatomic) PROJ1Entidade *entidadeParaMostrar;
+@property (strong, nonatomic) PROJ1Entidade *entidadeParaMostrar;
 
 @end
