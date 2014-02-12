@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableViewinstituicoesMaisVisitadasProfile;
 @property (weak, nonatomic) IBOutlet UIImageView *imagemDoPerfil;
 @property (strong, nonatomic) PROJ1Usuario *usuarioParaMostrar;
+@property (weak, nonatomic) IBOutlet UILabel *lbInteresses;
 @end
 
 @implementation PROJ1ProfileViewController
@@ -23,10 +24,10 @@
 
 - (PROJ1Usuario *)usuarioParaMostrar
 {
-    PROJ1Usuario *aUser = [[PROJ1Usuario alloc] init];
-    
-    aUser.instituicoesMaisVisitadas = @[@"Lar das criancas", @"Casa do Vovo", @"Salve Animais", @"blablabla", @"strings"];
-    return aUser;
+    if (!_usuarioParaMostrar) {
+        _usuarioParaMostrar = [[PROJ1Usuario alloc] init];
+    }
+    return _usuarioParaMostrar;
 }
 
 - (void)viewDidLoad
@@ -44,7 +45,36 @@
     [[self imagemDoPerfil] setImage:[[PROJ1UserInfoSingleton sharedManager] foto]];
     //NSLog(@"TESTE OK");
     
+    _lbInteresses.text = [@"Preferencias: " stringByAppendingString:[[[PFUser currentUser] objectForKey:@"entidadePref"] componentsJoinedByString:@", "]];
+    
+    
+    
+    
+    PROJ1Usuario *aUser = [[PROJ1Usuario alloc] init];
+    
+    // retorna as instituições do Parse
+    PFQuery *listar = [PFQuery queryWithClassName:@"Instituicoes"];
+    [listar orderByDescending:@"name"];
+    listar.limit = 100;
+    
+    __block NSMutableArray *arrayTemporarioBlock = [[NSMutableArray alloc] init];
+    [listar findObjectsInBackgroundWithBlock:^(NSArray *result, NSError *error) {
+        
+        for (PFObject *resultado in result) {
+            PFObject *post = resultado[@"name"];
+            //NSLog(@"----%@", post);
+            [arrayTemporarioBlock addObject:[NSString stringWithFormat:@"%@", post]];
+        }
+        
+        NSLog(@"%@", arrayTemporarioBlock);
+        self.usuarioParaMostrar.instituicoesMaisVisitadas = arrayTemporarioBlock;
+        NSLog(@"XX %@", self.usuarioParaMostrar.instituicoesMaisVisitadas);
+        [self.tableViewinstituicoesMaisVisitadasProfile reloadData];
+    }];
+
 }
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.usuarioParaMostrar.instituicoesMaisVisitadas.count;

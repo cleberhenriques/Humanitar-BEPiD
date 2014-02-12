@@ -15,5 +15,5 @@
 @property (nonatomic) NSString *loginUsuario;
 @property (nonatomic) NSString *senhaUsuario;
 @property (nonatomic) NSNumber *tipoUsuario; // int
-@property (nonatomic) NSArray *instituicoesMaisVisitadas;
+@property (nonatomic) NSMutableArray *instituicoesMaisVisitadas;
 @end
