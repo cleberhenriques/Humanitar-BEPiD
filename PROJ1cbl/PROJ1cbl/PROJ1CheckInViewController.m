@@ -23,6 +23,13 @@
 - (IBAction)fecharModalAction {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (IBAction)CheckInButtonClicked:(id)sender {
+#warning REALIZAR CHECK-IN
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
 
 - (NSArray *)arrayOfNearInstitutions
 {
@@ -117,8 +124,8 @@
     [self.tableViewNearLocationsCheckIn setDelegate:self];
     [self.tableViewNearLocationsCheckIn setDataSource:self];
     [self.tableViewNearLocationsCheckIn setBounces:NO];
-//    [self.tableViewNearLocationsCheckIn setAllowsSelection:YES];
-    
+    [self.tableViewNearLocationsCheckIn setAllowsSelection:YES];
+
     // Configurando MapView
     [self.mapViewCheckInShow setDelegate:self];
     [self.mapViewCheckInShow setZoomEnabled:NO];
@@ -131,7 +138,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.mapViewCheckInShow showAnnotations:[NSArray arrayWithObject:[self.arrayOfNearInstitutions objectAtIndex:indexPath.row]] animated:YES];
-    [self.tableViewNearLocationsCheckIn reloadData];
     [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];
     
 }
