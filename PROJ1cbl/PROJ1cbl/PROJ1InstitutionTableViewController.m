@@ -120,7 +120,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.timeLineTableView.allowsSelection = YES;
+    self.timeLineTableView.allowsSelection = NO;
     
     [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
     [self.tabBarController.tabBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
@@ -219,10 +219,9 @@
             }
         }];
 
-
-        #warning CHECK IF USER ALREADY HAS PREFERENCES, CHANGE THE 1 ON THE IF
-
-        if (1) {
+        NSArray *arrayOfPreferences = [[PFUser currentUser] objectForKey:@"entidadePref"];
+        
+        if (arrayOfPreferences.count < 1) {
             UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main-iPhone"
                                                                  bundle:nil];
             UINavigationController *add = [storyboard instantiateViewControllerWithIdentifier:@"selecionarInteressesView"];
@@ -257,34 +256,34 @@
                       otherButtonTitles:nil] show];
     return NO; // Interrupt login process
 }
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([[segue identifier] isEqualToString:@"SegueEntidadeProfile"])
-    {
-        
-        PROJ1EntidadeViewController *smvc = (PROJ1EntidadeViewController *)segue.destinationViewController;
-        
-        
-        PROJ1Entidade *entidadeSegue = [[PROJ1Entidade alloc] init];
-        //UIButton *buttonTemp = (UIButton *)[sender viewWithTag:101];
-        
-        
-        
-        ///
-#warning PEGAR INSTITUICAO NO PARSE COM nome abaixo e prencher
-        //NSLog(@"%@", buttonTemp.titleLabel.text);
-        
-        entidadeSegue.nomeEntidade = @"Nome Teste";
-        entidadeSegue.descricaoEntidade = @"Descricao Teste asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-        entidadeSegue.latitude = [NSNumber numberWithDouble:-30];
-        entidadeSegue.longitude = [NSNumber numberWithDouble:50];
-        ///
-        
-        
-        
-        smvc.entidadeParaMostrar = entidadeSegue;
-    }
-}
+//
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if([[segue identifier] isEqualToString:@"SegueEntidadeProfile"])
+//    {
+//        
+//        PROJ1EntidadeViewController *smvc = (PROJ1EntidadeViewController *)segue.destinationViewController;
+//        
+//        
+//        PROJ1Entidade *entidadeSegue = [[PROJ1Entidade alloc] init];
+//        //UIButton *buttonTemp = (UIButton *)[sender viewWithTag:101];
+//        
+//        
+//        
+//        ///
+//#warning PEGAR INSTITUICAO NO PARSE COM nome abaixo e prencher
+//        //NSLog(@"%@", buttonTemp.titleLabel.text);
+//        
+//        entidadeSegue.nomeEntidade = @"Nome Teste";
+//        entidadeSegue.descricaoEntidade = @"Descricao Teste asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+//        entidadeSegue.latitude = [NSNumber numberWithDouble:-30];
+//        entidadeSegue.longitude = [NSNumber numberWithDouble:50];
+//        ///
+//        
+//        
+//        
+//        smvc.entidadeParaMostrar = entidadeSegue;
+//    }
+//}
 
 @end
