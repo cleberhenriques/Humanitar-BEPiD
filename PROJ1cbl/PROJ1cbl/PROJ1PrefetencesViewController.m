@@ -27,10 +27,9 @@
 
 - (IBAction)removeAcountButton:(id)sender {
 
-    #warning REMOVE USER FROM PARSE
-    [PFUser logOut];
-    
-    
+    //[PFUser logOut];
+    [[PFUser currentUser] deleteInBackground];
+    [[PFUser currentUser] saveInBackground];
     [self.tabBarController setSelectedIndex:0];
 
 }

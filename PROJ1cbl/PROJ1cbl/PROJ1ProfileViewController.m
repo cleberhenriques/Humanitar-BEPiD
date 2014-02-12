@@ -26,6 +26,11 @@
 {
     if (!_usuarioParaMostrar) {
         _usuarioParaMostrar = [[PROJ1Usuario alloc] init];
+        
+        if ([[PFUser currentUser] objectForKey:@"historico"]) {
+            _usuarioParaMostrar.instituicoesMaisVisitadas = [[PFUser currentUser] objectForKey:@"historico"];
+        }
+        
     }
     return _usuarioParaMostrar;
 }
@@ -49,7 +54,7 @@
     
     
     
-    PROJ1Usuario *aUser = [[PROJ1Usuario alloc] init];
+    /*PROJ1Usuario *aUser = [[PROJ1Usuario alloc] init];
     
     // retorna as instituições do Parse
     PFQuery *listar = [PFQuery queryWithClassName:@"Instituicoes"];
@@ -69,7 +74,7 @@
         self.usuarioParaMostrar.instituicoesMaisVisitadas = arrayTemporarioBlock;
         NSLog(@"XX %@", self.usuarioParaMostrar.instituicoesMaisVisitadas);
         [self.tableViewinstituicoesMaisVisitadasProfile reloadData];
-    }];
+    }];*/
 
 }
 

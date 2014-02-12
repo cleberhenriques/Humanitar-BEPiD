@@ -131,7 +131,7 @@
     [self.tabBarController.tabBar setTranslucent:NO];
     [self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:0 green:45/255. blue:100/255. alpha:1.0]];
 
-#warning LOGOUT FOR LOGIN TESTS
+    //#warning LOGOUT FOR LOGIN TESTS
     [PFUser logOut];
     
     [self setTitle:@"Humanitar"];
