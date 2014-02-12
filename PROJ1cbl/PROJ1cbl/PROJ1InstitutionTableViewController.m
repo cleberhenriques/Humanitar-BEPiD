@@ -43,7 +43,9 @@
 - (PFQuery *)queryForTable {
     //NSLog(@"nome %@",[userInfo nome]);
     PFQuery *query = [PFQuery queryWithClassName:@"Evento" ];
-    [query whereKey:@"type" equalTo:[NSString stringWithFormat:@"%d", self.selectedTimeLineFilter]];
+    if(self.selectedTimeLineFilter == 0){
+        [query whereKey:@"type" equalTo:[NSString stringWithFormat:@"%d", self.selectedTimeLineFilter]];
+    }
     // If no objects are loaded in memory, we look to the cache
     // first to fill the table and then subsequently do a query
     // against the network.

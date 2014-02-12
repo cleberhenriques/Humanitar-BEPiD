@@ -19,7 +19,7 @@
 
 @implementation PROJ1MapaInstituicoesViewController
 
-- (void)buscaArrayDeInstituicoes
+- (void)loadAnnotationsOnMap
 {
     if (self.selectedMapViewFilter == 0) {
         [self loadAnnotationsFromParse:YES];
@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
     self.instituicoesMapView.delegate = self;
-    [self buscaArrayDeInstituicoes];
+    [self loadAnnotationsOnMap];
 
 }
 
@@ -88,7 +88,7 @@
 {
     self.selectedMapViewFilter = segmented.selectedSegmentIndex;
     self.arrayOfInstitutions = nil;
-    [self buscaArrayDeInstituicoes];
+    [self loadAnnotationsOnMap];
 }
 
 
