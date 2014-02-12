@@ -125,7 +125,7 @@
 
 - (void)updateTopBarButtonItems:(CGFloat)alpha
 {
-    NSLog(@"TOP: %f",alpha);
+//    NSLog(@"TOP: %f",alpha);
     
     [self.navigationItem.leftBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {
         item.customView.alpha = alpha;
@@ -140,7 +140,7 @@
 
 - (void)updateBottomBarButtonItems:(CGFloat)alpha
 {
-    NSLog(@"%f",alpha);
+//    NSLog(@"%f",alpha);
     //    UITabBarController *o1 = self.tabBarController;
     //    NSArray *o2 = o1.viewControllers;
     //    UIViewController *o3 = [o2 firstObject];
@@ -161,7 +161,7 @@
     [self.tabBarController.tabBar.subviews[5] setAlpha:alpha];
     [[self.tabBarController.view viewWithTag:17712] setAlpha:alpha];
     
-    NSLog(@"%@",[self.tabBarController.tabBar.subviews[5] class]);
+//    NSLog(@"%@",[self.tabBarController.tabBar.subviews[5] class]);
     
     
     //[self.navigationItem.rightBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {

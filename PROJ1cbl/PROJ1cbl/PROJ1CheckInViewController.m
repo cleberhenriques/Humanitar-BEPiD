@@ -51,7 +51,7 @@
         umaInstituicaoTemporaria.nomeEntidade = [NSString stringWithFormat:@"Instituicao %d",i+1];
         umaInstituicaoTemporaria.descricaoEntidade = [NSString stringWithFormat:@"Descricao de numero %d",i+1];
         umaInstituicaoTemporaria.codTipoEntidade = [NSNumber numberWithDouble:[myArrayLat[i] doubleValue]];
-        NSLog(@"%d",i);
+        //NSLog(@"%d",i);
         
         umaInstituicaoTemporaria.latitude = [NSNumber numberWithDouble:[myArrayLat[i] doubleValue]];
         umaInstituicaoTemporaria.longitude = [NSNumber numberWithDouble:[myArrayLong[i] doubleValue]];
