@@ -19,6 +19,7 @@
 {
     if (!_entidadeParaMostrar) {
         _entidadeParaMostrar = [[PROJ1Entidade alloc] init];
+        _entidadeParaMostrar.nomeEntidade = @"NAO DEU";
     }
     return _entidadeParaMostrar;
 }

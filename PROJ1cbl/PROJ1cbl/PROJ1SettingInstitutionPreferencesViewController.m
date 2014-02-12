@@ -74,9 +74,6 @@
         
         [self.tableViewOfSettingInstitutionsPreferences reloadData];
     }];
-    
-    
-    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
