@@ -8,6 +8,8 @@
 
 #import "PROJ1InstitutionTableViewController.h"
 #import "PROJ1Evento.h"
+#import "PROJ1Entidade.h"
+#import "PROJ1EntidadeViewController.h"
 #import "PROJ1UserInfoSingleton.h"
 #import "PROJ1LoginViewController.h"
 
@@ -39,8 +41,7 @@
 }
 
 - (PFQuery *)queryForTable {
-    PROJ1UserInfoSingleton *userInfo = [PROJ1UserInfoSingleton sharedManager];
-    NSLog(@"nome %@",[userInfo nome]);
+    //NSLog(@"nome %@",[userInfo nome]);
     PFQuery *query = [PFQuery queryWithClassName:@"Evento" ];
     [query whereKey:@"type" equalTo:[NSString stringWithFormat:@"%d", self.selectedTimeLineFilter]];
     // If no objects are loaded in memory, we look to the cache
@@ -55,72 +56,6 @@
     return query;
 }
 
-- (NSArray *)arrayOfEvents
-{
-    if (!_arrayOfEvents) {
-        
-        _arrayOfEvents = [[NSArray alloc] initWithArray:[self buscaArrayDeEventos]];
-    }
-    NSLog(@"%@", _arrayOfEvents);
-    return _arrayOfEvents;
-}
-
-- (NSArray *)buscaArrayDeEventos
-{
-    
-    NSMutableArray *arrayDeEventosTemporario = [[NSMutableArray alloc] init];
-    
-    ///////////////
-    if (self.selectedTimeLineFilter == 0) {
-        
-        // ENTRE OS // RETIRAR O CODIGO EXEMPLO E RETORNAR UM ARRAY arraydeEventosTemporario com os eventos da classe Evento
-        // Aqui é os RECENTES
-        ///////////////////////////////////////
-        for (int i=0; i<12; i++) {
-            PROJ1Evento *umEventoTemporario = [[PROJ1Evento alloc] init];
-            
-            umEventoTemporario.nomeEvento = [NSString stringWithFormat:@"Post %d",i+1];
-            umEventoTemporario.descricaoEvento = [NSString stringWithFormat:@"Descricao do evento de numero %d",i+1];
-            NSLog(@"%d",i);
-            NSArray *myArray = [NSArray arrayWithObjects:@"The Road.jpg", @"Arvore.jpg", @"Praia.jpg", @"Aguas.jpg", @"Onda.jpg", @"Breaking Bad.jpg", @"Cachoeira.jpg", @"Caminho.jpg", @"Cosmos.jpg", @"Leopard Screen.jpg", @"Milky Way.jpg", @"iPhone Generations.jpg", nil];
-            
-            umEventoTemporario.albumFotosEvento = [NSArray arrayWithObject:[UIImage imageNamed:myArray[i]]];
-            
-            [arrayDeEventosTemporario addObject:umEventoTemporario];
-            
-        }
-        ///////////////////////////////////////
-    }
-    else if (self.selectedTimeLineFilter == 1) {
-        // ENTRE OS // RETIRAR O CODIGO EXEMPLO E RETORNAR UM ARRAY arraydeEventosTemporario com os eventos da classe Evento
-        // Aqui é os PROXIMOS
-        ///////////////////////////////////////
-        for (int i=0; i<4; i++) {
-            PROJ1Evento *umEventoTemporario = [[PROJ1Evento alloc] init];
-            
-            umEventoTemporario.nomeEvento = [NSString stringWithFormat:@"Post %d",i+1];
-            umEventoTemporario.descricaoEvento = [NSString stringWithFormat:@"Descricao do evento de numero %d",i+1];
-            NSLog(@"%d",i);
-            NSArray *myArray = [NSArray arrayWithObjects:@"Onda.jpg", @"Breaking Bad.jpg", @"Cachoeira.jpg", @"Caminho.jpg", @"Cosmos.jpg", nil];
-            
-            umEventoTemporario.albumFotosEvento = [NSArray arrayWithObject:[UIImage imageNamed:myArray[i]]];
-            
-            [arrayDeEventosTemporario addObject:umEventoTemporario];
-            
-        }
-        ///////////////////////////////////////
-    }
-    
-    
-    return arrayDeEventosTemporario;
-
-}
-
-//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-    
-//    return self.arrayOfEvents.count;
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     static NSString *CellIdentifier = @"TimeLineCell";
@@ -185,7 +120,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.timeLineTableView.allowsSelection = NO;
+    self.timeLineTableView.allowsSelection = YES;
     
     [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
     [self.tabBarController.tabBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
@@ -195,7 +130,7 @@
     [self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:0 green:45/255. blue:100/255. alpha:1.0]];
 
 #warning LOGOUT FOR LOGIN TESTS
-    [PFUser logOut];
+    //[PFUser logOut];
     
     [self setTitle:@"Humanitar"];
 
@@ -205,7 +140,7 @@
     //headerViewSelectionButtons.backgroundColor = [UIColor greenColor];
 #define MARGINHEADERSEGMENT 6
     
-    UISegmentedControl *segmentButtons = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Recentes", @"Próximo",nil]];
+    UISegmentedControl *segmentButtons = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Interesses", @"Todas",nil]];
     segmentButtons.frame = CGRectMake(MARGINHEADERSEGMENT, MARGINHEADERSEGMENT, headerViewSelectionButtons.frame.size.width-(2*MARGINHEADERSEGMENT), headerViewSelectionButtons.frame.size.height-(2*MARGINHEADERSEGMENT));
     
     [segmentButtons addTarget:self action:@selector(didJustChangeOptionOnSegmentedControl:) forControlEvents:UIControlEventValueChanged];
@@ -278,7 +213,7 @@
                 [userInfo setNome:name];
                 [userInfo setFoto:image];
                 
-                NSLog(@"Name %@", name);
+                //NSLog(@"Name %@", name);
             }else{
                 NSLog(@"%@",error);
             }
@@ -323,5 +258,33 @@
     return NO; // Interrupt login process
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"SegueEntidadeProfile"])
+    {
+        
+        PROJ1EntidadeViewController *smvc = (PROJ1EntidadeViewController *)segue.destinationViewController;
+        
+        
+        PROJ1Entidade *entidadeSegue = [[PROJ1Entidade alloc] init];
+        //UIButton *buttonTemp = (UIButton *)[sender viewWithTag:101];
+        
+        
+        
+        ///
+#warning PEGAR INSTITUICAO NO PARSE COM nome abaixo e prencher
+        //NSLog(@"%@", buttonTemp.titleLabel.text);
+        
+        entidadeSegue.nomeEntidade = @"Nome Teste";
+        entidadeSegue.descricaoEntidade = @"Descricao Teste asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        entidadeSegue.latitude = [NSNumber numberWithDouble:-30];
+        entidadeSegue.longitude = [NSNumber numberWithDouble:50];
+        ///
+        
+        
+        
+        smvc.entidadeParaMostrar = entidadeSegue;
+    }
+}
 
 @end

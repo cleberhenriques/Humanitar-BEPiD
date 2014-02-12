@@ -69,7 +69,7 @@
             [arrayTemporarioBlock addObject:[NSString stringWithFormat:@"%@", post]];
         }
         
-        NSLog(@"%@", arrayTemporarioBlock);
+        //NSLog(@"%@", arrayTemporarioBlock);
         _arrayOfInstitutionsPrefences = [[NSMutableArray alloc] initWithArray:arrayTemporarioBlock];
         
         [self.tableViewOfSettingInstitutionsPreferences reloadData];
@@ -110,13 +110,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%@", self.arrayOfInstitutionsPrefences[indexPath.row]);
+    //NSLog(@"%@", self.arrayOfInstitutionsPrefences[indexPath.row]);
     [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
     if(![self.listaDePreferencias containsObject:self.arrayOfInstitutionsPrefences[indexPath.row]])
     {
         [self.listaDePreferencias addObject:self.arrayOfInstitutionsPrefences[indexPath.row]];
     }
-    NSLog(@"%@", self.listaDePreferencias);
+    //NSLog(@"%@", self.listaDePreferencias);
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
