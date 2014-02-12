@@ -22,49 +22,9 @@
 - (void)buscaArrayDeInstituicoes
 {
     if (self.selectedMapViewFilter == 0) {
-        [self.instituicoesMapView removeAnnotations:self.instituicoesMapView.annotations];
-        PFQuery *query = [PFQuery queryWithClassName:@"Instituicoes"];
-        [query whereKey:@"tipo" containedIn:[[PFUser currentUser] objectForKey:@"entidadePref"]];
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if (!error) {
-                NSMutableArray *arrayDeInstituicoesTemporario = [[NSMutableArray alloc] init];
-                for (PFObject *object in objects) {
-                    PROJ1Entidade *institution = [[PROJ1Entidade alloc] init];
-                    institution.nomeEntidade = [object objectForKey:@"name"];
-                    PFGeoPoint *position = [object objectForKey:@"location"];
-                    institution.latitude = [NSNumber numberWithDouble:position.latitude];
-                    institution.longitude = [NSNumber numberWithDouble:position.longitude];
-                    
-                    NSLog(@"%@, %@",institution.latitude,institution.longitude);
-                    [arrayDeInstituicoesTemporario addObject:institution];
-                }
-                [self.instituicoesMapView addAnnotations:arrayDeInstituicoesTemporario];
-                [self.instituicoesMapView showAnnotations:arrayDeInstituicoesTemporario animated:YES];
-            } else {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
-            }
-        }];
+        [self loadAnnotationsFromParse:YES];
     }else{
-        [self.instituicoesMapView removeAnnotations:self.instituicoesMapView.annotations];
-        PFQuery *query = [PFQuery queryWithClassName:@"Instituicoes"];
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if (!error) {
-                NSMutableArray *arrayDeInstituicoesTemporario = [[NSMutableArray alloc] init];
-                for (PFObject *object in objects) {
-                    PROJ1Entidade *institution = [[PROJ1Entidade alloc] init];
-                    institution.nomeEntidade = [object objectForKey:@"name"];
-                    PFGeoPoint *position = [object objectForKey:@"location"];
-                    institution.latitude = [NSNumber numberWithDouble:position.latitude];
-                    institution.longitude = [NSNumber numberWithDouble:position.longitude];
-                    NSLog(@"%@, %@",institution.latitude,institution.longitude);
-                    [arrayDeInstituicoesTemporario addObject:institution];
-                }
-                [self.instituicoesMapView addAnnotations:arrayDeInstituicoesTemporario];
-                [self.instituicoesMapView showAnnotations:arrayDeInstituicoesTemporario animated:YES];
-            } else {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
-            }
-        }];
+        [self loadAnnotationsFromParse:NO];
     }
 }
 
@@ -74,6 +34,33 @@
     self.instituicoesMapView.delegate = self;
     [self buscaArrayDeInstituicoes];
 
+}
+
+-(void) loadAnnotationsFromParse:(BOOL)filter{
+    [self.instituicoesMapView removeAnnotations:self.instituicoesMapView.annotations];
+    PFQuery *query = [PFQuery queryWithClassName:@"Instituicoes"];
+    if(filter){
+        [query whereKey:@"tipo" containedIn:[[PFUser currentUser] objectForKey:@"entidadePref"]];
+    }
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSMutableArray *arrayDeInstituicoesTemporario = [[NSMutableArray alloc] init];
+            for (PFObject *object in objects) {
+                PROJ1Entidade *institution = [[PROJ1Entidade alloc] init];
+                institution.nomeEntidade = [object objectForKey:@"name"];
+                PFGeoPoint *position = [object objectForKey:@"location"];
+                institution.latitude = [NSNumber numberWithDouble:position.latitude];
+                institution.longitude = [NSNumber numberWithDouble:position.longitude];
+                
+                NSLog(@"%@, %@",institution.latitude,institution.longitude);
+                [arrayDeInstituicoesTemporario addObject:institution];
+            }
+            [self.instituicoesMapView addAnnotations:arrayDeInstituicoesTemporario];
+            [self.instituicoesMapView showAnnotations:arrayDeInstituicoesTemporario animated:YES];
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
