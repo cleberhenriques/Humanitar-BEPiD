@@ -27,9 +27,10 @@
 
 - (IBAction)removeAcountButton:(id)sender {
 
-    //[PFUser logOut];
+    
     [[PFUser currentUser] deleteInBackground];
     [[PFUser currentUser] saveInBackground];
+    [PFUser logOut];
     [self.tabBarController setSelectedIndex:0];
 
 }

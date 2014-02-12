@@ -75,7 +75,7 @@
 		BAC3777F189B3A87003CC303 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BAC37781189B3A8E003CC303 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BAC37783189B3A99003CC303 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		E91B8A2318991F21008FD64E /* PROJ1cbl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJ1cbl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91B8A2318991F21008FD64E /* Humanitar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Humanitar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91B8A2618991F21008FD64E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E91B8A2818991F21008FD64E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E91B8A2A18991F21008FD64E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -185,7 +185,7 @@
 		E91B8A2418991F21008FD64E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E91B8A2318991F21008FD64E /* PROJ1cbl.app */,
+				E91B8A2318991F21008FD64E /* Humanitar.app */,
 				E91B8A3E18991F21008FD64E /* PROJ1cblTests.xctest */,
 			);
 			name = Products;
@@ -344,7 +344,7 @@
 			);
 			name = PROJ1cbl;
 			productName = PROJ1cbl;
-			productReference = E91B8A2318991F21008FD64E /* PROJ1cbl.app */;
+			productReference = E91B8A2318991F21008FD64E /* Humanitar.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E91B8A3D18991F21008FD64E /* PROJ1cblTests */ = {
@@ -574,7 +574,7 @@
 				GCC_PREFIX_HEADER = "PROJ1cbl/PROJ1cbl-Prefix.pch";
 				INFOPLIST_FILE = "PROJ1cbl/PROJ1cbl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Humanitar;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -593,7 +593,7 @@
 				GCC_PREFIX_HEADER = "PROJ1cbl/PROJ1cbl-Prefix.pch";
 				INFOPLIST_FILE = "PROJ1cbl/PROJ1cbl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Humanitar;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
