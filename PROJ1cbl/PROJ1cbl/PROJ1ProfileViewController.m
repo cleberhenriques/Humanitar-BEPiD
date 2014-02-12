@@ -45,8 +45,7 @@
     [[self imagemDoPerfil] setImage:[[PROJ1UserInfoSingleton sharedManager] foto]];
     //NSLog(@"TESTE OK");
     
-    _lbInteresses.text = [@"Preferencias: " stringByAppendingString:[[[PFUser currentUser] objectForKey:@"entidadePref"] componentsJoinedByString:@", "]];
-    
+    [self atualizacaoDeDados];
     
     
     
@@ -74,6 +73,18 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self atualizacaoDeDados];
+}
+
+
+
+- (void)atualizacaoDeDados
+{
+    _lbInteresses.text = [@"Preferencias: " stringByAppendingString:[[[PFUser currentUser] objectForKey:@"entidadePref"] componentsJoinedByString:@", "]];
+    
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
