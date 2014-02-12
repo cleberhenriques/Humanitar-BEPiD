@@ -26,6 +26,11 @@
 {
     if (!_usuarioParaMostrar) {
         _usuarioParaMostrar = [[PROJ1Usuario alloc] init];
+        
+        if ([[PFUser currentUser] objectForKey:@"historico"]) {
+            _usuarioParaMostrar.instituicoesMaisVisitadas = [[PFUser currentUser] objectForKey:@"historico"];
+        }
+        
     }
     return _usuarioParaMostrar;
 }
@@ -45,12 +50,11 @@
     [[self imagemDoPerfil] setImage:[[PROJ1UserInfoSingleton sharedManager] foto]];
     //NSLog(@"TESTE OK");
     
-    _lbInteresses.text = [@"Preferencias: " stringByAppendingString:[[[PFUser currentUser] objectForKey:@"entidadePref"] componentsJoinedByString:@", "]];
+    [self atualizacaoDeDados];
     
     
     
-    
-    PROJ1Usuario *aUser = [[PROJ1Usuario alloc] init];
+    /*PROJ1Usuario *aUser = [[PROJ1Usuario alloc] init];
     
     // retorna as instituições do Parse
     PFQuery *listar = [PFQuery queryWithClassName:@"Instituicoes"];
@@ -70,10 +74,22 @@
         self.usuarioParaMostrar.instituicoesMaisVisitadas = arrayTemporarioBlock;
         NSLog(@"XX %@", self.usuarioParaMostrar.instituicoesMaisVisitadas);
         [self.tableViewinstituicoesMaisVisitadasProfile reloadData];
-    }];
+    }];*/
 
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self atualizacaoDeDados];
+}
+
+
+
+- (void)atualizacaoDeDados
+{
+    _lbInteresses.text = [@"Preferencias: " stringByAppendingString:[[[PFUser currentUser] objectForKey:@"entidadePref"] componentsJoinedByString:@", "]];
+    
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

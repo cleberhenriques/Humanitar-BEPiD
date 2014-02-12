@@ -54,6 +54,7 @@
     
     [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
     
+    
     // retorna as instituições do Parse
     PFQuery *listar = [PFQuery queryWithClassName:@"TipoInstituicao"];
     [listar orderByDescending:@"Instituicao"];
