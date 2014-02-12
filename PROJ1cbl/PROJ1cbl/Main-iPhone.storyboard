@@ -48,9 +48,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="gm3-mA-CBw"/>
-                    <connections>
-                        <outlet property="timeLineTableView" destination="vHh-lp-yry" id="DpJ-ff-z4R"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeG-2N-hAu" sceneMemberID="firstResponder"/>
             </objects>
