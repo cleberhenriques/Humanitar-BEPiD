@@ -15,7 +15,7 @@
     CLLocationCoordinate2D coordinate;
     
     coordinate.latitude = [self.latitude doubleValue];
-    coordinate.latitude = [self.longitude doubleValue];
+    coordinate.longitude = [self.longitude doubleValue];
     
     return coordinate;
 }
