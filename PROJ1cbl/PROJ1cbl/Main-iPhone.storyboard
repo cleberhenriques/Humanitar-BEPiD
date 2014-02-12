@@ -468,44 +468,37 @@
                         <viewControllerLayoutGuide type="bottom" id="KHC-t9-rmx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0z9-cX-mnc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interesse relacionados a instituição: Crianças Carentes, Idosos, Animais." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="310" translatesAutoresizingMaskIntoConstraints="NO" id="bs1-JL-bUZ">
-                                <rect key="frame" x="15" y="449" width="310" height="80"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interesse relacionados a instituição: Crianças Carentes, Idosos, Animais." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="310" translatesAutoresizingMaskIntoConstraints="NO" id="bs1-JL-bUZ">
+                                <rect key="frame" x="5" y="389" width="310" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="6MD-3q-wBQ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="descricao" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ZrP-80-mNd">
-                                <rect key="frame" x="20" y="198" width="280" height="235"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="descricao" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ZrP-80-mNd">
+                                <rect key="frame" x="20" y="136" width="280" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instituições Visitadas: 15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3g-zY-eQr">
-                                <rect key="frame" x="132" y="167" width="188" height="17"/>
+                                <rect key="frame" x="127" y="111" width="188" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NT5-Z2-gLv">
-                                <rect key="frame" x="4" y="70" width="120" height="120"/>
+                                <rect key="frame" x="7" y="8" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="bs1-JL-bUZ" secondAttribute="trailing" constant="-5" id="Fkz-yz-jts"/>
-                            <constraint firstItem="bs1-JL-bUZ" firstAttribute="leading" secondItem="0z9-cX-mnc" secondAttribute="leading" constant="15" id="G8S-gR-GrJ"/>
-                            <constraint firstAttribute="bottom" secondItem="bs1-JL-bUZ" secondAttribute="bottom" constant="39" id="X7O-Y1-vQz"/>
-                            <constraint firstItem="bs1-JL-bUZ" firstAttribute="top" secondItem="ZrP-80-mNd" secondAttribute="bottom" constant="16" id="XW4-tF-JFW"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="udu-4A-Bk1"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="EntidadeimageView" destination="NT5-Z2-gLv" id="IjY-9c-Sd5"/>
                         <outlet property="descricao" destination="ZrP-80-mNd" id="PUo-hX-KGh"/>

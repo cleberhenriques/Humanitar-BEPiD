@@ -10,4 +10,6 @@
 #import <Parse/Parse.h>
 @interface TDW_HideBarsOnScroll : PFQueryTableViewController <PFLogInViewControllerDelegate>
 
+- (void)returnToInitialPosition;
+
 @end

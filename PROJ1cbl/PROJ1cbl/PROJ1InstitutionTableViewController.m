@@ -159,6 +159,9 @@
     [self LogInCheckAndPreferences];
 }
 
+
+
+
 - (void)didJustChangeOptionOnSegmentedControl:(UISegmentedControl *)segment
 {
     
@@ -290,7 +293,7 @@
         entidadeSegue.latitude = [instituicaoArray firstObject][@"latitude"];
         entidadeSegue.longitude = [instituicaoArray firstObject][@"longitude"];
         entidadeSegue.interesses = [instituicaoArray firstObject][@"tipo"];
-        NSArray *historico = [instituicaoArray firstObject][@"historico"];
+        NSArray *historico = [instituicaoArray firstObject][@"historicoPessoas"];
         entidadeSegue.qtdDeCheckIns = historico.count;
         smvc.entidadeParaMostrar = entidadeSegue;
         

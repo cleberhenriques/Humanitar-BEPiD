@@ -7,6 +7,8 @@
 //
 
 #import "PROJ1EntidadeViewController.h"
+#import "TDW_HideBarsOnScroll.h"
+#import "PROJ1InstitutionTableViewController.h"
 
 @interface PROJ1EntidadeViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *EntidadeimageView;
@@ -32,15 +34,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSLog(@"ai ai");
     [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithRed:41/255. green:128/255. blue:185/255. alpha:1.0]];
     
     [self setTitle:self.entidadeParaMostrar.nomeEntidade];
     self.descricao.text = self.entidadeParaMostrar.descricaoEntidade;
     self.qtdVisitados.text = [NSString stringWithFormat:@"%d Visitaram a Instituição", self.entidadeParaMostrar.qtdDeCheckIns];
-    self.interessesRelacionados.text = self.entidadeParaMostrar.interesses;
+    self.interessesRelacionados.text = [@"Interesses Relacionados: " stringByAppendingString:self.entidadeParaMostrar.interesses];
     
     NSLog(@"%@", self.entidadeParaMostrar);
     
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    PROJ1InstitutionTableViewController *lastVC = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
+    [lastVC returnToInitialPosition];
 }
 @end
