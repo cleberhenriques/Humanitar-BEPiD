@@ -45,6 +45,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Evento" ];
     if(self.selectedTimeLineFilter == 0){
         [query whereKey:@"type" equalTo:[NSString stringWithFormat:@"%d", self.selectedTimeLineFilter]];
+#warning SUBSTITUIR O FILTRO 0 e 1 pelos interesses
     }
     // If no objects are loaded in memory, we look to the cache
     // first to fill the table and then subsequently do a query
@@ -158,6 +159,9 @@
     [self LogInCheckAndPreferences];
 }
 
+
+
+
 - (void)didJustChangeOptionOnSegmentedControl:(UISegmentedControl *)segment
 {
     
@@ -234,11 +238,6 @@
     
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self performSegueWithIdentifier:@"gotovc" sender:self];
-}
-
 // Sent to the delegate when the log in attempt fails.
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
     NSLog(@"Failed to log in...");
@@ -275,15 +274,27 @@
         
         
         PROJ1Entidade *entidadeSegue = [[PROJ1Entidade alloc] init];
-        //UIButton *buttonTemp = (UIButton *)[sender viewWithTag:101];
+        UIButton *buttonTemp = (UIButton *)[sender viewWithTag:101];
         
         
 #warning PEGAR INSTITUICAO NO PARSE COM nome abaixo e prencher
         
-        entidadeSegue.nomeEntidade = @"Nome Teste";
+        entidadeSegue.nomeEntidade = buttonTemp.titleLabel.text;
         entidadeSegue.descricaoEntidade = @"Descricao Teste aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
         entidadeSegue.latitude = [NSNumber numberWithDouble:-30.];
         entidadeSegue.longitude = [NSNumber numberWithDouble:50.];
+        
+    
+        PFQuery *query = [PFQuery queryWithClassName:@"Instituicoes"];
+        [query whereKey:@"name" equalTo:buttonTemp.titleLabel.text];
+        NSArray* instituicaoArray = [query findObjects];
+        
+        entidadeSegue.descricaoEntidade = [instituicaoArray firstObject][@"description"];
+        entidadeSegue.latitude = [instituicaoArray firstObject][@"latitude"];
+        entidadeSegue.longitude = [instituicaoArray firstObject][@"longitude"];
+        entidadeSegue.interesses = [instituicaoArray firstObject][@"tipo"];
+        NSArray *historico = [instituicaoArray firstObject][@"historicoPessoas"];
+        entidadeSegue.qtdDeCheckIns = historico.count;
         smvc.entidadeParaMostrar = entidadeSegue;
         
     }

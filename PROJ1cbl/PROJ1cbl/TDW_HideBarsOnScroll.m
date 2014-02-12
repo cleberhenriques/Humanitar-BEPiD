@@ -66,6 +66,27 @@
     
     
 }
+- (void)returnToInitialPosition
+{
+    CGRect topFrame = self.navigationController.navigationBar.frame;
+    CGRect bottomFrame = self.tabBarController.tabBar.frame;
+    CGRect centerButtonFrame = [self.tabBarController.view viewWithTag:17712].frame;
+    CGFloat FramePercentageHidden = ((20 - topFrame.origin.y) / (topFrame.size.height - 1));
+    
+    topFrame.origin.y = 20;
+    bottomFrame.origin.y = POSYCOMECOBOTTOMBAR;
+    centerButtonFrame.origin.y = POSYCOMECOBOTAOCENTRALBOTTOMBAR;
+    
+
+    [self updateTopBarButtonItems:(1 - FramePercentageHidden)];
+    [self updateBottomBarButtonItems:(1 - FramePercentageHidden)];
+
+    [self animateNavBarTo:21];
+
+    
+    [self animateBottomBarTo:POSYCOMECOBOTTOMBAR and:POSYCOMECOBOTTOMBAR];
+}
+
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
