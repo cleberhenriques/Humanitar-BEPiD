@@ -276,8 +276,14 @@
         PROJ1Entidade *entidadeSegue = [[PROJ1Entidade alloc] init];
         UIButton *buttonTemp = (UIButton *)[sender viewWithTag:101];
         
+        UITableViewCell *cell = (UITableViewCell *)sender;
         
-#warning PEGAR INSTITUICAO NO PARSE COM nome abaixo e prencher
+        UIImageView *imgView = (UIImageView *)[cell viewWithTag:100];
+        
+        NSLog(@"=+%@", imgView);
+        UIImage *img = [[UIImage alloc] init];
+        img = [[imgView image] copy];
+        smvc.imagemParaMostrar = [[UIImageView alloc] initWithImage:img];
         
         entidadeSegue.nomeEntidade = buttonTemp.titleLabel.text;
         entidadeSegue.descricaoEntidade = @"Descricao Teste aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";

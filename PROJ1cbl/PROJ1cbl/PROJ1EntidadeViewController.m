@@ -11,7 +11,6 @@
 #import "PROJ1InstitutionTableViewController.h"
 
 @interface PROJ1EntidadeViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *EntidadeimageView;
 @property (weak, nonatomic) IBOutlet UILabel *qtdVisitados;
 @property (weak, nonatomic) IBOutlet UILabel *descricao;
 @property (weak, nonatomic) IBOutlet UILabel *interessesRelacionados;
@@ -39,9 +38,14 @@
     [self setTitle:self.entidadeParaMostrar.nomeEntidade];
     self.descricao.text = self.entidadeParaMostrar.descricaoEntidade;
     self.qtdVisitados.text = [NSString stringWithFormat:@"%d Visitaram a Instituição", self.entidadeParaMostrar.qtdDeCheckIns];
-    self.interessesRelacionados.text = [@"Interesses Relacionados: " stringByAppendingString:self.entidadeParaMostrar.interesses];
+    if (self.entidadeParaMostrar.interesses) {
+        self.interessesRelacionados.text = [@"Interesses Relacionados: " stringByAppendingString:self.entidadeParaMostrar.interesses];
+    }else{
+        self.interessesRelacionados.text = @"Interesses Relacionados: -";
+    }
     
-    NSLog(@"%@", self.entidadeParaMostrar);
+    
+    NSLog(@"%@", self.imagemParaMostrar);
     
 }
 

@@ -12,5 +12,6 @@
 @interface PROJ1EntidadeViewController : UIViewController
 
 @property (strong, nonatomic) PROJ1Entidade *entidadeParaMostrar;
+@property (strong, nonatomic) IBOutlet UIImageView *imagemParaMostrar;
 
 @end
