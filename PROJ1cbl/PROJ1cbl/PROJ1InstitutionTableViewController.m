@@ -133,7 +133,7 @@
     [self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:0 green:45/255. blue:100/255. alpha:1.0]];
 
 #warning LOGOUT FOR LOGIN TESTS
-    //[PFUser logOut];
+    [PFUser logOut];
     
     [self setTitle:@"Humanitar"];
 
@@ -282,8 +282,11 @@
         
         NSLog(@"=+%@", imgView);
         UIImage *img = [[UIImage alloc] init];
+        NSLog(@"1 %@", imgView.image);
+        NSLog(@"2 %@", img);
+        
         img = [[imgView image] copy];
-        smvc.imagemParaMostrar = [[UIImageView alloc] initWithImage:img];
+        smvc.imagemParaMostrar = [[UIImageView alloc] initWithImage:[img copy]];
         
         entidadeSegue.nomeEntidade = buttonTemp.titleLabel.text;
         entidadeSegue.descricaoEntidade = @"Descricao Teste aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
