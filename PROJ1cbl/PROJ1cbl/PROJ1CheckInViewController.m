@@ -8,14 +8,15 @@
 
 #import "PROJ1CheckInViewController.h"
 #import "PROJ1Entidade.h"
-
+#import "Parse/Parse.h"
 @interface PROJ1CheckInViewController ()
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapViewCheckInShow;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewNearLocationsCheckIn;
-
+@property (nonatomic) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSArray *arrayOfNearInstitutions; // usually 5 objets of type Entidade
-
+@property double lat;
+@property double longi;
 @end
 
 @implementation PROJ1CheckInViewController
@@ -43,30 +44,31 @@
 - (NSArray *)buscaArrayDeInstituicoesPerto
 {
     NSMutableArray *arrayTemporarioDeInstituicoesPerto = [[NSMutableArray alloc] init];
-    ///////////////////////////////////////////
-    
-    for (int i=0; i<5; i++) {
-        PROJ1Entidade *umaInstituicaoTemporaria = [[PROJ1Entidade alloc] init];
-        
-        
-        NSArray *myArrayLat = [NSArray arrayWithObjects:@"51.219656", @"-30.034634", @"-30.032654", @"-30.442634", @"-30.032629", nil];
-        
-        NSArray *myArrayLong = [NSArray arrayWithObjects:@"-30.034712", @"-51.250944", @"-51.220540", @"-51.210944", @"-51.220900", nil];
-        
-        
-        
-        umaInstituicaoTemporaria.nomeEntidade = [NSString stringWithFormat:@"Instituicao %d",i+1];
-        umaInstituicaoTemporaria.descricaoEntidade = [NSString stringWithFormat:@"Descricao de numero %d",i+1];
-        umaInstituicaoTemporaria.codTipoEntidade = [NSNumber numberWithDouble:[myArrayLat[i] doubleValue]];
-        //NSLog(@"%d",i);
-        
-        umaInstituicaoTemporaria.latitude = [NSNumber numberWithDouble:[myArrayLat[i] doubleValue]];
-        umaInstituicaoTemporaria.longitude = [NSNumber numberWithDouble:[myArrayLong[i] doubleValue]];
-        
-        [arrayTemporarioDeInstituicoesPerto addObject:umaInstituicaoTemporaria];
-        
-    }
-    //////////////////////////////////////////
+        PFQuery *query = [PFQuery queryWithClassName:@"Instituicoes"];
+        [query whereKey:@"location" nearGeoPoint: [PFGeoPoint geoPointWithLatitude:-30.039823 longitude:-51.222652]];
+        [query setLimit:4];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                NSMutableArray *arrayDeInstituicoesPerto = [[NSMutableArray alloc] init];
+                for (PFObject *object in objects) {
+                    PROJ1Entidade *institution = [[PROJ1Entidade alloc] init];
+                    institution.nomeEntidade = [object objectForKey:@"name"];
+                    PFGeoPoint *position = [object objectForKey:@"location"];
+                    institution.latitude = [NSNumber numberWithDouble:position.latitude];
+                    institution.longitude = [NSNumber numberWithDouble:position.longitude];
+                    
+                    NSLog(@"%@, %@",institution.latitude,institution.longitude);
+                    [arrayDeInstituicoesPerto addObject:institution];
+                }
+                [self.mapViewCheckInShow addAnnotations:arrayDeInstituicoesPerto];
+                [self.mapViewCheckInShow showAnnotations:arrayDeInstituicoesPerto animated:YES];
+                self.arrayOfNearInstitutions = [[NSArray alloc]initWithArray:arrayDeInstituicoesPerto];
+                [self.tableViewNearLocationsCheckIn reloadData];
+
+            } else {
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
     return arrayTemporarioDeInstituicoesPerto;
 }
 
@@ -107,7 +109,7 @@
     [self.mapViewCheckInShow removeAnnotations:self.mapViewCheckInShow.annotations];
     [self.mapViewCheckInShow addAnnotations:self.arrayOfNearInstitutions];
     [self.mapViewCheckInShow showAnnotations:self.arrayOfNearInstitutions animated:YES];
-    [self.tableViewNearLocationsCheckIn reloadData];
+   
 }
 
 
@@ -148,4 +150,38 @@
     [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryNone];
     
 }
+
+- (void)startStandardUpdates
+{
+    // Create the location manager if this object does not
+    // already have one.
+    if (nil == _locationManager)
+        _locationManager = [[CLLocationManager alloc] init];
+    
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    
+    // Set a movement threshold for new events.
+    _locationManager.distanceFilter = 500; // meters
+    
+    [_locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations {
+    // If it's a relatively recent event, turn off updates to save power.
+    CLLocation* location = [locations lastObject];
+    NSDate* eventDate = location.timestamp;
+    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+    if (abs(howRecent) < 15.0) {
+        // If the event is recent, do something with it.
+        NSLog(@"latitude %+.6f, longitude %+.6f\n",
+              location.coordinate.latitude,
+              location.coordinate.longitude);
+        self.lat = location.coordinate.latitude;
+        self.longi = location.coordinate.longitude;
+        [self buscaArrayDeInstituicoesPerto];
+    }
+}
+
 @end
